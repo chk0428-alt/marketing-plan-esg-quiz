@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Marketing Plan &amp; ESG 퀴즈</string>
+    <string name="title_activity_main">Marketing Plan &amp; ESG 퀴즈</string>
+    <string name="package_name">com.atomy.quiz</string>
+    <string name="custom_url_scheme">com.atomy.quiz</string>
+</resources>

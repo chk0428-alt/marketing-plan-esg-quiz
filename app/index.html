@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>Marketing Plan & ESG 퀴즈</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="app-header">
+  <div class="app-header__inner">
+    <button id="btn-header-home" class="app-header__home" type="button">
+      <span class="app-header__badge" aria-hidden="true">A</span>
+      <span class="app-header__text">
+        <span class="app-header__logo">Marketing Plan & ESG 퀴즈</span>
+        <span class="app-header__tagline">사업 파트너를 위한 학습 도구</span>
+      </span>
+    </button>
+
+    <div id="account-widget" class="account-widget">
+      <button id="btn-account-toggle" class="account-widget__toggle" type="button">
+        <span id="account-status-text">로그인</span>
+      </button>
+
+      <div id="account-panel" class="account-panel" hidden>
+        <p class="account-panel__desc">로그인하면 학습 이력이 서버에 저장되어 다른 기기에서도 이어할 수 있습니다.</p>
+        <input id="account-email-input" class="account-panel__input" type="email" placeholder="이메일" autocomplete="username">
+        <input id="account-password-input" class="account-panel__input" type="password" placeholder="비밀번호 (6자 이상)" autocomplete="current-password">
+        <p id="account-message" class="account-message"></p>
+        <div class="account-panel__actions">
+          <button id="btn-account-login" class="btn btn-primary" type="button">로그인</button>
+          <button id="btn-account-signup" class="btn btn-secondary" type="button">회원가입</button>
+          <button id="btn-account-logout" class="btn btn-secondary" type="button" hidden>로그아웃</button>
+        </div>
+
+        <button id="btn-account-forgot" class="account-panel__link" type="button">비밀번호를 잊으셨나요?</button>
+
+        <div id="account-reset-panel" class="account-reset-panel" hidden>
+          <p class="account-panel__desc">이메일로 받은 링크로 확인되었습니다. 새 비밀번호를 입력하세요.</p>
+          <input id="account-reset-newpassword-input" class="account-panel__input" type="password" placeholder="새 비밀번호 (6자 이상)" autocomplete="new-password">
+          <div class="account-panel__actions">
+            <button id="btn-account-reset-confirm" class="btn btn-primary" type="button">비밀번호 변경</button>
+            <button id="btn-account-reset-cancel" class="btn btn-secondary" type="button">취소</button>
+          </div>
+        </div>
+
+        <div id="account-nickname-row" class="account-nickname-row" hidden>
+          <p class="account-panel__desc">랭킹에는 이메일 대신 닉네임이 표시됩니다.</p>
+          <input id="account-nickname-input" class="account-panel__input" type="text" placeholder="랭킹에 표시할 닉네임" maxlength="20">
+          <button id="btn-account-save-nickname" class="btn btn-secondary" type="button">닉네임 저장</button>
+        </div>
+
+        <button id="btn-account-close" class="account-panel__close" type="button" aria-label="닫기">닫기</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="app-main">
+
+  <!-- ===================== 시작 화면 ===================== -->
+  <section id="screen-start" class="screen">
+    <h1 class="screen-title">퀴즈를 시작해 보세요</h1>
+    <p id="screen-start-desc" class="screen-desc">후원수당·직급수당 등 애터미 마케팅플랜(수당체계)부터 환경·사회·지배구조를 다루는 ESG REPORT까지, 퀴즈로 정확하게 학습합니다.</p>
+
+    <div id="domain-switcher" class="domain-switcher" role="tablist" aria-label="학습 영역 선택">
+      <button type="button" class="domain-switcher__btn" data-domain="marketing_plan" role="tab" aria-selected="false">Marketing Plan</button>
+      <button type="button" class="domain-switcher__btn" data-domain="esg" role="tab" aria-selected="false">ESG REPORT</button>
+    </div>
+
+    <div id="domain-empty-notice" class="domain-empty-notice" hidden>
+      <p>이 영역의 문제를 준비하고 있습니다. 곧 만나보실 수 있어요!</p>
+    </div>
+
+    <div id="domain-quiz-actions">
+    <div class="start-hero" aria-hidden="true">
+      <img id="start-hero-img" class="start-hero__img" src="main_image_marketing_plan.png" alt="" width="640" height="349" loading="eager">
+    </div>
+
+    <div class="quick-actions">
+      <button id="btn-open-daily-quiz" class="btn btn-secondary" type="button">
+        <span class="quick-actions__icon" aria-hidden="true">
+          <svg class="qa-icon" viewBox="0 0 24 24" focusable="false">
+            <rect x="4" y="5" width="16" height="15" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+            <line x1="4" y1="9" x2="20" y2="9" stroke="currentColor" stroke-width="1.8"/>
+            <line x1="8" y1="3" x2="8" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="16" y1="3" x2="16" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M9 14l2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        오늘의 퀴즈
+      </button>
+      <button id="btn-open-notebook" class="btn btn-secondary" type="button">
+        <span class="quick-actions__icon" aria-hidden="true">
+          <svg class="qa-icon" viewBox="0 0 24 24" focusable="false">
+            <rect x="4" y="3" width="16" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+            <line x1="8" y1="8" x2="16" y2="8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="8" y1="12" x2="16" y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="8" y1="16" x2="13" y2="16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </span>
+        오답노트 다시 풀기 <span id="notebook-count" class="badge">0</span>
+      </button>
+      <button id="btn-open-custom-quiz" class="btn btn-primary" type="button">
+        <span class="quick-actions__icon" aria-hidden="true">
+          <svg class="qa-icon" viewBox="0 0 24 24" focusable="false">
+            <line x1="4" y1="6" x2="20" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <circle cx="9" cy="6" r="2.2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+            <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <circle cx="15" cy="12" r="2.2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+            <line x1="4" y1="18" x2="20" y2="18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <circle cx="11" cy="18" r="2.2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+          </svg>
+        </span>
+        맞춤 퀴즈
+      </button>
+    </div>
+
+    <div id="custom-quiz-panel" class="start-panel" hidden>
+      <div class="start-panel__header">
+        <h2 class="start-panel__title">맞춤 퀴즈 설정</h2>
+        <button id="btn-close-custom-quiz" class="start-panel__close" type="button" aria-label="맞춤 퀴즈 설정 닫기">✕</button>
+      </div>
+
+      <p class="start-step-label">1단계 · 원하면 범위를 좁혀보세요 (선택 사항)</p>
+      <details class="filter-panel">
+        <summary>
+          <span class="filter-panel__summary-text">
+            난이도 · 문제 유형 필터
+            <span id="filter-summary-badge" class="filter-summary-badge" hidden></span>
+          </span>
+        </summary>
+        <div class="filter-group">
+          <span class="filter-group__label">난이도</span>
+          <div id="filter-difficulty" class="filter-chip-list"></div>
+        </div>
+        <div class="filter-group">
+          <span class="filter-group__label">문제 유형</span>
+          <div id="filter-type" class="filter-chip-list"></div>
+        </div>
+        <button id="btn-reset-filters" class="btn btn-ghost" type="button">필터 초기화</button>
+      </details>
+
+      <div class="start-flow-connector" aria-hidden="true">
+        <span class="start-flow-connector__line"></span>
+        <span class="start-flow-connector__arrow">↓</span>
+      </div>
+
+      <p class="start-step-label">2단계 · 몇 문제를 풀지 정해주세요</p>
+      <div class="quiz-count-picker">
+        <span class="quiz-count-picker__label">문항 수</span>
+        <div class="quiz-count-picker__control">
+          <button id="btn-count-minus" class="quiz-count-picker__step" type="button" aria-label="5문제 줄이기">−5</button>
+          <span id="quiz-count-value" class="quiz-count-picker__value">10</span>
+          <button id="btn-count-plus" class="quiz-count-picker__step" type="button" aria-label="5문제 늘리기">+5</button>
+        </div>
+        <button id="btn-count-max" class="quiz-count-picker__max" type="button">전체로</button>
+      </div>
+
+      <div class="start-flow-connector" aria-hidden="true">
+        <span class="start-flow-connector__line"></span>
+        <span class="start-flow-connector__arrow">↓</span>
+      </div>
+
+      <div class="start-mode-card">
+        <p class="start-step-label">3단계 · 시작 방식을 골라주세요</p>
+
+        <button id="btn-random-all" class="btn btn-primary btn-large" type="button">
+          전체 카테고리 중 랜덤으로 풀기
+        </button>
+
+        <div class="start-mode-divider"><span>또는</span></div>
+
+        <h2 class="section-heading">카테고리를 골라서 풀기 <span class="section-heading__hint">(여러 개 선택 가능)</span></h2>
+        <button id="btn-start-selected-categories" class="btn btn-primary btn-large" type="button" disabled>
+          카테고리를 선택해 주세요
+        </button>
+        <div id="category-list" class="category-grid" role="group" aria-label="카테고리 선택"></div>
+      </div>
+    </div>
+    </div>
+
+    <div class="quick-actions quick-actions--secondary">
+      <button id="btn-open-dashboard" class="btn btn-secondary" type="button">
+        <span class="quick-actions__icon" aria-hidden="true">
+          <svg class="qa-icon" viewBox="0 0 24 24" focusable="false">
+            <rect x="4" y="13" width="4" height="7" rx="1" fill="currentColor"/>
+            <rect x="10" y="8" width="4" height="12" rx="1" fill="currentColor"/>
+            <rect x="16" y="4" width="4" height="16" rx="1" fill="currentColor"/>
+          </svg>
+        </span>
+        학습 진도 대시보드
+      </button>
+      <button id="btn-open-leaderboard" class="btn btn-secondary" type="button">
+        <span class="quick-actions__icon" aria-hidden="true">
+          <svg class="qa-icon" viewBox="0 0 24 24" focusable="false">
+            <path d="M7 4h10v4a5 5 0 0 1-10 0V4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+            <path d="M7 5H4a3 3 0 0 0 3 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M17 5h3a3 3 0 0 1-3 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="12" y1="13" x2="12" y2="17" stroke="currentColor" stroke-width="1.8"/>
+            <line x1="8" y1="20" x2="16" y2="20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="12" y1="17" x2="12" y2="20" stroke="currentColor" stroke-width="1.8"/>
+          </svg>
+        </span>
+        랭킹 보기
+      </button>
+      <button id="btn-open-admin" class="btn btn-secondary" type="button" hidden>문제 관리 (관리자)</button>
+      <button id="btn-open-admin-stats" class="btn btn-secondary" type="button" hidden>조직 통계 (관리자)</button>
+    </div>
+  </section>
+
+  <!-- ===================== 퀴즈 화면 ===================== -->
+  <section id="screen-quiz" class="screen" hidden>
+    <div class="quiz-topbar">
+      <button id="btn-quit" class="btn btn-ghost" type="button">종료</button>
+      <div class="quiz-progress">
+        <span id="quiz-progress-text">1 / 10</span>
+        <div class="progress-bar"><div id="progress-bar-fill" class="progress-bar__fill"></div></div>
+      </div>
+      <span id="quiz-score-live" class="quiz-score-live">0점</span>
+    </div>
+
+    <div class="quiz-card">
+      <div class="quiz-tag-row">
+        <span id="quiz-category-tag" class="category-tag">카테고리</span>
+        <span id="quiz-difficulty-tag" class="difficulty-tag">중급</span>
+      </div>
+      <h2 id="quiz-question" class="quiz-question">문제 내용</h2>
+
+      <div id="quiz-choices" class="choice-list" role="group" aria-label="보기" hidden></div>
+
+      <div id="quiz-input-area" class="input-area" hidden>
+        <input id="quiz-text-input" type="text" class="text-input" placeholder="정답을 입력하세요" autocomplete="off">
+      </div>
+
+      <div id="quiz-order-area" class="order-area" hidden>
+        <p class="order-area__label">아래 보기를 정답이라고 생각하는 순서대로 눌러주세요.</p>
+        <div id="order-answer-list" class="order-answer-list"></div>
+        <div id="order-pool-list" class="order-pool-list"></div>
+        <button id="btn-order-reset" class="btn btn-ghost" type="button">초기화</button>
+      </div>
+
+      <div id="quiz-match-area" class="match-area" hidden></div>
+
+      <button id="btn-submit-answer" class="btn btn-primary btn-large" type="button" hidden>제출하기</button>
+
+      <div id="quiz-feedback" class="quiz-feedback" hidden>
+        <p id="quiz-feedback-result" class="quiz-feedback__result"></p>
+        <p id="quiz-feedback-answer" class="quiz-feedback__answer" hidden></p>
+        <p id="quiz-feedback-explanation" class="quiz-feedback__explanation"></p>
+      </div>
+    </div>
+
+    <div class="quiz-actions">
+      <button id="btn-next" class="btn btn-primary btn-large" type="button" disabled>다음 문제</button>
+    </div>
+  </section>
+
+  <!-- ===================== 결과 화면 ===================== -->
+  <section id="screen-result" class="screen" hidden>
+    <h1 class="screen-title">결과 요약</h1>
+
+    <div class="result-summary">
+      <div class="result-score">
+        <span id="result-score-num" class="result-score__num">0 / 0</span>
+        <span id="result-score-percent" class="result-score__percent">0%</span>
+      </div>
+      <p id="result-message" class="result-message"></p>
+    </div>
+
+    <h2 class="section-heading">카테고리별 정답률</h2>
+    <div id="result-category-table" class="result-category-table"></div>
+
+    <div class="result-actions">
+      <button id="btn-retry" class="btn btn-primary btn-large" type="button">같은 조건으로 다시 풀기</button>
+      <button id="btn-home" class="btn btn-secondary btn-large" type="button">처음 화면으로</button>
+    </div>
+    <div class="result-actions">
+      <button id="btn-result-notebook" class="btn btn-ghost" type="button">오답노트 다시 풀기</button>
+      <button id="btn-result-dashboard" class="btn btn-ghost" type="button">학습 대시보드 보기</button>
+      <button id="btn-result-leaderboard" class="btn btn-ghost" type="button">랭킹 보기</button>
+    </div>
+  </section>
+
+  <!-- ===================== 학습 진도 대시보드 ===================== -->
+  <section id="screen-dashboard" class="screen" hidden>
+    <h1 class="screen-title">학습 진도 대시보드</h1>
+    <p class="screen-desc">지금까지 누적된 학습 기록을 바탕으로 정답률과 취약 영역을 보여줍니다.</p>
+
+    <div id="dashboard-domain-switcher" class="domain-switcher" role="tablist" aria-label="학습 영역 선택">
+      <button type="button" class="domain-switcher__btn" data-domain="marketing_plan" role="tab" aria-selected="false">Marketing Plan</button>
+      <button type="button" class="domain-switcher__btn" data-domain="esg" role="tab" aria-selected="false">ESG REPORT</button>
+    </div>
+
+    <div class="dashboard-daily-quiz">
+      <div class="dashboard-daily-quiz__info">
+        <span class="dashboard-daily-quiz__label">오늘의 퀴즈</span>
+        <span id="dashboard-daily-quiz-status" class="dashboard-daily-quiz__status">아직 오늘의 퀴즈를 풀지 않았어요</span>
+      </div>
+      <button id="btn-dashboard-daily-quiz" class="btn btn-primary" type="button">오늘의 퀴즈 풀기</button>
+    </div>
+
+    <div class="dashboard-summary">
+      <div class="dashboard-summary__stat">
+        <span id="dashboard-total-attempts" class="dashboard-summary__num">0</span>
+        <span class="dashboard-summary__label">누적 풀이 수</span>
+      </div>
+      <div class="dashboard-summary__stat">
+        <span id="dashboard-total-accuracy" class="dashboard-summary__num">-</span>
+        <span class="dashboard-summary__label">누적 정답률</span>
+      </div>
+      <div class="dashboard-summary__stat">
+        <span id="dashboard-notebook-count" class="dashboard-summary__num">0</span>
+        <span class="dashboard-summary__label">오답노트</span>
+      </div>
+    </div>
+
+    <h2 class="section-heading">카테고리별 정답률</h2>
+    <div id="dashboard-category-table" class="result-category-table"></div>
+
+    <h2 class="section-heading">취약 태그 Top 5</h2>
+    <div id="dashboard-weak-tags" class="result-category-table"></div>
+
+    <div class="result-actions">
+      <button id="btn-dashboard-home" class="btn btn-secondary btn-large" type="button">처음 화면으로</button>
+    </div>
+  </section>
+
+  <!-- ===================== 랭킹 ===================== -->
+  <section id="screen-leaderboard" class="screen" hidden>
+    <h1 class="screen-title">랭킹</h1>
+    <p class="screen-desc">최소 5문제 이상 풀이한 사용자 중 정답 수가 많은 순으로 표시됩니다. (로그인 없이도 열람 가능)</p>
+
+    <div id="leaderboard-domain-tabs" class="domain-tabs" role="tablist" aria-label="랭킹 영역 선택">
+      <button type="button" class="domain-tabs__btn is-active" data-domain="all" role="tab" aria-selected="true">통합</button>
+      <button type="button" class="domain-tabs__btn" data-domain="marketing_plan" role="tab" aria-selected="false">Marketing Plan</button>
+      <button type="button" class="domain-tabs__btn" data-domain="esg" role="tab" aria-selected="false">ESG REPORT</button>
+    </div>
+
+    <div id="leaderboard-table" class="result-category-table">
+      <p class="dashboard-empty">랭킹 기능을 사용할 수 없습니다. (Supabase 설정이 필요합니다)</p>
+    </div>
+
+    <div class="result-actions">
+      <button id="btn-leaderboard-home" class="btn btn-secondary btn-large" type="button">처음 화면으로</button>
+    </div>
+  </section>
+
+  <!-- ===================== 관리자: 문제 목록 ===================== -->
+  <section id="screen-admin" class="screen" hidden>
+    <h1 class="screen-title">문제 관리</h1>
+    <p class="screen-desc">문제를 등록·수정·삭제할 수 있습니다. 저장하면 모든 사용자에게 즉시 반영됩니다.</p>
+
+    <div class="admin-toolbar">
+      <select id="admin-domain-filter" class="admin-toolbar__select">
+        <option value="">전체 영역</option>
+      </select>
+      <select id="admin-category-filter" class="admin-toolbar__select">
+        <option value="">전체 카테고리</option>
+      </select>
+      <select id="admin-report-year-filter" class="admin-toolbar__select">
+        <option value="">전체 연도</option>
+      </select>
+      <select id="admin-active-filter" class="admin-toolbar__select">
+        <option value="">전체 상태</option>
+        <option value="active">활성만</option>
+        <option value="inactive">비활성만</option>
+      </select>
+      <button id="btn-admin-new" class="btn btn-primary" type="button">새 문제 추가</button>
+    </div>
+
+    <div id="admin-question-list" class="admin-question-list">
+      <p class="dashboard-empty">불러오는 중...</p>
+    </div>
+
+    <div class="result-actions">
+      <button id="btn-admin-home" class="btn btn-secondary btn-large" type="button">처음 화면으로</button>
+    </div>
+  </section>
+
+  <!-- ===================== 관리자: 문제 등록/수정 ===================== -->
+  <section id="screen-admin-form" class="screen" hidden>
+    <h1 id="admin-form-title" class="screen-title">문제 추가</h1>
+
+    <div class="admin-form">
+      <label class="admin-form__label">문제 ID
+        <input id="admin-field-id" class="account-panel__input" type="text" placeholder="예: q157">
+      </label>
+
+      <label class="admin-form__label">학습 영역
+        <select id="admin-field-domain" class="admin-toolbar__select"></select>
+      </label>
+
+      <label class="admin-form__label">카테고리
+        <select id="admin-field-category" class="admin-toolbar__select"></select>
+      </label>
+
+      <label class="admin-form__label">리포트 연도 (ESG처럼 매년 갱신되는 콘텐츠만 해당, 선택)
+        <input id="admin-field-report-year" class="account-panel__input" type="number" placeholder="예: 2025">
+      </label>
+
+      <label class="admin-form__checkbox">
+        <input id="admin-field-active" type="checkbox" checked>
+        활성 (해제 시 신규 출제에서 제외되고 과거 이력만 조회됨)
+      </label>
+
+      <label class="admin-form__label">난이도
+        <select id="admin-field-difficulty" class="admin-toolbar__select">
+          <option value="초급">초급</option>
+          <option value="중급">중급</option>
+          <option value="고급">고급</option>
+        </select>
+      </label>
+
+      <label class="admin-form__label">문제 유형
+        <select id="admin-field-type" class="admin-toolbar__select">
+          <option value="mc">4지선다</option>
+          <option value="ox">OX</option>
+          <option value="fill">빈칸채우기</option>
+          <option value="calc">계산</option>
+          <option value="order">순서배열</option>
+          <option value="match">매칭</option>
+        </select>
+      </label>
+
+      <label class="admin-form__label">태그 (쉼표로 구분)
+        <input id="admin-field-tags" class="account-panel__input" type="text" placeholder="예: N가, 점수계산">
+      </label>
+
+      <label class="admin-form__label">문제 내용
+        <textarea id="admin-field-question" class="admin-form__textarea" rows="3"></textarea>
+      </label>
+
+      <div id="admin-type-fields" class="admin-type-fields"></div>
+
+      <label class="admin-form__label">해설
+        <textarea id="admin-field-explanation" class="admin-form__textarea" rows="3"></textarea>
+      </label>
+
+      <p id="admin-form-message" class="account-message"></p>
+
+      <div class="account-panel__actions">
+        <button id="btn-admin-form-save" class="btn btn-primary" type="button">저장</button>
+        <button id="btn-admin-form-cancel" class="btn btn-secondary" type="button">취소</button>
+        <button id="btn-admin-form-delete" class="btn btn-ghost" type="button" hidden>이 문제 삭제</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 관리자: 조직 통계 대시보드 ===================== -->
+  <section id="screen-admin-stats" class="screen" hidden>
+    <h1 class="screen-title">조직 통계 대시보드</h1>
+    <p class="screen-desc">전체 사용자의 학습 현황을 확인할 수 있습니다. (관리자 전용)</p>
+
+    <div id="admin-stats-domain-tabs" class="domain-tabs" role="tablist" aria-label="통계 영역 선택">
+      <button type="button" class="domain-tabs__btn is-active" data-domain="all" role="tab" aria-selected="true">통합</button>
+      <button type="button" class="domain-tabs__btn" data-domain="marketing_plan" role="tab" aria-selected="false">Marketing Plan</button>
+      <button type="button" class="domain-tabs__btn" data-domain="esg" role="tab" aria-selected="false">ESG REPORT</button>
+    </div>
+
+    <div class="dashboard-summary">
+      <div class="dashboard-summary__stat">
+        <span id="admin-stats-total-users" class="dashboard-summary__num">0</span>
+        <span class="dashboard-summary__label">가입자 수</span>
+      </div>
+      <div class="dashboard-summary__stat">
+        <span id="admin-stats-active-users" class="dashboard-summary__num">0</span>
+        <span class="dashboard-summary__label">참여자 수</span>
+      </div>
+      <div class="dashboard-summary__stat">
+        <span id="admin-stats-participation-rate" class="dashboard-summary__num">-</span>
+        <span class="dashboard-summary__label">참여율</span>
+      </div>
+    </div>
+
+    <div class="dashboard-summary">
+      <div class="dashboard-summary__stat">
+        <span id="admin-stats-total-attempts" class="dashboard-summary__num">0</span>
+        <span class="dashboard-summary__label">총 풀이 수</span>
+      </div>
+      <div class="dashboard-summary__stat">
+        <span id="admin-stats-overall-accuracy" class="dashboard-summary__num">-</span>
+        <span class="dashboard-summary__label">전체 정답률</span>
+      </div>
+    </div>
+
+    <h2 class="section-heading">오늘의 퀴즈</h2>
+    <div class="dashboard-summary">
+      <div class="dashboard-summary__stat dashboard-summary__stat--daily">
+        <span id="admin-stats-daily-participants" class="dashboard-summary__num">0</span>
+        <span class="dashboard-summary__label">오늘 참여자 수</span>
+      </div>
+      <div class="dashboard-summary__stat dashboard-summary__stat--daily">
+        <span id="admin-stats-daily-accuracy" class="dashboard-summary__num">-</span>
+        <span class="dashboard-summary__label">오늘 평균 정답률</span>
+      </div>
+      <div class="dashboard-summary__stat dashboard-summary__stat--daily">
+        <span id="admin-stats-daily-participation-rate" class="dashboard-summary__num">-</span>
+        <span class="dashboard-summary__label">가입자 대비 참여율</span>
+      </div>
+    </div>
+
+    <h2 class="section-heading">카테고리별 정답률 (전체 사용자)</h2>
+    <div id="admin-stats-category-table" class="result-category-table">
+      <p class="dashboard-empty">조직 통계 기능을 사용할 수 없습니다. (Supabase 설정이 필요합니다)</p>
+    </div>
+
+    <h2 class="section-heading">개인별 현황 (풀이 수 순, 상위 50명)</h2>
+    <div id="admin-stats-user-table" class="result-category-table"></div>
+
+    <div class="result-actions">
+      <button id="btn-admin-stats-home" class="btn btn-secondary btn-large" type="button">처음 화면으로</button>
+    </div>
+  </section>
+
+</main>
+
+<footer class="app-footer">
+  <p>본 퀴즈의 수치는 사내 교육자료 "애터미_수당_체계v1.0"을 기준으로 합니다.</p>
+</footer>
+
+<script src="questions.js"></script>
+<script src="app.js"></script>
+<script src="vendor/supabase.js"></script>
+<script src="supabase-config.js"></script>
+<script src="auth.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>

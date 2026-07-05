@@ -1,0 +1,8 @@
+{
+  "appId": "com.atomy.quiz",
+  "appName": "Marketing Plan & ESG 퀴즈",
+  "webDir": "app",
+  "android": {
+    "allowMixedContent": false
+  }
+}

@@ -1,0 +1,21 @@
+node_modules/
+
+# 릴리즈 서명 키스토어 — 절대 커밋 금지 (분실 시 앱 업데이트 불가)
+keystore/*.jks
+keystore/*.keystore
+keystore/keystore.properties
+
+# Android/Gradle 빌드 산출물
+android/app/build/
+android/build/
+android/.gradle/
+android/local.properties
+android/captures/
+android/.cxx/
+
+.DS_Store
+Thumbs.db
+
+# 내부 기획문서/원본 자료 — 공개 리포지토리 제외
+PRD/
+참고자료/
