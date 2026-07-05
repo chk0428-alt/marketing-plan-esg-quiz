@@ -46,7 +46,10 @@
   var elResetConfirmBtn = document.getElementById("btn-account-reset-confirm");
   var elResetCancelBtn = document.getElementById("btn-account-reset-cancel");
 
-  var RESET_REDIRECT_URL = "atomyquiz://reset-callback";
+  // Supabase의 재설정 링크는 이 GitHub Pages 페이지로 먼저 열리고, 그 페이지가
+  // 다시 atomyquiz://reset-callback 커스텀 스킴으로 앱을 연다(PC 등 앱이 없는
+  // 환경에서는 안내 문구를 보여준다). app/reset-redirect.html 참고.
+  var RESET_REDIRECT_URL = "https://chk0428-alt.github.io/marketing-plan-esg-quiz/reset-redirect.html";
 
   var elNicknameRow = document.getElementById("account-nickname-row");
   var elNicknameInput = document.getElementById("account-nickname-input");
@@ -338,12 +341,13 @@
     });
   });
 
-  // --- 비밀번호 재설정 (앱 딥링크 방식) ------------------------------------
-  // 이 앱은 호스팅된 웹 페이지가 없는 순수 Capacitor 네이티브 앱이다. 이메일의
-  // 기본 "재설정 링크"를 그대로 쓰되, redirectTo를 커스텀 URL 스킴
-  // (atomyquiz://reset-callback)으로 지정해 링크를 누르면 앱이 직접 열리도록 한다.
-  // 링크를 열면 MainActivity(안드로이드 네이티브)가 URL 조각(#access_token=...)을
-  // 파싱해 window.__atomyQuizApplyRecovery(payload)를 호출해준다 — 아래 정의 참고.
+  // --- 비밀번호 재설정 (앱 딥링크 방식, GitHub Pages 중계) -------------------
+  // 이메일의 기본 "재설정 링크"를 그대로 쓰되, redirectTo를 GitHub Pages의
+  // reset-redirect.html로 지정한다. 그 페이지는 로드 즉시 커스텀 URL 스킴
+  // (atomyquiz://reset-callback)으로 재이동을 시도해 앱을 연다(PC 등 앱이 없는
+  // 환경에서는 안내 문구를 보여줌). 앱이 열리면 MainActivity(안드로이드 네이티브)가
+  // URL 조각(#access_token=...)을 파싱해 window.__atomyQuizApplyRecovery(payload)를
+  // 호출해준다 — 아래 정의 참고.
 
   elForgotBtn.addEventListener("click", function () {
     var email = elEmailInput.value.trim();

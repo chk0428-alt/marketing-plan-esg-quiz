@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>비밀번호 재설정 - Marketing Plan & ESG 퀴즈</title>
+<style>
+  :root { color-scheme: light; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f4f6fb;
+    font-family: -apple-system, "Segoe UI", "Malgun Gothic", sans-serif;
+    color: #1a1a1a;
+    padding: 24px;
+    box-sizing: border-box;
+  }
+  .card {
+    max-width: 420px;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 32px 28px;
+    box-shadow: 0 8px 24px rgba(11, 61, 140, 0.12);
+    text-align: center;
+  }
+  .spinner {
+    width: 36px;
+    height: 36px;
+    margin: 0 auto 20px;
+    border: 4px solid #dbe4f5;
+    border-top-color: #0b3d8c;
+    border-radius: 50%;
+    animation: spin 0.9s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  h1 {
+    font-size: 18px;
+    margin: 0 0 8px;
+    color: #0b3d8c;
+  }
+  p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #444;
+    margin: 0 0 16px;
+  }
+  .fallback { display: none; }
+  .btn {
+    display: inline-block;
+    margin-top: 4px;
+    padding: 12px 20px;
+    background: #0b3d8c;
+    color: #fff;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .hint {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #888;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="spinner" id="spinner"></div>
+    <h1 id="title">앱으로 이동 중입니다...</h1>
+    <p id="message">잠시만 기다려주세요. 자동으로 앱이 열리지 않으면 아래 안내를 확인해주세요.</p>
+
+    <div class="fallback" id="fallback">
+      <p>
+        비밀번호 재설정은 <strong>Marketing Plan &amp; ESG 퀴즈 앱</strong>에서만 완료할 수 있습니다.<br>
+        휴대폰이라면 아래 버튼을 눌러 앱을 열어주세요.
+      </p>
+      <a class="btn" id="open-app-btn" href="#">앱에서 열기</a>
+      <p class="hint" id="pc-hint">PC/노트북에서는 앱을 열 수 없어요. 이메일을 보낸 링크를 휴대폰에서 다시 눌러주세요.</p>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var hash = window.location.hash || "";
+      var deepLink = "atomyquiz://reset-callback" + hash;
+      var hasToken = /access_token=/.test(hash);
+
+      document.getElementById("open-app-btn").addEventListener("click", function (e) {
+        e.preventDefault();
+        window.location.href = deepLink;
+      });
+
+      if (!hasToken) {
+        document.getElementById("spinner").style.display = "none";
+        document.getElementById("title").textContent = "유효하지 않은 링크입니다";
+        document.getElementById("message").textContent = "링크가 만료되었거나 잘못되었습니다. 앱에서 비밀번호 재설정을 다시 요청해주세요.";
+        return;
+      }
+
+      window.location.href = deepLink;
+
+      setTimeout(function () {
+        document.getElementById("spinner").style.display = "none";
+        document.getElementById("title").textContent = "앱이 자동으로 열리지 않았나요?";
+        document.getElementById("message").style.display = "none";
+        document.getElementById("fallback").style.display = "block";
+      }, 1800);
+    })();
+  </script>
+</body>
+</html>
