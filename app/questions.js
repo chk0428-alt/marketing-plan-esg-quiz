@@ -97,18 +97,6 @@ var QUESTIONS = [
     voiceExplanationUrl: "voice/q005.mp3"
   },
   {
-    id: "q006",
-    category: "수당의 종류와 법적 한도",
-    type: "mc",
-    difficulty: "중급",
-    tags: ["4대수당", "법적한도"],
-    question: "현재 애터미의 실제 수당 지급률은 얼마인가?",
-    choices: ["34.5%", "35.0%", "35.9%", "36.5%"],
-    answerIndex: 2,
-    explanation: "현재 지급률은 35.9%로, 법적 한도(35%)를 0.9%p 초과하는 상태다.",
-    voiceExplanationUrl: "voice/q006.mp3"
-  },
-  {
     id: "q008",
     category: "수당의 종류와 법적 한도",
     type: "mc",
@@ -131,18 +119,6 @@ var QUESTIONS = [
     answerIndex: 0,
     explanation: "4대 수당은 후원수당, 직급수당, 승급/유지 프로모션, 교육수당이다.",
     voiceExplanationUrl: "voice/q009.mp3"
-  },
-  {
-    id: "q010",
-    category: "수당의 종류와 법적 한도",
-    type: "mc",
-    difficulty: "중급",
-    tags: ["4대수당", "법적한도"],
-    question: "현재 지급률이 법적 한도를 초과하는 폭은 몇 %p인가?",
-    choices: ["0.5%p", "0.9%p", "1.4%p", "1.9%p"],
-    answerIndex: 1,
-    explanation: "35.9% - 35% = 0.9%p 초과한다.",
-    voiceExplanationUrl: "voice/q010.mp3"
   },
 
   /* ===================== 2. 후원수당-정산원리 (q011-q020) ===================== */
@@ -655,7 +631,8 @@ var QUESTIONS = [
     question: "다이아몬드마스터의 달성 조건은?",
     choices: ["소실적 250만 PV 이상", "각 라인 세일즈 2명 이상", "각 라인 다이아몬드 2명 이상", "각 라인 샤론로즈 2명 이상"],
     answerIndex: 1,
-    explanation: "다이아몬드마스터(본인등급 대리점)의 달성 조건은 각 라인 세일즈 2명 이상이다."
+    explanation: "다이아몬드마스터(본인등급 대리점)의 달성 조건은 각 라인 세일즈 2명 이상이다.",
+    voiceExplanationUrl: "voice/q054.mp3"
   },
   {
     id: "q055",
@@ -666,7 +643,8 @@ var QUESTIONS = [
     question: "스타마스터의 승급 조건은?",
     choices: ["샤론로즈 3회 이상 달성", "스타 3회 이상 달성", "로열 3회 이상 달성", "승급조건 없음"],
     answerIndex: 0,
-    explanation: "스타마스터로 승급하려면 샤론로즈를 3회 이상 달성해야 한다."
+    explanation: "스타마스터로 승급하려면 샤론로즈를 3회 이상 달성해야 한다.",
+    voiceExplanationUrl: "voice/q055.mp3"
   },
   {
     id: "q056",
@@ -677,7 +655,8 @@ var QUESTIONS = [
     question: "로열마스터의 승급 조건은?",
     choices: ["샤론로즈 3회 이상 달성", "스타 3회 이상 달성", "크라운 3회 이상 달성", "승급조건 없음"],
     answerIndex: 1,
-    explanation: "로열마스터로 승급하려면 스타를 3회 이상 달성해야 한다."
+    explanation: "로열마스터로 승급하려면 스타를 3회 이상 달성해야 한다.",
+    voiceExplanationUrl: "voice/q056.mp3"
   },
   {
     id: "q057",
@@ -688,7 +667,8 @@ var QUESTIONS = [
     question: "크라운마스터의 승급 조건은?",
     choices: ["스타 3회 이상 달성", "로열 3회 이상 달성", "임페리얼 3회 이상 달성", "승급조건 없음"],
     answerIndex: 1,
-    explanation: "크라운마스터로 승급하려면 로열을 3회 이상 달성해야 한다."
+    explanation: "크라운마스터로 승급하려면 로열을 3회 이상 달성해야 한다.",
+    voiceExplanationUrl: "voice/q057.mp3"
   },
   {
     id: "q058",
@@ -699,7 +679,8 @@ var QUESTIONS = [
     question: "임페리얼마스터의 승급 조건은?",
     choices: ["로열 3회 이상 달성", "크라운 3회 이상 달성", "스타 3회 이상 달성", "승급조건 없음"],
     answerIndex: 1,
-    explanation: "임페리얼마스터로 승급하려면 크라운을 3회 이상 달성해야 한다."
+    explanation: "임페리얼마스터로 승급하려면 크라운을 3회 이상 달성해야 한다.",
+    voiceExplanationUrl: "voice/q058.mp3"
   },
   {
     id: "q059",
@@ -710,7 +691,8 @@ var QUESTIONS = [
     question: "다음 중 승급 조건이 '없는' 직급은?",
     choices: ["세일즈마스터", "스타마스터", "로열마스터", "크라운마스터"],
     answerIndex: 0,
-    explanation: "세일즈, 다이아몬드, 샤론로즈마스터는 승급조건이 없으며 달성조건만 존재한다."
+    explanation: "세일즈, 다이아몬드, 샤론로즈마스터는 승급조건이 없으며 달성조건만 존재한다.",
+    voiceExplanationUrl: "voice/q059.mp3"
   },
   {
     id: "q060",
@@ -721,7 +703,8 @@ var QUESTIONS = [
     question: "세일즈마스터의 특이 규정으로 옳은 것은?",
     choices: ["해당 구간 중 본인의 실적이 소실적에 합산된다", "세일즈마스터는 승급 프로모션이 없다", "세일즈마스터는 유지 프로모션이 있다", "세일즈마스터는 매달 재심사를 받는다"],
     answerIndex: 0,
-    explanation: "세일즈마스터는 해당 구간 중 본인의 실적이 소실적에 합산되는 특이 규정이 있다."
+    explanation: "세일즈마스터는 해당 구간 중 본인의 실적이 소실적에 합산되는 특이 규정이 있다.",
+    voiceExplanationUrl: "voice/q060.mp3"
   },
 
   /* ===================== 7. 직급수당 지급 (q061-q070) ===================== */
@@ -734,7 +717,8 @@ var QUESTIONS = [
     question: "직급수당의 재원은 회사 총 매출 PV의 몇 %인가?",
     choices: ["6%", "20%", "35%", "44%"],
     answerIndex: 1,
-    explanation: "직급수당은 회사 총 매출 PV의 20%를 재원으로 한다."
+    explanation: "직급수당은 회사 총 매출 PV의 20%를 재원으로 한다.",
+    voiceExplanationUrl: "voice/q061.mp3"
   },
   {
     id: "q062",
@@ -745,7 +729,8 @@ var QUESTIONS = [
     question: "세일즈마스터의 직급수당 배분율은?",
     choices: ["5%", "10%", "2%", "1.2%"],
     answerIndex: 1,
-    explanation: "세일즈마스터의 배분율은 10%이다."
+    explanation: "세일즈마스터의 배분율은 10%이다.",
+    voiceExplanationUrl: "voice/q062.mp3"
   },
   {
     id: "q063",
@@ -756,7 +741,8 @@ var QUESTIONS = [
     question: "다이아몬드마스터의 직급수당 배분율은?",
     choices: ["10%", "5%", "2%", "1%"],
     answerIndex: 1,
-    explanation: "다이아몬드마스터의 배분율은 5%이다."
+    explanation: "다이아몬드마스터의 배분율은 5%이다.",
+    voiceExplanationUrl: "voice/q063.mp3"
   },
   {
     id: "q064",
@@ -767,7 +753,8 @@ var QUESTIONS = [
     question: "샤론로즈마스터의 직급수당 배분율은?",
     choices: ["5%", "2%", "1.2%", "0.5%"],
     answerIndex: 1,
-    explanation: "샤론로즈마스터의 배분율은 2%이다."
+    explanation: "샤론로즈마스터의 배분율은 2%이다.",
+    voiceExplanationUrl: "voice/q064.mp3"
   },
   {
     id: "q065",
@@ -778,7 +765,8 @@ var QUESTIONS = [
     question: "스타마스터의 직급수당 배분율은?",
     choices: ["2%", "1.2%", "1%", "0.5%"],
     answerIndex: 1,
-    explanation: "스타마스터의 배분율은 1.2%이다."
+    explanation: "스타마스터의 배분율은 1.2%이다.",
+    voiceExplanationUrl: "voice/q065.mp3"
   },
   {
     id: "q066",
@@ -789,7 +777,8 @@ var QUESTIONS = [
     question: "로열마스터의 직급수당 배분율은?",
     choices: ["1.2%", "1%", "0.5%", "0.3%"],
     answerIndex: 1,
-    explanation: "로열마스터의 배분율은 1%이다."
+    explanation: "로열마스터의 배분율은 1%이다.",
+    voiceExplanationUrl: "voice/q066.mp3"
   },
   {
     id: "q067",
@@ -800,7 +789,8 @@ var QUESTIONS = [
     question: "크라운마스터의 직급수당 배분율은?",
     choices: ["1%", "0.5%", "0.3%", "2%"],
     answerIndex: 1,
-    explanation: "크라운마스터의 배분율은 0.5%이다."
+    explanation: "크라운마스터의 배분율은 0.5%이다.",
+    voiceExplanationUrl: "voice/q067.mp3"
   },
   {
     id: "q068",
@@ -811,7 +801,8 @@ var QUESTIONS = [
     question: "임페리얼마스터의 직급수당 배분율은?",
     choices: ["0.5%", "0.3%", "1%", "1.2%"],
     answerIndex: 1,
-    explanation: "임페리얼마스터의 배분율은 0.3%이다."
+    explanation: "임페리얼마스터의 배분율은 0.3%이다.",
+    voiceExplanationUrl: "voice/q068.mp3"
   },
   {
     id: "q069",
@@ -822,7 +813,8 @@ var QUESTIONS = [
     question: "직급 산정 기준일로 옳은 것은?",
     choices: ["매월 1일·15일", "매월 15일·말일", "매주 화요일", "매월 10일·25일"],
     answerIndex: 1,
-    explanation: "직급수당 산정은 매월 15일과 말일을 기준으로 한다."
+    explanation: "직급수당 산정은 매월 15일과 말일을 기준으로 한다.",
+    voiceExplanationUrl: "voice/q069.mp3"
   },
   {
     id: "q070",
@@ -833,7 +825,8 @@ var QUESTIONS = [
     question: "직급수당 지급일로 옳은 것은?",
     choices: ["매월 1일·15일", "매월 7일·22일", "매주 화요일", "매월 10일·25일"],
     answerIndex: 1,
-    explanation: "직급수당 지급일은 7일과 22일이며, 공휴일인 경우 앞날 지급한다."
+    explanation: "직급수당 지급일은 7일과 22일이며, 공휴일인 경우 앞날 지급한다.",
+    voiceExplanationUrl: "voice/q070.mp3"
   },
 
   /* ===================== 8. 승급-유지 프로모션 (q071-q080) ===================== */
@@ -846,7 +839,8 @@ var QUESTIONS = [
     question: "세일즈마스터 승급 프로모션 금액은?",
     choices: ["50만원", "150만원", "200만원", "1,000만원"],
     answerIndex: 0,
-    explanation: "세일즈마스터 승급 프로모션은 50만원이다."
+    explanation: "세일즈마스터 승급 프로모션은 50만원이다.",
+    voiceExplanationUrl: "voice/q071.mp3"
   },
   {
     id: "q072",
@@ -857,7 +851,8 @@ var QUESTIONS = [
     question: "다이아몬드마스터 승급 프로모션 금액은?",
     choices: ["50만원", "150만원", "200만원", "1,000만원"],
     answerIndex: 1,
-    explanation: "다이아몬드마스터 승급 프로모션은 150만원이다."
+    explanation: "다이아몬드마스터 승급 프로모션은 150만원이다.",
+    voiceExplanationUrl: "voice/q072.mp3"
   },
   {
     id: "q073",
@@ -868,7 +863,8 @@ var QUESTIONS = [
     question: "샤론로즈마스터 승급 프로모션 금액은?",
     choices: ["150만원", "200만원", "1,000만원", "5,000만원"],
     answerIndex: 1,
-    explanation: "샤론로즈마스터 승급 프로모션은 200만원이다."
+    explanation: "샤론로즈마스터 승급 프로모션은 200만원이다.",
+    voiceExplanationUrl: "voice/q073.mp3"
   },
   {
     id: "q074",
@@ -879,7 +875,8 @@ var QUESTIONS = [
     question: "스타마스터 승급 프로모션 금액은?",
     choices: ["200만원", "1,000만원", "5,000만원", "3억원"],
     answerIndex: 1,
-    explanation: "스타마스터 승급 프로모션은 1,000만원이다."
+    explanation: "스타마스터 승급 프로모션은 1,000만원이다.",
+    voiceExplanationUrl: "voice/q074.mp3"
   },
   {
     id: "q075",
@@ -890,7 +887,8 @@ var QUESTIONS = [
     question: "로열마스터 승급 프로모션 금액은?",
     choices: ["1,000만원", "5,000만원", "3억원", "10억원"],
     answerIndex: 1,
-    explanation: "로열마스터 승급 프로모션은 5,000만원이다."
+    explanation: "로열마스터 승급 프로모션은 5,000만원이다.",
+    voiceExplanationUrl: "voice/q075.mp3"
   },
   {
     id: "q076",
@@ -901,7 +899,8 @@ var QUESTIONS = [
     question: "크라운마스터 승급 프로모션 금액은?",
     choices: ["5,000만원", "1억원", "3억원", "10억원"],
     answerIndex: 2,
-    explanation: "크라운마스터 승급 프로모션은 3억원이다."
+    explanation: "크라운마스터 승급 프로모션은 3억원이다.",
+    voiceExplanationUrl: "voice/q076.mp3"
   },
   {
     id: "q077",
@@ -912,7 +911,8 @@ var QUESTIONS = [
     question: "임페리얼마스터 승급 프로모션 금액은?",
     choices: ["3억원", "5억원", "10억원", "15억원"],
     answerIndex: 2,
-    explanation: "임페리얼마스터 승급 프로모션은 10억원이다."
+    explanation: "임페리얼마스터 승급 프로모션은 10억원이다.",
+    voiceExplanationUrl: "voice/q077.mp3"
   },
   {
     id: "q078",
@@ -923,7 +923,8 @@ var QUESTIONS = [
     question: "유지 프로모션이 존재하는 최소 직급은?",
     choices: ["스타마스터 이상", "로열마스터 이상", "크라운마스터 이상", "임페리얼마스터만"],
     answerIndex: 1,
-    explanation: "유지 프로모션은 로열마스터 이상에서만 존재한다(세일즈~스타는 유지 프로모션 없음)."
+    explanation: "유지 프로모션은 로열마스터 이상에서만 존재한다(세일즈~스타는 유지 프로모션 없음).",
+    voiceExplanationUrl: "voice/q078.mp3"
   },
   {
     id: "q079",
@@ -934,7 +935,8 @@ var QUESTIONS = [
     question: "로열마스터 유지 프로모션 금액은?",
     choices: ["150만원", "250만원", "800만원", "1,000만원"],
     answerIndex: 0,
-    explanation: "로열마스터 유지 프로모션은 150만원이다."
+    explanation: "로열마스터 유지 프로모션은 150만원이다.",
+    voiceExplanationUrl: "voice/q079.mp3"
   },
   {
     id: "q080",
@@ -945,7 +947,8 @@ var QUESTIONS = [
     question: "크라운마스터와 임페리얼마스터의 유지 프로모션 금액을 옳게 짝지은 것은?",
     choices: ["크라운 150만원, 임페리얼 250만원", "크라운 250만원, 임페리얼 800만원", "크라운 800만원, 임페리얼 250만원", "크라운 500만원, 임페리얼 1,000만원"],
     answerIndex: 1,
-    explanation: "크라운마스터 유지 프로모션은 250만원, 임페리얼마스터는 800만원이다."
+    explanation: "크라운마스터 유지 프로모션은 250만원, 임페리얼마스터는 800만원이다.",
+    voiceExplanationUrl: "voice/q080.mp3"
   },
 
   /* ===================== 9. 교육수당 (q081-q090) ===================== */
@@ -958,7 +961,8 @@ var QUESTIONS = [
     question: "교육수당 산정 공식은?",
     choices: ["센터 소속회원 PV 총합 × 6%", "본인 PV × 20%", "직급수당 × 6%", "센터 소속회원 수 × 6%"],
     answerIndex: 0,
-    explanation: "교육수당은 센터 소속회원이 일으킨 PV 총합에 6%를 곱해 산정한다."
+    explanation: "교육수당은 센터 소속회원이 일으킨 PV 총합에 6%를 곱해 산정한다.",
+    voiceExplanationUrl: "voice/q081.mp3"
   },
   {
     id: "q082",
@@ -969,7 +973,8 @@ var QUESTIONS = [
     question: "교육수당 산정 기준일은?",
     choices: ["매월 1일·15일", "매월 15일·말일", "매주 화요일", "매월 10일·25일"],
     answerIndex: 1,
-    explanation: "교육수당은 매월 15일과 말일을 기준으로 산정한다."
+    explanation: "교육수당은 매월 15일과 말일을 기준으로 산정한다.",
+    voiceExplanationUrl: "voice/q082.mp3"
   },
   {
     id: "q083",
@@ -980,7 +985,8 @@ var QUESTIONS = [
     question: "AX센터의 6/1~15일 합산 PV가 1,000,000 PV일 때 교육수당은?",
     choices: ["6,000원", "60,000원", "600,000원", "20,000원"],
     answerIndex: 1,
-    explanation: "1,000,000 PV × 6% = 60,000원이다."
+    explanation: "1,000,000 PV × 6% = 60,000원이다.",
+    voiceExplanationUrl: "voice/q083.mp3"
   },
   {
     id: "q084",
@@ -991,7 +997,8 @@ var QUESTIONS = [
     question: "교육수당 지급일은?",
     choices: ["매월 1일·15일", "매월 7일·22일", "매주 화요일", "매월 5일·20일"],
     answerIndex: 1,
-    explanation: "교육수당 지급일은 7일과 22일이며, 공휴일인 경우 앞날 지급한다."
+    explanation: "교육수당 지급일은 7일과 22일이며, 공휴일인 경우 앞날 지급한다.",
+    voiceExplanationUrl: "voice/q084.mp3"
   },
   {
     id: "q085",
@@ -1002,7 +1009,8 @@ var QUESTIONS = [
     question: "교육수당 산정 대상 PV는 누구의 것인가?",
     choices: ["본인의 개인 PV만", "센터 소속회원 전체가 일으킨 PV 총합", "직급수당 수령자의 PV", "전국 회원의 총 PV"],
     answerIndex: 1,
-    explanation: "교육수당은 센터 소속회원 전체가 일으킨 PV 총합을 기준으로 산정한다."
+    explanation: "교육수당은 센터 소속회원 전체가 일으킨 PV 총합을 기준으로 산정한다.",
+    voiceExplanationUrl: "voice/q085.mp3"
   },
   {
     id: "q086",
@@ -1013,7 +1021,8 @@ var QUESTIONS = [
     question: "교육수당 계산에 사용되는 비율은?",
     choices: ["6%", "20%", "35%", "44%"],
     answerIndex: 0,
-    explanation: "교육수당은 센터 소속회원 PV 총합의 6%를 원화로 산정한다."
+    explanation: "교육수당은 센터 소속회원 PV 총합의 6%를 원화로 산정한다.",
+    voiceExplanationUrl: "voice/q086.mp3"
   },
   {
     id: "q087",
@@ -1024,7 +1033,8 @@ var QUESTIONS = [
     question: "공휴일이 교육수당 지급일(7일 또는 22일)과 겹치는 경우 처리 방식은?",
     choices: ["다음날 지급", "앞날 지급", "지급 취소", "다음 정산기간에 합산"],
     answerIndex: 1,
-    explanation: "지급일이 공휴일인 경우 앞날 지급한다."
+    explanation: "지급일이 공휴일인 경우 앞날 지급한다.",
+    voiceExplanationUrl: "voice/q087.mp3"
   },
   {
     id: "q088",
@@ -1035,7 +1045,8 @@ var QUESTIONS = [
     question: "교육수당과 직급수당의 지급일이 같은 이유로 옳은 것은?",
     choices: ["둘 다 7일·22일 지급 규정을 따르기 때문", "우연히 같은 날짜가 겹쳤기 때문", "법적으로 강제된 동일 지급일이기 때문", "무작위 배정이기 때문"],
     answerIndex: 0,
-    explanation: "직급수당과 교육수당 모두 산정 후 7일·22일 지급 규정을 따른다."
+    explanation: "직급수당과 교육수당 모두 산정 후 7일·22일 지급 규정을 따른다.",
+    voiceExplanationUrl: "voice/q088.mp3"
   },
   {
     id: "q089",
@@ -1046,7 +1057,8 @@ var QUESTIONS = [
     question: "센터 소속회원 PV 총합이 2,000,000 PV일 때 교육수당은?",
     choices: ["60,000원", "120,000원", "200,000원", "240,000원"],
     answerIndex: 1,
-    explanation: "2,000,000 PV × 6% = 120,000원이다."
+    explanation: "2,000,000 PV × 6% = 120,000원이다.",
+    voiceExplanationUrl: "voice/q089.mp3"
   },
   {
     id: "q090",
@@ -1057,7 +1069,8 @@ var QUESTIONS = [
     question: "교육수당의 산정 주기로 옳은 것은?",
     choices: ["매일", "월 2회(15일, 말일 기준)", "분기 1회", "연 1회"],
     answerIndex: 1,
-    explanation: "교육수당은 매월 15일과 말일을 기준으로 산정되어 월 2회 산정된다."
+    explanation: "교육수당은 매월 15일과 말일을 기준으로 산정되어 월 2회 산정된다.",
+    voiceExplanationUrl: "voice/q090.mp3"
   },
 
   /* ===================== 보강: 후원수당-본인등급과 점수표 (6급/5급/4급/2급 구간, q091-q094) ===================== */
@@ -1070,7 +1083,8 @@ var QUESTIONS = [
     question: "6급(특약점)의 점수와 필요 일일 소실적은?",
     choices: ["15점, 30만 PV 이상", "30점, 70만 PV 이상", "60점, 150만 PV 이상", "90점, 240만 PV 이상"],
     answerIndex: 1,
-    explanation: "6급(특약점)은 30점이며 일일 소실적 70만 PV 이상이 필요하다."
+    explanation: "6급(특약점)은 30점이며 일일 소실적 70만 PV 이상이 필요하다.",
+    voiceExplanationUrl: "voice/q091.mp3"
   },
   {
     id: "q092",
@@ -1081,7 +1095,8 @@ var QUESTIONS = [
     question: "5급(대리점)의 점수와 필요 일일 소실적은?",
     choices: ["30점, 70만 PV 이상", "60점, 150만 PV 이상", "90점, 240만 PV 이상", "150점, 600만 PV 이상"],
     answerIndex: 1,
-    explanation: "5급(대리점)은 60점이며 일일 소실적 150만 PV 이상이 필요하다."
+    explanation: "5급(대리점)은 60점이며 일일 소실적 150만 PV 이상이 필요하다.",
+    voiceExplanationUrl: "voice/q092.mp3"
   },
   {
     id: "q093",
@@ -1092,7 +1107,8 @@ var QUESTIONS = [
     question: "4급(총판)의 점수와 필요 일일 소실적은?",
     choices: ["60점, 150만 PV 이상", "90점, 240만 PV 이상", "150점, 600만 PV 이상", "250점, 2,000만 PV 이상"],
     answerIndex: 1,
-    explanation: "4급(총판)은 90점이며 일일 소실적 240만 PV 이상이 필요하다."
+    explanation: "4급(총판)은 90점이며 일일 소실적 240만 PV 이상이 필요하다.",
+    voiceExplanationUrl: "voice/q093.mp3"
   },
   {
     id: "q094",
@@ -1103,7 +1119,8 @@ var QUESTIONS = [
     question: "2급(총판)의 점수와 필요 일일 소실적은?",
     choices: ["90점, 240만 PV 이상", "150점, 600만 PV 이상", "250점, 2,000만 PV 이상", "300점, 5,000만 PV 이상"],
     answerIndex: 2,
-    explanation: "2급(총판)은 250점이며 일일 소실적 2,000만 PV 이상이 필요하다."
+    explanation: "2급(총판)은 250점이며 일일 소실적 2,000만 PV 이상이 필요하다.",
+    voiceExplanationUrl: "voice/q094.mp3"
   },
 
   /* ===================== 2단계 추가: OX 퀴즈 (q095-q110) ===================== */
@@ -1115,17 +1132,8 @@ var QUESTIONS = [
     tags: ["4대수당"],
     question: "직급수당은 회사 총 매출 PV의 20%를 재원으로 한다.",
     answer: true,
-    explanation: "직급수당은 회사 총 매출 PV의 20%를 재원으로 하여 직급별로 차등 지급된다."
-  },
-  {
-    id: "q096",
-    category: "수당의 종류와 법적 한도",
-    type: "ox",
-    difficulty: "초급",
-    tags: ["법적한도"],
-    question: "현재 애터미의 실제 수당 지급률(35.9%)은 법적 한도(35%)를 초과한 상태이다.",
-    answer: true,
-    explanation: "현재 지급률 35.9%는 법적 지급 한도 35%를 0.9%p 초과한다."
+    explanation: "직급수당은 회사 총 매출 PV의 20%를 재원으로 하여 직급별로 차등 지급된다.",
+    voiceExplanationUrl: "voice/q095.mp3"
   },
   {
     id: "q097",
@@ -1135,7 +1143,8 @@ var QUESTIONS = [
     tags: ["정산원리"],
     question: "후원수당은 일요일에도 정산된다.",
     answer: false,
-    explanation: "일요일은 판매일자로 설정할 수 없으며 수당도 발생하지 않는다."
+    explanation: "일요일은 판매일자로 설정할 수 없으며 수당도 발생하지 않는다.",
+    voiceExplanationUrl: "voice/q097.mp3"
   },
   {
     id: "q098",
@@ -1145,7 +1154,8 @@ var QUESTIONS = [
     tags: ["정산원리"],
     question: "소비자 회원으로 등록된 경우에도 후원수당 점수 계산에 포함된다.",
     answer: false,
-    explanation: "소비자 회원으로 등록된 경우 점수 계산에서 제외된다."
+    explanation: "소비자 회원으로 등록된 경우 점수 계산에서 제외된다.",
+    voiceExplanationUrl: "voice/q098.mp3"
   },
   {
     id: "q099",
@@ -2004,17 +2014,6 @@ var QUESTIONS = [
     answer: "교육수당",
     acceptableAnswers: [],
     explanation: "애터미의 4대 수당은 후원수당, 직급수당, 승급/유지 프로모션, 교육수당이다."
-  },
-  {
-    id: "q164",
-    category: "수당의 종류와 법적 한도",
-    type: "fill",
-    difficulty: "중급",
-    tags: ["법적한도"],
-    question: "애터미의 현재 실제 수당 지급률과 법적 한도의 차이는 ( )%p이다.",
-    answer: "0.9",
-    acceptableAnswers: [],
-    explanation: "현재 지급률 35.9%에서 법적 한도 35%를 뺀 0.9%p가 초과분이다."
   },
 
   /* ===================== 3단계 추가: 후원수당-정산원리 (q165-q167) ===================== */

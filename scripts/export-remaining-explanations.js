@@ -51,18 +51,28 @@ function spellOutPercent(text) {
   });
 }
 
+function spellOutDates(text) {
+  return text
+    .replace(/(\d{1,2})\/(\d{1,2})/g, function (whole, m, d) {
+      return m + "월 " + d + "일";
+    })
+    .replace(/([(,]\s*)(월|화|수|목|금|토|일)\)/g, function (whole, prefix, day) {
+      return prefix + day + "요일)";
+    });
+}
+
 var code = fs.readFileSync(path.join(__dirname, "../app/questions.js"), "utf8");
 var g = {};
 new Function("window", code + "; window.QUESTIONS = QUESTIONS;")(g);
 
-var DONE = new Set(["q001", "q002", "q003", "q004", "q005"]);
 var remaining = g.QUESTIONS.filter(function (q) {
-  return !DONE.has(q.id);
+  return !q.voiceExplanationUrl;
 }).map(function (q) {
-  return { id: q.id, ttsText: spellOutPercent(q.explanation) };
+  return { id: q.id, ttsText: spellOutDates(spellOutPercent(q.explanation)) };
 });
 
-var BATCH_COUNT = 10;
+var BATCH_COUNT = Number(process.argv[2] || 10);
+var START_STAGE = Number(process.argv[3] || 1);
 var batchSize = Math.ceil(remaining.length / BATCH_COUNT);
 var outDir = path.join(__dirname, "_voice_batches");
 fs.mkdirSync(outDir, { recursive: true });
@@ -70,7 +80,7 @@ fs.mkdirSync(outDir, { recursive: true });
 for (var b = 0; b < BATCH_COUNT; b++) {
   var slice = remaining.slice(b * batchSize, (b + 1) * batchSize);
   if (slice.length === 0) continue;
-  var num = String(b + 1).padStart(2, "0");
+  var num = String(START_STAGE + b).padStart(2, "0");
   fs.writeFileSync(path.join(outDir, "batch" + num + ".json"), JSON.stringify(slice, null, 2));
   console.log("batch" + num + ": " + slice.length + " questions");
 }
