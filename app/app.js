@@ -97,7 +97,10 @@
   var quizFeedbackEl = document.getElementById("quiz-feedback");
   var quizFeedbackResultEl = document.getElementById("quiz-feedback-result");
   var quizFeedbackAnswerEl = document.getElementById("quiz-feedback-answer");
+  var quizFeedbackExplanationLabelEl = document.getElementById("quiz-feedback-explanation-label");
   var quizFeedbackExplanationEl = document.getElementById("quiz-feedback-explanation");
+  var btnVoiceExplanation = document.getElementById("btn-voice-explanation");
+  var voiceExplanationAudio = document.getElementById("voice-explanation-audio");
   var btnNext = document.getElementById("btn-next");
 
   var resultScoreNum = document.getElementById("result-score-num");
@@ -1049,6 +1052,17 @@
     }
 
     quizFeedbackExplanationEl.textContent = q.explanation;
+    quizFeedbackExplanationEl.classList.toggle("is-detailed", !isCorrect);
+    quizFeedbackExplanationLabelEl.hidden = isCorrect;
+
+    if (!isCorrect && q.voiceExplanationUrl) {
+      btnVoiceExplanation.hidden = false;
+      voiceExplanationAudio.src = q.voiceExplanationUrl;
+    } else {
+      btnVoiceExplanation.hidden = true;
+      voiceExplanationAudio.removeAttribute("src");
+    }
+
     quizFeedbackEl.hidden = false;
   }
 
@@ -1410,6 +1424,14 @@
   });
 
   btnNext.addEventListener("click", goNext);
+
+  btnVoiceExplanation.addEventListener("click", function () {
+    if (!voiceExplanationAudio.src) {
+      return;
+    }
+    voiceExplanationAudio.currentTime = 0;
+    voiceExplanationAudio.play();
+  });
 
   function quitQuizToStart() {
     if (confirm("퀴즈를 종료하고 처음 화면으로 돌아갈까요? 진행 상황은 저장되지 않습니다.")) {

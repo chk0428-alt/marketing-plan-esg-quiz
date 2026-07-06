@@ -1138,6 +1138,26 @@ summary:focus-visible,
   border-left: 4px solid var(--color-primary);
 }
 
+.quiz-feedback__explanation-label {
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--color-incorrect-dark);
+  margin: 14px 0 6px;
+}
+
+.quiz-feedback__explanation.is-detailed {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  padding: 18px 20px;
+  border-left: 4px solid var(--color-incorrect-dark);
+  background: var(--color-incorrect-bg);
+}
+
+.quiz-feedback__voice-btn {
+  margin-top: 10px;
+  width: 100%;
+}
+
 .quiz-actions {
   margin-top: 18px;
   position: sticky;
