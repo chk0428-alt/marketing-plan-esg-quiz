@@ -110,12 +110,33 @@ function spellOutGeneralNumbers(text) {
 // 자동 변환 결과가 부자연스러운 특정 문항은 여기서 TTS 낭독용 문구를 직접 지정한다
 // (화면에 보이는 explanation 텍스트 자체는 건드리지 않는다).
 var TTS_OVERRIDES = {
-  q043: "예시에 따르면 삼월삼일부터 삼월구일 정산분은 삼월십육일 화요일에 일괄 지급된다."
+  q043: "예시에 따르면 삼월삼일부터 삼월구일 정산분은 삼월십육일 화요일에 일괄 지급된다.",
+  q221: "일일부터 십오일, 십육일부터 말일 기준 두 라인 각각의 산하 판매실적이 이백오십만 피브이 이상이어야 한다."
 };
+
+// 영문 알파벳/약어는 TTS가 못 읽으므로 한글 음가로 바꾼다.
+function spellOutLetterVars(text) {
+  return text.replace(/\bN가/g, "앤가").replace(/PV/g, "피브이");
+}
+
+// ×/÷/=/+는 이 문제 데이터에서 항상 산술 기호로만 쓰인다. "-"는 영문 합성어
+// (Inside-out, 비스페놀-A 등)에도 쓰이므로, 숫자(+선택적 단위 1~3글자) 바로
+// 뒤에 오는 경우로만 좁혀서 뺄셈으로 바꾼다.
+function spellOutMathSymbols(text) {
+  return text
+    .replace(/1\+1/g, "원플러스원")
+    .replace(/×/g, " 곱하기 ")
+    .replace(/÷/g, " 나누기 ")
+    .replace(/=/g, " 는 ")
+    .replace(/\+/g, " 더하기 ")
+    .replace(/([\d,.]+[가-힣]{0,3})\s*-\s*(?=\d)/g, "$1 빼기 ")
+    .replace(/\s*→\s*/g, ", ");
+}
 
 function toTtsText(explanation, id) {
   if (id && TTS_OVERRIDES[id]) return TTS_OVERRIDES[id];
-  return spellOutGeneralNumbers(spellOutDates(spellOutPercent(explanation)));
+  var result = spellOutGeneralNumbers(spellOutDates(spellOutPercent(spellOutMathSymbols(spellOutLetterVars(explanation)))));
+  return result.replace(/\s+/g, " ").trim();
 }
 
 module.exports = { toTtsText, spellOutPercent, spellOutDates, spellOutGeneralNumbers, sinoKoreanNumber, nativeKoreanInt, TTS_OVERRIDES };
