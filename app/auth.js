@@ -118,6 +118,7 @@
               tags: row.tags || [],
               question: row.question,
               explanation: row.explanation,
+              voiceExplanationUrl: row.voice_explanation_url || null,
               reportYear: row.report_year || null,
               active: row.is_active !== false
             },

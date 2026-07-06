@@ -45,7 +45,8 @@ var QUESTIONS = [
     question: "애터미의 4대 수당에 해당하지 않는 것은?",
     choices: ["후원수당", "직급수당", "리더십수당", "교육수당"],
     answerIndex: 2,
-    explanation: "애터미의 4대 수당은 후원수당, 직급수당, 승급/유지 프로모션, 교육수당이다. '리더십수당'은 존재하지 않는 명칭이다."
+    explanation: "애터미의 4대 수당은 후원수당, 직급수당, 승급/유지 프로모션, 교육수당이다. '리더십수당'은 존재하지 않는 명칭이다.",
+    voiceExplanationUrl: "voice/q001.mp3"
   },
   {
     id: "q002",
@@ -56,7 +57,8 @@ var QUESTIONS = [
     question: "애터미 후원수당의 지급 방식에 대한 설명으로 옳은 것은?",
     choices: ["좌/우 소실적 기반으로 매일 정산·점수제로 운영된다", "월 1회 일괄 지급된다", "센터장에게만 지급된다", "PV와 무관하게 정액 지급된다"],
     answerIndex: 0,
-    explanation: "후원수당은 좌/우 소실적을 기반으로 매일 정산되는 점수제 수당이다."
+    explanation: "후원수당은 좌/우 소실적을 기반으로 매일 정산되는 점수제 수당이다.",
+    voiceExplanationUrl: "voice/q002.mp3"
   },
   {
     id: "q003",
@@ -67,7 +69,8 @@ var QUESTIONS = [
     question: "직급수당은 몇 개 직급을 기준으로, 월 몇 회 지급되는가?",
     choices: ["5개 직급, 월 1회", "7개 직급, 월 2회", "9개 직급, 월 2회", "7개 직급, 월 1회"],
     answerIndex: 1,
-    explanation: "직급수당은 7개 직급 체계를 기준으로 월 2회(7일, 22일) 지급된다."
+    explanation: "직급수당은 7개 직급 체계를 기준으로 월 2회(7일, 22일) 지급된다.",
+    voiceExplanationUrl: "voice/q003.mp3"
   },
   {
     id: "q004",
@@ -78,7 +81,8 @@ var QUESTIONS = [
     question: "교육수당의 산정 방식은?",
     choices: ["센터 소속회원 PV 총합 × 6%", "본인 PV × 6%", "전체 매출 × 6%", "직급수당의 6%"],
     answerIndex: 0,
-    explanation: "교육수당은 센터 소속회원이 일으킨 PV 총합에 6%를 곱해 원화로 산정한다."
+    explanation: "교육수당은 센터 소속회원이 일으킨 PV 총합에 6%를 곱해 원화로 산정한다.",
+    voiceExplanationUrl: "voice/q004.mp3"
   },
   {
     id: "q005",
@@ -89,7 +93,8 @@ var QUESTIONS = [
     question: "애터미 수당체계 상 법적 지급 한도는 총 매출액의 몇 %인가?",
     choices: ["30%", "32%", "35%", "38%"],
     answerIndex: 2,
-    explanation: "법적 지급 한도는 총 매출액의 35%이다."
+    explanation: "법적 지급 한도는 총 매출액의 35%이다.",
+    voiceExplanationUrl: "voice/q005.mp3"
   },
   {
     id: "q006",
