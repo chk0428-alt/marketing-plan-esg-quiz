@@ -105,7 +105,8 @@ var QUESTIONS = [
     question: "현재 애터미의 실제 수당 지급률은 얼마인가?",
     choices: ["34.5%", "35.0%", "35.9%", "36.5%"],
     answerIndex: 2,
-    explanation: "현재 지급률은 35.9%로, 법적 한도(35%)를 0.9%p 초과하는 상태다."
+    explanation: "현재 지급률은 35.9%로, 법적 한도(35%)를 0.9%p 초과하는 상태다.",
+    voiceExplanationUrl: "voice/q006.mp3"
   },
   {
     id: "q008",
@@ -116,7 +117,8 @@ var QUESTIONS = [
     question: "승급/유지 프로모션이 지급되는 시점으로 옳은 것은?",
     choices: ["매일", "직급 승급 또는 유지 시", "연 1회 정기", "분기별 정기"],
     answerIndex: 1,
-    explanation: "승급/유지 프로모션은 직급 승급 시 또는 직급 유지 시에 별도로 지급되는 수당이다."
+    explanation: "승급/유지 프로모션은 직급 승급 시 또는 직급 유지 시에 별도로 지급되는 수당이다.",
+    voiceExplanationUrl: "voice/q008.mp3"
   },
   {
     id: "q009",
@@ -127,7 +129,8 @@ var QUESTIONS = [
     question: "다음 중 애터미 4대 수당을 모두 옳게 나열한 것은?",
     choices: ["후원수당, 직급수당, 승급/유지 프로모션, 교육수당", "후원수당, 판매수당, 관리수당, 교육수당", "직급수당, 리더십수당, 교육수당, 승급수당", "후원수당, 직급수당, 판매장려금, 교육수당"],
     answerIndex: 0,
-    explanation: "4대 수당은 후원수당, 직급수당, 승급/유지 프로모션, 교육수당이다."
+    explanation: "4대 수당은 후원수당, 직급수당, 승급/유지 프로모션, 교육수당이다.",
+    voiceExplanationUrl: "voice/q009.mp3"
   },
   {
     id: "q010",
@@ -138,7 +141,8 @@ var QUESTIONS = [
     question: "현재 지급률이 법적 한도를 초과하는 폭은 몇 %p인가?",
     choices: ["0.5%p", "0.9%p", "1.4%p", "1.9%p"],
     answerIndex: 1,
-    explanation: "35.9% - 35% = 0.9%p 초과한다."
+    explanation: "35.9% - 35% = 0.9%p 초과한다.",
+    voiceExplanationUrl: "voice/q010.mp3"
   },
 
   /* ===================== 2. 후원수당-정산원리 (q011-q020) ===================== */
@@ -151,7 +155,8 @@ var QUESTIONS = [
     question: "후원수당의 정산 기준은?",
     choices: ["판매일자 기준 매일 정산", "월말 일괄 정산", "분기별 정산", "연 1회 정산"],
     answerIndex: 0,
-    explanation: "후원수당은 판매일자를 기준으로 매일 정산된다."
+    explanation: "후원수당은 판매일자를 기준으로 매일 정산된다.",
+    voiceExplanationUrl: "voice/q011.mp3"
   },
   {
     id: "q012",
@@ -162,7 +167,8 @@ var QUESTIONS = [
     question: "특정일에 점수가 발생하지 않으면 어떻게 되는가?",
     choices: ["소멸된다", "점수가 발생할 때까지 이월된다", "다음달로 자동 이월된다", "본사가 임의로 지급한다"],
     answerIndex: 1,
-    explanation: "점수 미발생 시 점수가 발생할 때까지 이월된다."
+    explanation: "점수 미발생 시 점수가 발생할 때까지 이월된다.",
+    voiceExplanationUrl: "voice/q012.mp3"
   },
   {
     id: "q013",
@@ -173,7 +179,8 @@ var QUESTIONS = [
     question: "소비자 회원으로 등록된 경우 점수 계산은 어떻게 되는가?",
     choices: ["2배로 계산된다", "점수 계산에서 제외된다", "별도 우대율이 적용된다", "연말에 합산 정산된다"],
     answerIndex: 1,
-    explanation: "소비자 회원으로 등록된 경우 점수 계산에서 제외된다."
+    explanation: "소비자 회원으로 등록된 경우 점수 계산에서 제외된다.",
+    voiceExplanationUrl: "voice/q013.mp3"
   },
   {
     id: "q014",
@@ -184,7 +191,8 @@ var QUESTIONS = [
     question: "좌/우 라인 소실적 점수가 발생하기 위한 최소 기준은?",
     choices: ["10만 PV 이상", "20만 PV 이상", "30만 PV 이상", "50만 PV 이상"],
     answerIndex: 2,
-    explanation: "좌/우 라인 하위회원 PV를 라인별로 합산해 소실적 30만 PV 이상일 때 점수가 발생한다."
+    explanation: "좌/우 라인 하위회원 PV를 라인별로 합산해 소실적 30만 PV 이상일 때 점수가 발생한다.",
+    voiceExplanationUrl: "voice/q014.mp3"
   },
   {
     id: "q015",
@@ -195,7 +203,8 @@ var QUESTIONS = [
     question: "소실적은 어떻게 산출되는가?",
     choices: ["좌/우 라인 하위회원 PV를 라인별로 합산", "본인 PV만 단독 집계", "센터 전체 PV를 균등 배분", "상위 라인 PV를 제외하고 집계"],
     answerIndex: 0,
-    explanation: "좌/우 라인 하위회원 PV를 라인별로 합산하여 소실적을 산출한다."
+    explanation: "좌/우 라인 하위회원 PV를 라인별로 합산하여 소실적을 산출한다.",
+    voiceExplanationUrl: "voice/q015.mp3"
   },
   {
     id: "q016",
@@ -206,7 +215,8 @@ var QUESTIONS = [
     question: "2026.04.08부터 적용되는 '본인 PV의 소실적 합산' 규정의 조건은?",
     choices: ["좌/우 라인이 모두 존재해야 한다", "본인이 총판 등급이어야 한다", "센터장 승인이 필요하다", "일요일에 발생한 PV여야 한다"],
     answerIndex: 0,
-    explanation: "2026.04.08부터 좌/우 라인이 모두 존재하는 경우에 한해 해당 구간 본인 PV도 소실적에 합산된다."
+    explanation: "2026.04.08부터 좌/우 라인이 모두 존재하는 경우에 한해 해당 구간 본인 PV도 소실적에 합산된다.",
+    voiceExplanationUrl: "voice/q016.mp3"
   },
   {
     id: "q017",
@@ -217,7 +227,8 @@ var QUESTIONS = [
     question: "일요일에 대한 후원수당 규정으로 옳은 것은?",
     choices: ["일요일은 2배수 정산일이다", "일요일은 판매일자로 설정할 수 없고 수당도 발생하지 않는다", "일요일은 특별 보너스가 지급된다", "일요일은 월요일과 합산 정산된다"],
     answerIndex: 1,
-    explanation: "일요일은 판매일자로 설정할 수 없으며 수당도 발생하지 않는다."
+    explanation: "일요일은 판매일자로 설정할 수 없으며 수당도 발생하지 않는다.",
+    voiceExplanationUrl: "voice/q017.mp3"
   },
   {
     id: "q018",
@@ -228,7 +239,8 @@ var QUESTIONS = [
     question: "본인 PV가 소실적에 합산되는 규정이 적용되기 시작한 날짜는?",
     choices: ["2025.01.01", "2026.04.08", "2026.01.01", "2025.04.08"],
     answerIndex: 1,
-    explanation: "해당 규정은 2026년 4월 8일부터 적용된다."
+    explanation: "해당 규정은 2026년 4월 8일부터 적용된다.",
+    voiceExplanationUrl: "voice/q018.mp3"
   },
   {
     id: "q019",
@@ -239,7 +251,8 @@ var QUESTIONS = [
     question: "다음 중 후원수당 점수 계산에서 제외되는 경우는?",
     choices: ["에이전트 등급 회원", "소비자 회원으로 등록된 경우", "특약점 등급 회원", "총판 등급 회원"],
     answerIndex: 1,
-    explanation: "소비자 회원으로 등록된 경우 점수 계산에서 제외된다."
+    explanation: "소비자 회원으로 등록된 경우 점수 계산에서 제외된다.",
+    voiceExplanationUrl: "voice/q019.mp3"
   },
   {
     id: "q020",
@@ -250,7 +263,8 @@ var QUESTIONS = [
     question: "후원수당 정산의 기본 원리를 가장 정확히 설명한 것은?",
     choices: ["판매일자 기준 매일 정산되며, 점수 미발생시 발생할 때까지 이월된다", "월 1회 일괄 정산되며 이월은 없다", "분기별로 정산되며 소멸시효가 있다", "연 단위로 누적 정산된다"],
     answerIndex: 0,
-    explanation: "후원수당은 판매일자 기준 매일 정산되고, 점수가 미발생하면 발생할 때까지 이월된다."
+    explanation: "후원수당은 판매일자 기준 매일 정산되고, 점수가 미발생하면 발생할 때까지 이월된다.",
+    voiceExplanationUrl: "voice/q020.mp3"
   },
 
   /* ===================== 3. 후원수당-본인등급과 점수표 (q021-q030) ===================== */
@@ -263,7 +277,8 @@ var QUESTIONS = [
     question: "'회원' 등급의 취득 조건은?",
     choices: ["누적 1만~30만 PV 미만", "누적 30만 PV 이상", "누적 70만 PV 이상", "누적 150만 PV 이상"],
     answerIndex: 0,
-    explanation: "회원 등급은 누적 1만~30만 PV 미만 구간이다."
+    explanation: "회원 등급은 누적 1만~30만 PV 미만 구간이다.",
+    voiceExplanationUrl: "voice/q021.mp3"
   },
   {
     id: "q022",
@@ -274,7 +289,8 @@ var QUESTIONS = [
     question: "'에이전트' 등급의 취득 조건으로 옳은 것은?",
     choices: ["누적 30만 PV 이상 또는 전월 하위그룹 소실적 60만 PV 이상", "누적 70만 PV 이상 또는 전월 하위그룹 소실적 140만 PV 이상", "누적 150만 PV 이상 또는 전월 하위그룹 소실적 300만 PV 이상", "누적 240만 PV 이상 또는 전월 하위그룹 소실적 480만 PV 이상"],
     answerIndex: 0,
-    explanation: "에이전트는 누적 30만 PV 이상 또는 전월 하위그룹 소실적 60만 PV 이상 시 취득한다."
+    explanation: "에이전트는 누적 30만 PV 이상 또는 전월 하위그룹 소실적 60만 PV 이상 시 취득한다.",
+    voiceExplanationUrl: "voice/q022.mp3"
   },
   {
     id: "q023",
@@ -285,7 +301,8 @@ var QUESTIONS = [
     question: "'특약점' 등급 취득 조건은?",
     choices: ["누적 30만 PV 이상 또는 전월 하위그룹 소실적 60만 PV 이상", "누적 70만 PV 이상 또는 전월 하위그룹 소실적 140만 PV 이상", "누적 150만 PV 이상 또는 전월 하위그룹 소실적 300만 PV 이상", "누적 240만 PV 이상 또는 전월 하위그룹 소실적 480만 PV 이상"],
     answerIndex: 1,
-    explanation: "특약점은 누적 70만 PV 이상 또는 전월 하위그룹 소실적 140만 PV 이상이다."
+    explanation: "특약점은 누적 70만 PV 이상 또는 전월 하위그룹 소실적 140만 PV 이상이다.",
+    voiceExplanationUrl: "voice/q023.mp3"
   },
   {
     id: "q024",
@@ -296,7 +313,8 @@ var QUESTIONS = [
     question: "'대리점' 등급 취득 조건은?",
     choices: ["누적 70만 PV 이상 또는 전월 하위그룹 소실적 140만 PV 이상", "누적 150만 PV 이상 또는 전월 하위그룹 소실적 300만 PV 이상", "누적 240만 PV 이상 또는 전월 하위그룹 소실적 480만 PV 이상", "누적 300만 PV 이상 또는 전월 하위그룹 소실적 600만 PV 이상"],
     answerIndex: 1,
-    explanation: "대리점은 누적 150만 PV 이상 또는 전월 하위그룹 소실적 300만 PV 이상이다."
+    explanation: "대리점은 누적 150만 PV 이상 또는 전월 하위그룹 소실적 300만 PV 이상이다.",
+    voiceExplanationUrl: "voice/q024.mp3"
   },
   {
     id: "q025",
@@ -307,7 +325,8 @@ var QUESTIONS = [
     question: "'총판' 등급 취득 조건은?",
     choices: ["누적 150만 PV 이상 또는 전월 하위그룹 소실적 300만 PV 이상", "누적 240만 PV 이상 또는 전월 하위그룹 소실적 480만 PV 이상", "누적 300만 PV 이상 또는 전월 하위그룹 소실적 600만 PV 이상", "누적 100만 PV 이상 또는 전월 하위그룹 소실적 200만 PV 이상"],
     answerIndex: 1,
-    explanation: "총판은 누적 240만 PV 이상 또는 전월 하위그룹 소실적 480만 PV 이상이다."
+    explanation: "총판은 누적 240만 PV 이상 또는 전월 하위그룹 소실적 480만 PV 이상이다.",
+    voiceExplanationUrl: "voice/q025.mp3"
   },
   {
     id: "q026",
@@ -318,7 +337,8 @@ var QUESTIONS = [
     question: "후원수당 점수표에 따라 회사 총 매출 PV의 몇 %를 지급하는가?",
     choices: ["20%", "35%", "44%", "6%"],
     answerIndex: 2,
-    explanation: "후원수당은 회사 총 매출 PV의 44%를 재원으로 지급한다."
+    explanation: "후원수당은 회사 총 매출 PV의 44%를 재원으로 지급한다.",
+    voiceExplanationUrl: "voice/q026.mp3"
   },
   {
     id: "q027",
@@ -329,7 +349,8 @@ var QUESTIONS = [
     question: "8급(회원)의 점수와 필요 일일 소실적은?",
     choices: ["5점, 30만 PV 이상", "15점, 30만 PV 이상", "30점, 70만 PV 이상", "60점, 150만 PV 이상"],
     answerIndex: 0,
-    explanation: "8급(회원)은 5점이며 일일 소실적 30만 PV 이상이 필요하다."
+    explanation: "8급(회원)은 5점이며 일일 소실적 30만 PV 이상이 필요하다.",
+    voiceExplanationUrl: "voice/q027.mp3"
   },
   {
     id: "q028",
@@ -340,7 +361,8 @@ var QUESTIONS = [
     question: "7급(에이전트)의 점수와 필요 일일 소실적은?",
     choices: ["5점, 30만 PV 이상", "15점, 30만 PV 이상", "30점, 70만 PV 이상", "90점, 240만 PV 이상"],
     answerIndex: 1,
-    explanation: "7급(에이전트)은 15점이며 일일 소실적 30만 PV 이상이 필요하다."
+    explanation: "7급(에이전트)은 15점이며 일일 소실적 30만 PV 이상이 필요하다.",
+    voiceExplanationUrl: "voice/q028.mp3"
   },
   {
     id: "q029",
@@ -351,7 +373,8 @@ var QUESTIONS = [
     question: "1급의 점수와 필요 일일 소실적은?",
     choices: ["150점, 600만 PV 이상", "250점, 2,000만 PV 이상", "300점, 5,000만 PV 이상", "90점, 240만 PV 이상"],
     answerIndex: 2,
-    explanation: "1급(총판)은 300점이며 일일 소실적 5,000만 PV 이상이 필요하다."
+    explanation: "1급(총판)은 300점이며 일일 소실적 5,000만 PV 이상이 필요하다.",
+    voiceExplanationUrl: "voice/q029.mp3"
   },
   {
     id: "q030",
@@ -362,7 +385,8 @@ var QUESTIONS = [
     question: "3급(150점) 취득에 필요한 일일 소실적 기준은?",
     choices: ["150만 PV 이상", "240만 PV 이상", "600만 PV 이상", "2,000만 PV 이상"],
     answerIndex: 2,
-    explanation: "3급(총판, 150점)은 일일 소실적 600만 PV 이상이 필요하다."
+    explanation: "3급(총판, 150점)은 일일 소실적 600만 PV 이상이 필요하다.",
+    voiceExplanationUrl: "voice/q030.mp3"
   },
 
   /* ===================== 4. 후원수당-점수와 N가 (q031-q040) ===================== */
@@ -375,7 +399,8 @@ var QUESTIONS = [
     question: "후원수당 계산 공식으로 옳은 것은?",
     choices: ["취득 점수 × N가", "취득 점수 ÷ N가", "PV × N가", "직급 × 점수"],
     answerIndex: 0,
-    explanation: "후원수당 = 취득 점수 × N가로 계산된다."
+    explanation: "후원수당 = 취득 점수 × N가로 계산된다.",
+    voiceExplanationUrl: "voice/q031.mp3"
   },
   {
     id: "q033",
@@ -386,7 +411,8 @@ var QUESTIONS = [
     question: "N가를 3,502원이라고 가정할 때, 15점을 취득했다면 후원수당 금액은 얼마인가?",
     choices: ["45,530원", "52,530원", "60,000원", "35,020원"],
     answerIndex: 1,
-    explanation: "15점 × 3,502원 = 52,530원이다."
+    explanation: "15점 × 3,502원 = 52,530원이다.",
+    voiceExplanationUrl: "voice/q033.mp3"
   },
   {
     id: "q034",
@@ -397,7 +423,8 @@ var QUESTIONS = [
     question: "본인 등급이 '회원'인 사람이 소실적 30만 PV를 달성하면 몇 점을 취득하는가?",
     choices: ["5점", "15점", "30점", "60점"],
     answerIndex: 0,
-    explanation: "동일한 소실적이라도 본인 등급이 '회원'이면 8급 기준인 5점만 취득한다."
+    explanation: "동일한 소실적이라도 본인 등급이 '회원'이면 8급 기준인 5점만 취득한다.",
+    voiceExplanationUrl: "voice/q034.mp3"
   },
   {
     id: "q035",
@@ -408,7 +435,8 @@ var QUESTIONS = [
     question: "N가의 최근 추세로 옳은 것은?",
     choices: ["지속 상승 추세", "지속 하락 추세", "변동 없이 고정", "분기마다 급등락"],
     answerIndex: 1,
-    explanation: "N가는 지속 하락 추세를 보이고 있다."
+    explanation: "N가는 지속 하락 추세를 보이고 있다.",
+    voiceExplanationUrl: "voice/q035.mp3"
   },
   {
     id: "q036",
@@ -419,7 +447,8 @@ var QUESTIONS = [
     question: "과거 15점 기준 후원수당은 대략 얼마였는가?",
     choices: ["약 3만원", "약 4.5만원", "약 6만원", "약 8만원"],
     answerIndex: 2,
-    explanation: "15점 기준 후원수당은 과거 약 6만원 수준이었다."
+    explanation: "15점 기준 후원수당은 과거 약 6만원 수준이었다.",
+    voiceExplanationUrl: "voice/q036.mp3"
   },
   {
     id: "q037",
@@ -430,7 +459,8 @@ var QUESTIONS = [
     question: "N가를 3,502원이라고 가정할 때, 15점 기준 후원수당은 대략 얼마인가?",
     choices: ["약 3.5만원", "약 4.2만원", "약 5.2만원", "약 6.5만원"],
     answerIndex: 2,
-    explanation: "15점 × 3,502원 = 52,530원으로 약 5.2만원이다."
+    explanation: "15점 × 3,502원 = 52,530원으로 약 5.2만원이다.",
+    voiceExplanationUrl: "voice/q037.mp3"
   },
   {
     id: "q038",
@@ -441,7 +471,8 @@ var QUESTIONS = [
     question: "동일한 소실적이라도 회원마다 취득 점수가 달라지는 이유는?",
     choices: ["가입 기간에 따라 다르기 때문", "본인의 등급에 따라 점수표가 다르게 적용되기 때문", "센터 위치에 따라 다르기 때문", "무작위로 배정되기 때문"],
     answerIndex: 1,
-    explanation: "취득 점수는 본인 등급에 따라 점수표가 다르게 적용되어 결정된다."
+    explanation: "취득 점수는 본인 등급에 따라 점수표가 다르게 적용되어 결정된다.",
+    voiceExplanationUrl: "voice/q038.mp3"
   },
   {
     id: "q039",
@@ -452,7 +483,8 @@ var QUESTIONS = [
     question: "N가(포인트 가치)에 대한 설명으로 옳은 것은?",
     choices: ["고정된 상수값으로 절대 변하지 않는다", "1점당 지급되는 금액으로 시기에 따라 변동된다", "PV 1당 지급되는 고정 금액이다", "직급수당에만 적용되는 값이다"],
     answerIndex: 1,
-    explanation: "N가는 1점당 지급 금액으로, 변동값이며 최근 지속 하락 추세다."
+    explanation: "N가는 1점당 지급 금액으로, 변동값이며 최근 지속 하락 추세다.",
+    voiceExplanationUrl: "voice/q039.mp3"
   },
   {
     id: "q040",
@@ -463,7 +495,8 @@ var QUESTIONS = [
     question: "N가를 3,502원이라고 가정할 때, 30점을 취득했다면 후원수당 금액은 얼마인가?",
     choices: ["52,530원", "105,060원", "150,000원", "35,020원"],
     answerIndex: 1,
-    explanation: "30점 × 3,502원 = 105,060원이다."
+    explanation: "30점 × 3,502원 = 105,060원이다.",
+    voiceExplanationUrl: "voice/q040.mp3"
   },
 
   /* ===================== 5. 후원수당-지급일정 (q041-q050) ===================== */
@@ -476,7 +509,8 @@ var QUESTIONS = [
     question: "후원수당 정산 기간은 언제부터 언제까지인가?",
     choices: ["월요일부터 일요일까지", "수요일부터 차주 화요일까지", "매월 1일부터 말일까지", "목요일부터 차주 수요일까지"],
     answerIndex: 1,
-    explanation: "후원수당 정산 기간은 수요일부터 차주 화요일까지다."
+    explanation: "후원수당 정산 기간은 수요일부터 차주 화요일까지다.",
+    voiceExplanationUrl: "voice/q041.mp3"
   },
   {
     id: "q042",
@@ -487,7 +521,8 @@ var QUESTIONS = [
     question: "정산이 완료된 후원수당은 언제 지급되는가?",
     choices: ["정산 종료 다음날", "정산 종료 주의 금요일", "차차주 화요일", "정산 종료 후 1개월 뒤"],
     answerIndex: 2,
-    explanation: "정산 완료 후 차차주 화요일에 지급된다."
+    explanation: "정산 완료 후 차차주 화요일에 지급된다.",
+    voiceExplanationUrl: "voice/q042.mp3"
   },
   {
     id: "q043",
@@ -498,7 +533,8 @@ var QUESTIONS = [
     question: "3/3~3/9 기간 동안 매일 정산된 후원수당은 언제 지급되는가?",
     choices: ["3/9(월)", "3/10(화)", "3/16(월)", "3/16(화)"],
     answerIndex: 3,
-    explanation: "PRD 예시에 따르면 3/3~3/9 정산분은 3/16(화)에 일괄 지급된다."
+    explanation: "PRD 예시에 따르면 3/3~3/9 정산분은 3/16(화)에 일괄 지급된다.",
+    voiceExplanationUrl: "voice/q043.mp3"
   },
   {
     id: "q044",
@@ -509,7 +545,8 @@ var QUESTIONS = [
     question: "후원수당은 매주 무슨 요일에 지급되는가?",
     choices: ["월요일", "화요일", "수요일", "금요일"],
     answerIndex: 1,
-    explanation: "후원수당은 매주 화요일에 지급된다."
+    explanation: "후원수당은 매주 화요일에 지급된다.",
+    voiceExplanationUrl: "voice/q044.mp3"
   },
   {
     id: "q045",
@@ -520,7 +557,8 @@ var QUESTIONS = [
     question: "후원수당 정산이 시작되는 요일은?",
     choices: ["월요일", "화요일", "수요일", "목요일"],
     answerIndex: 2,
-    explanation: "정산 기간은 수요일부터 시작된다."
+    explanation: "정산 기간은 수요일부터 시작된다.",
+    voiceExplanationUrl: "voice/q045.mp3"
   },
   {
     id: "q046",
@@ -531,7 +569,8 @@ var QUESTIONS = [
     question: "후원수당 정산 기간과 지급일 사이의 간격으로 옳은 것은?",
     choices: ["정산 종료 당일 지급", "정산 종료 후 1주일 뒤(차차주 화요일) 지급", "정산 종료 후 1개월 뒤 지급", "정산 기간 중간에 지급"],
     answerIndex: 1,
-    explanation: "정산 종료 후 1주일 뒤인 차차주 화요일에 지급된다."
+    explanation: "정산 종료 후 1주일 뒤인 차차주 화요일에 지급된다.",
+    voiceExplanationUrl: "voice/q046.mp3"
   },
   {
     id: "q047",
@@ -542,7 +581,8 @@ var QUESTIONS = [
     question: "후원수당 정산 방식과 지급 방식을 옳게 짝지은 것은?",
     choices: ["매일 정산 후 주 단위 합산하여 차차주 화요일 지급", "매일 정산 후 즉시 당일 지급", "월말 일괄 정산 후 익월 초 지급", "분기 정산 후 익분기 초 지급"],
     answerIndex: 0,
-    explanation: "후원수당은 매일 정산되고 일주일간 합산되어 차차주 화요일에 지급된다."
+    explanation: "후원수당은 매일 정산되고 일주일간 합산되어 차차주 화요일에 지급된다.",
+    voiceExplanationUrl: "voice/q047.mp3"
   },
   {
     id: "q048",
@@ -553,7 +593,8 @@ var QUESTIONS = [
     question: "후원수당 지급 시 본인 발생 PV 소실적은 어떻게 처리되는가?",
     choices: ["합산이 항상 불가능하다", "규정 조건(좌/우 라인 존재 등)을 만족하면 합산이 가능하다", "별도로 항상 추가 지급된다", "자동 소멸된다"],
     answerIndex: 1,
-    explanation: "본인 발생 PV 소실적도 규정 조건을 만족하면 합산이 가능하다."
+    explanation: "본인 발생 PV 소실적도 규정 조건을 만족하면 합산이 가능하다.",
+    voiceExplanationUrl: "voice/q048.mp3"
   },
   {
     id: "q050",
@@ -564,7 +605,8 @@ var QUESTIONS = [
     question: "후원수당 예시(3/3~3/9 정산 → 3/16 지급)에서 정산 종료일과 지급일 사이의 기간은?",
     choices: ["3일", "7일", "14일", "10일"],
     answerIndex: 1,
-    explanation: "3/9(정산종료)부터 3/16(지급일)까지는 7일이다."
+    explanation: "3/9(정산종료)부터 3/16(지급일)까지는 7일이다.",
+    voiceExplanationUrl: "voice/q050.mp3"
   },
 
   /* ===================== 6. 직급-7단계 체계 (q051-q060) ===================== */
@@ -577,7 +619,8 @@ var QUESTIONS = [
     question: "애터미 직급 체계는 총 몇 단계로 구성되는가?",
     choices: ["5단계", "6단계", "7단계", "9단계"],
     answerIndex: 2,
-    explanation: "직급은 세일즈마스터~임페리얼마스터까지 총 7단계로 구성된다."
+    explanation: "직급은 세일즈마스터~임페리얼마스터까지 총 7단계로 구성된다.",
+    voiceExplanationUrl: "voice/q051.mp3"
   },
   {
     id: "q052",
@@ -588,7 +631,8 @@ var QUESTIONS = [
     question: "직급 체계의 순서로 옳은 것은?",
     choices: ["세일즈→다이아몬드→샤론로즈→스타→로열→크라운→임페리얼", "세일즈→샤론로즈→다이아몬드→스타→크라운→로열→임페리얼", "다이아몬드→세일즈→스타→샤론로즈→로열→임페리얼→크라운", "세일즈→다이아몬드→스타→샤론로즈→크라운→로열→임페리얼"],
     answerIndex: 0,
-    explanation: "직급 순서는 세일즈→다이아몬드→샤론로즈→스타→로열→크라운→임페리얼이다."
+    explanation: "직급 순서는 세일즈→다이아몬드→샤론로즈→스타→로열→크라운→임페리얼이다.",
+    voiceExplanationUrl: "voice/q052.mp3"
   },
   {
     id: "q053",
@@ -599,7 +643,8 @@ var QUESTIONS = [
     question: "세일즈마스터의 달성 조건은?",
     choices: ["소실적 250만 PV 이상", "각 라인 세일즈 2명 이상", "소실적 480만 PV 이상", "각 라인 다이아몬드 2명 이상"],
     answerIndex: 0,
-    explanation: "세일즈마스터(본인등급 특약점)의 달성 조건은 소실적 250만 PV 이상이다."
+    explanation: "세일즈마스터(본인등급 특약점)의 달성 조건은 소실적 250만 PV 이상이다.",
+    voiceExplanationUrl: "voice/q053.mp3"
   },
   {
     id: "q054",
