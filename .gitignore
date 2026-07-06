@@ -19,3 +19,7 @@ Thumbs.db
 # 내부 기획문서/원본 자료 — 공개 리포지토리 제외
 PRD/
 참고자료/
+
+# 회장님 음성 샘플/원본 — 실제 인물 음성 자료, 절대 커밋 금지
+scripts/_voice_sample/
+scripts/_tmp_*
