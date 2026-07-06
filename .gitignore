@@ -2,6 +2,7 @@ node_modules/
 .agents/
 .claude/skills/
 skills-lock.json
+.venv_voice/
 
 # 릴리즈 서명 키스토어 — 절대 커밋 금지 (분실 시 앱 업데이트 불가)
 keystore/*.jks
