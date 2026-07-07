@@ -9,13 +9,16 @@
  * "N가를 3,502원이라고 가정할 때"처럼 가정값으로 명시해 출제한다.
  *
  * 각 문제는 type(mc/ox/fill/order/calc/match), difficulty(초급/중급/고급), tags를 가진다.
- * 총 254문항 (mc 131, ox 31, fill 34, order 13, calc 32, match 13)
- * (2단계 156문항 중 q032·q122는 "현재 N가" 암기형이라 제거하고, q157~q256 100문항 추가)
+ * 총 239문항 (mc 120, ox 30, fill 31, order 13, calc 32, match 13)
+ * (id는 q001~q256 범위 내에서 부여되나, 그간 여러 차례의 오류 검증으로 일부 결번이
+ *  있어 연속되지 않는다 — 예: q032·q122는 "현재 N가" 암기형이라 제거, q016·q018·q048은
+ *  기준 자료로 검증 불가한 규정/날짜라 제거, q160은 근거 없는 "현재 지급률 35.9%" 주장
+ *  포함으로 제거)
  *
  * 전역 변수로 로드됩니다: CATEGORIES, QUESTIONS, DOMAINS, CATEGORIES_BY_DOMAIN
  * (file:// 로 직접 열었을 때 fetch/CORS 문제를 피하기 위해 <script> 태그로 로드하는 방식)
  *
- * 4-1/4-2단계: 위 내용은 마케팅플랜 도메인(marketing_plan) 254문항에 대한 설명이다.
+ * 4-1/4-2단계: 위 내용은 마케팅플랜 도메인(marketing_plan) 239문항에 대한 설명이다.
  * 파일 하단에 ESG REPORT 도메인(esg) 200문항(e001~e200)이 이어지며, 출처는
  * 참고자료/2025_ATOMY_ESG_REPORT_v1.pdf 원문이다. 두 도메인은 CATEGORIES_BY_DOMAIN으로
  * 구분되고, QUESTIONS는 두 도메인 문항이 합쳐진 전체 배열이다.
@@ -183,18 +186,6 @@ var QUESTIONS = [
     voiceExplanationUrl: "voice/q015.mp3"
   },
   {
-    id: "q016",
-    category: "후원수당-정산원리",
-    type: "mc",
-    difficulty: "고급",
-    tags: ["정산원리", "소실적"],
-    question: "2026.04.08부터 적용되는 '본인 PV의 소실적 합산' 규정의 조건은?",
-    choices: ["좌/우 라인이 모두 존재해야 한다", "본인이 총판 등급이어야 한다", "센터장 승인이 필요하다", "일요일에 발생한 PV여야 한다"],
-    answerIndex: 0,
-    explanation: "2026.04.08부터 좌/우 라인이 모두 존재하는 경우에 한해 해당 구간 본인 PV도 소실적에 합산된다.",
-    voiceExplanationUrl: "voice/q016.mp3"
-  },
-  {
     id: "q017",
     category: "후원수당-정산원리",
     type: "mc",
@@ -205,18 +196,6 @@ var QUESTIONS = [
     answerIndex: 1,
     explanation: "일요일은 판매일자로 설정할 수 없으며 수당도 발생하지 않는다.",
     voiceExplanationUrl: "voice/q017.mp3"
-  },
-  {
-    id: "q018",
-    category: "후원수당-정산원리",
-    type: "mc",
-    difficulty: "중급",
-    tags: ["정산원리", "소실적"],
-    question: "본인 PV가 소실적에 합산되는 규정이 적용되기 시작한 날짜는?",
-    choices: ["2025.01.01", "2026.04.08", "2026.01.01", "2025.04.08"],
-    answerIndex: 1,
-    explanation: "해당 규정은 2026년 4월 8일부터 적용된다.",
-    voiceExplanationUrl: "voice/q018.mp3"
   },
   {
     id: "q019",
@@ -495,9 +474,9 @@ var QUESTIONS = [
     difficulty: "중급",
     tags: ["지급일정"],
     question: "정산이 완료된 후원수당은 언제 지급되는가?",
-    choices: ["정산 종료 다음날", "정산 종료 주의 금요일", "차차주 화요일", "정산 종료 후 1개월 뒤"],
+    choices: ["정산 종료 다음날", "정산 종료 주의 금요일", "차주 화요일", "정산 종료 후 1개월 뒤"],
     answerIndex: 2,
-    explanation: "정산 완료 후 차차주 화요일에 지급된다.",
+    explanation: "정산 완료 후 차주 화요일에 지급된다.",
     voiceExplanationUrl: "voice/q042.mp3"
   },
   {
@@ -543,9 +522,9 @@ var QUESTIONS = [
     difficulty: "고급",
     tags: ["지급일정"],
     question: "후원수당 정산 기간과 지급일 사이의 간격으로 옳은 것은?",
-    choices: ["정산 종료 당일 지급", "정산 종료 후 1주일 뒤(차차주 화요일) 지급", "정산 종료 후 1개월 뒤 지급", "정산 기간 중간에 지급"],
+    choices: ["정산 종료 당일 지급", "정산 종료 후 1주일 뒤(차주 화요일) 지급", "정산 종료 후 1개월 뒤 지급", "정산 기간 중간에 지급"],
     answerIndex: 1,
-    explanation: "정산 종료 후 1주일 뒤인 차차주 화요일에 지급된다.",
+    explanation: "정산 종료 후 1주일 뒤인 차주 화요일에 지급된다.",
     voiceExplanationUrl: "voice/q046.mp3"
   },
   {
@@ -555,22 +534,10 @@ var QUESTIONS = [
     difficulty: "고급",
     tags: ["지급일정"],
     question: "후원수당 정산 방식과 지급 방식을 옳게 짝지은 것은?",
-    choices: ["매일 정산 후 주 단위 합산하여 차차주 화요일 지급", "매일 정산 후 즉시 당일 지급", "월말 일괄 정산 후 익월 초 지급", "분기 정산 후 익분기 초 지급"],
+    choices: ["매일 정산 후 주 단위 합산하여 차주 화요일 지급", "매일 정산 후 즉시 당일 지급", "월말 일괄 정산 후 익월 초 지급", "분기 정산 후 익분기 초 지급"],
     answerIndex: 0,
-    explanation: "후원수당은 매일 정산되고 일주일간 합산되어 차차주 화요일에 지급된다.",
+    explanation: "후원수당은 매일 정산되고 일주일간 합산되어 차주 화요일에 지급된다.",
     voiceExplanationUrl: "voice/q047.mp3"
-  },
-  {
-    id: "q048",
-    category: "후원수당-지급일정",
-    type: "mc",
-    difficulty: "고급",
-    tags: ["지급일정"],
-    question: "후원수당 지급 시 본인 발생 PV 소실적은 어떻게 처리되는가?",
-    choices: ["합산이 항상 불가능하다", "규정 조건(좌/우 라인 존재 등)을 만족하면 합산이 가능하다", "별도로 항상 추가 지급된다", "자동 소멸된다"],
-    answerIndex: 1,
-    explanation: "본인 발생 PV 소실적도 규정 조건을 만족하면 합산이 가능하다.",
-    voiceExplanationUrl: "voice/q048.mp3"
   },
   {
     id: "q050",
@@ -1535,8 +1502,8 @@ var QUESTIONS = [
     difficulty: "중급",
     tags: ["지급일정"],
     question: "후원수당 지급 절차를 순서대로 배열하시오.",
-    items: ["판매일자 기준 매일 정산", "일주일간 정산 금액 합산", "차차주 화요일 지급"],
-    explanation: "후원수당은 매일 정산 후 일주일간 합산되어 차차주 화요일에 지급된다.",
+    items: ["판매일자 기준 매일 정산", "일주일간 정산 금액 합산", "차주 화요일 지급"],
+    explanation: "후원수당은 매일 정산 후 일주일간 합산되어 차주 화요일에 지급된다.",
     voiceExplanationUrl: "voice/q132.mp3"
   },
   {
@@ -1700,7 +1667,7 @@ var QUESTIONS = [
     question: "후원수당 정산 종료일부터 지급일까지는 며칠이 걸리는가? (숫자만 입력)",
     answer: "7",
     unit: "일",
-    explanation: "정산 종료 후 7일 뒤(차차주 화요일)에 지급된다."
+    explanation: "정산 종료 후 7일 뒤(차주 화요일)에 지급된다."
   },
   {
     id: "q147",
@@ -2016,17 +1983,6 @@ var QUESTIONS = [
     choices: ["한국 다단계판매법", "전자상거래법", "공정거래법", "방문판매법"],
     answerIndex: 3,
     explanation: "방문판매 등에 관한 법률(약칭 방문판매법)상 총 매출액의 35%까지 수당 지급이 가능하다."
-  },
-  {
-    id: "q160",
-    category: "수당의 종류와 법적 한도",
-    type: "mc",
-    difficulty: "중급",
-    tags: ["4대수당", "법적한도"],
-    question: "다음 중 애터미 수당체계에 대한 설명으로 옳지 않은 것은?",
-    choices: ["법적 지급 한도는 총 매출액의 35%이다", "현재 지급률은 35.9%로 한도를 초과한다", "교육수당은 본인 PV × 6%로 산정한다", "직급수당은 7개 직급 산정 후 월 2회 지급된다"],
-    answerIndex: 2,
-    explanation: "교육수당은 본인 PV가 아니라 센터 소속회원 PV 총합의 6%로 산정한다."
   },
   {
     id: "q161",
@@ -2486,7 +2442,7 @@ var QUESTIONS = [
     question: "정산이 종료된 후 실제 지급일까지는 정산 종료일로부터 ( )일이 소요된다.",
     answer: "7",
     acceptableAnswers: [],
-    explanation: "정산 종료일로부터 7일 후(차차주 화요일)에 지급된다."
+    explanation: "정산 종료일로부터 7일 후(차주 화요일)에 지급된다."
   },
   {
     id: "q203",
