@@ -22,9 +22,7 @@ update public.questions set voice_explanation_url = 'voice/q012.mp3' where id = 
 update public.questions set voice_explanation_url = 'voice/q013.mp3' where id = 'q013';
 update public.questions set voice_explanation_url = 'voice/q014.mp3' where id = 'q014';
 update public.questions set voice_explanation_url = 'voice/q015.mp3' where id = 'q015';
-update public.questions set voice_explanation_url = 'voice/q016.mp3' where id = 'q016';
 update public.questions set voice_explanation_url = 'voice/q017.mp3' where id = 'q017';
-update public.questions set voice_explanation_url = 'voice/q018.mp3' where id = 'q018';
 update public.questions set voice_explanation_url = 'voice/q019.mp3' where id = 'q019';
 update public.questions set voice_explanation_url = 'voice/q020.mp3' where id = 'q020';
 update public.questions set voice_explanation_url = 'voice/q021.mp3' where id = 'q021';
@@ -53,7 +51,6 @@ update public.questions set voice_explanation_url = 'voice/q044.mp3' where id = 
 update public.questions set voice_explanation_url = 'voice/q045.mp3' where id = 'q045';
 update public.questions set voice_explanation_url = 'voice/q046.mp3' where id = 'q046';
 update public.questions set voice_explanation_url = 'voice/q047.mp3' where id = 'q047';
-update public.questions set voice_explanation_url = 'voice/q048.mp3' where id = 'q048';
 update public.questions set voice_explanation_url = 'voice/q050.mp3' where id = 'q050';
 update public.questions set voice_explanation_url = 'voice/q051.mp3' where id = 'q051';
 update public.questions set voice_explanation_url = 'voice/q052.mp3' where id = 'q052';
