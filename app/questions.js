@@ -1645,7 +1645,8 @@ var QUESTIONS = [
     question: "센터 소속회원 PV 총합이 1,500,000 PV일 때 교육수당은 얼마인가? (숫자만 입력)",
     answer: "90000",
     unit: "원",
-    explanation: "1,500,000 PV × 6% = 90,000원"
+    explanation: "1,500,000 PV × 6% = 90,000원",
+    voiceExplanationUrl: "voice/q144.mp3"
   },
   {
     id: "q145",
@@ -1656,7 +1657,8 @@ var QUESTIONS = [
     question: "센터 소속회원 PV 총합이 3,000,000 PV일 때 교육수당은 얼마인가? (숫자만 입력)",
     answer: "180000",
     unit: "원",
-    explanation: "3,000,000 PV × 6% = 180,000원"
+    explanation: "3,000,000 PV × 6% = 180,000원",
+    voiceExplanationUrl: "voice/q145.mp3"
   },
   {
     id: "q146",
@@ -1667,7 +1669,8 @@ var QUESTIONS = [
     question: "후원수당 정산 종료일부터 지급일까지는 며칠이 걸리는가? (숫자만 입력)",
     answer: "7",
     unit: "일",
-    explanation: "정산 종료 후 7일 뒤(차주 화요일)에 지급된다."
+    explanation: "정산 종료 후 7일 뒤(차주 화요일)에 지급된다.",
+    voiceExplanationUrl: "voice/q146.mp3"
   },
   {
     id: "q147",
@@ -1678,7 +1681,8 @@ var QUESTIONS = [
     question: "본인 등급이 '회원'인 사람이 소실적 30만 PV 달성으로 5점을 두 차례 취득했다. 합산 점수 기준, N가를 3,502원이라고 가정할 때 후원수당 금액은 얼마인가? (숫자만 입력)",
     answer: "35020",
     unit: "원",
-    explanation: "5점 + 5점 = 10점, 10점 × 3,502원 = 35,020원"
+    explanation: "5점 + 5점 = 10점, 10점 × 3,502원 = 35,020원",
+    voiceExplanationUrl: "voice/q147.mp3"
   },
   {
     id: "q148",
@@ -1689,7 +1693,8 @@ var QUESTIONS = [
     question: "센터 소속회원 PV 총합이 800,000 PV일 때 교육수당은 얼마인가? (숫자만 입력)",
     answer: "48000",
     unit: "원",
-    explanation: "800,000 PV × 6% = 48,000원"
+    explanation: "800,000 PV × 6% = 48,000원",
+    voiceExplanationUrl: "voice/q148.mp3"
   },
 
   /* ===================== 2단계 추가: 매칭 문제 (q149-q156) ===================== */
@@ -1730,7 +1735,8 @@ var QUESTIONS = [
         right: "0.3%"
       }
     ],
-    explanation: "직급수당 배분율: 세일즈 10%, 다이아몬드 5%, 샤론로즈 2%, 스타 1.2%, 로열 1%, 크라운 0.5%, 임페리얼 0.3%."
+    explanation: "직급수당 배분율: 세일즈 10%, 다이아몬드 5%, 샤론로즈 2%, 스타 1.2%, 로열 1%, 크라운 0.5%, 임페리얼 0.3%.",
+    voiceExplanationUrl: "voice/q149.mp3"
   },
   {
     id: "q150",
@@ -1769,7 +1775,8 @@ var QUESTIONS = [
         right: "10억원"
       }
     ],
-    explanation: "승급 프로모션은 세일즈 50만원부터 임페리얼 10억원까지 직급별로 차등 지급된다."
+    explanation: "승급 프로모션은 세일즈 50만원부터 임페리얼 10억원까지 직급별로 차등 지급된다.",
+    voiceExplanationUrl: "voice/q150.mp3"
   },
   {
     id: "q151",
@@ -1800,7 +1807,8 @@ var QUESTIONS = [
         right: "누적 240만 PV 이상"
       }
     ],
-    explanation: "등급별 누적 PV 조건: 회원(1만~30만 미만), 에이전트(30만 이상), 특약점(70만 이상), 대리점(150만 이상), 총판(240만 이상)."
+    explanation: "등급별 누적 PV 조건: 회원(1만~30만 미만), 에이전트(30만 이상), 특약점(70만 이상), 대리점(150만 이상), 총판(240만 이상).",
+    voiceExplanationUrl: "voice/q151.mp3"
   },
   {
     id: "q152",
@@ -1843,7 +1851,8 @@ var QUESTIONS = [
         right: "300점"
       }
     ],
-    explanation: "급수별 취득 점수: 8급 5점, 7급 15점, 6급 30점, 5급 60점, 4급 90점, 3급 150점, 2급 250점, 1급 300점."
+    explanation: "급수별 취득 점수: 8급 5점, 7급 15점, 6급 30점, 5급 60점, 4급 90점, 3급 150점, 2급 250점, 1급 300점.",
+    voiceExplanationUrl: "voice/q152.mp3"
   },
   {
     id: "q153",
@@ -1870,7 +1879,8 @@ var QUESTIONS = [
         right: "크라운 3회 이상 달성"
       }
     ],
-    explanation: "스타는 샤론로즈 3회, 로열은 스타 3회, 크라운은 로열 3회, 임페리얼은 크라운 3회 달성 시 승급한다."
+    explanation: "스타는 샤론로즈 3회, 로열은 스타 3회, 크라운은 로열 3회, 임페리얼은 크라운 3회 달성 시 승급한다.",
+    voiceExplanationUrl: "voice/q153.mp3"
   },
   {
     id: "q154",
@@ -1893,7 +1903,8 @@ var QUESTIONS = [
         right: "800만원"
       }
     ],
-    explanation: "유지 프로모션은 로열 150만원, 크라운 250만원, 임페리얼 800만원이다."
+    explanation: "유지 프로모션은 로열 150만원, 크라운 250만원, 임페리얼 800만원이다.",
+    voiceExplanationUrl: "voice/q154.mp3"
   },
   {
     id: "q155",
@@ -1920,7 +1931,8 @@ var QUESTIONS = [
         right: "직급 승급·유지 시 별도 지급"
       }
     ],
-    explanation: "4대 수당은 각각 서로 다른 산정 방식을 갖는다."
+    explanation: "4대 수당은 각각 서로 다른 산정 방식을 갖는다.",
+    voiceExplanationUrl: "voice/q155.mp3"
   },
   {
     id: "q156",
@@ -1947,7 +1959,8 @@ var QUESTIONS = [
         right: "각 라인 샤론로즈 2명 이상"
       }
     ],
-    explanation: "직급별 달성 조건은 세일즈(소실적 250만 PV), 다이아몬드(각 라인 세일즈 2명), 샤론로즈(각 라인 다이아몬드 2명), 스타(각 라인 샤론로즈 2명)이다."
+    explanation: "직급별 달성 조건은 세일즈(소실적 250만 PV), 다이아몬드(각 라인 세일즈 2명), 샤론로즈(각 라인 다이아몬드 2명), 스타(각 라인 샤론로즈 2명)이다.",
+    voiceExplanationUrl: "voice/q156.mp3"
   },
 
   /* ===================== 3단계 추가: 수당의 종류와 법적 한도 (q157-q164) ===================== */
@@ -1960,7 +1973,8 @@ var QUESTIONS = [
     question: "다음 중 '좌/우 라인 소실적'을 기반으로 하는 수당은?",
     choices: ["후원수당", "직급수당", "교육수당", "승급/유지 프로모션"],
     answerIndex: 0,
-    explanation: "후원수당은 좌/우 라인 소실적을 기반으로 매일 정산되는 점수제 수당이다."
+    explanation: "후원수당은 좌/우 라인 소실적을 기반으로 매일 정산되는 점수제 수당이다.",
+    voiceExplanationUrl: "voice/q157.mp3"
   },
   {
     id: "q158",
@@ -1971,7 +1985,8 @@ var QUESTIONS = [
     question: "다음 중 '별도 지급'된다는 표현이 사용되는 수당은?",
     choices: ["교육수당", "후원수당", "승급/유지 프로모션", "직급수당"],
     answerIndex: 2,
-    explanation: "승급/유지 프로모션은 직급 승급 또는 유지 시 별도로 지급된다."
+    explanation: "승급/유지 프로모션은 직급 승급 또는 유지 시 별도로 지급된다.",
+    voiceExplanationUrl: "voice/q158.mp3"
   },
   {
     id: "q159",
@@ -1982,7 +1997,8 @@ var QUESTIONS = [
     question: "애터미의 수당 지급 한도 35%는 어떤 법률에 근거하는가?",
     choices: ["한국 다단계판매법", "전자상거래법", "공정거래법", "방문판매법"],
     answerIndex: 3,
-    explanation: "방문판매 등에 관한 법률(약칭 방문판매법)상 총 매출액의 35%까지 수당 지급이 가능하다."
+    explanation: "방문판매 등에 관한 법률(약칭 방문판매법)상 총 매출액의 35%까지 수당 지급이 가능하다.",
+    voiceExplanationUrl: "voice/q159.mp3"
   },
   {
     id: "q161",
@@ -1992,7 +2008,8 @@ var QUESTIONS = [
     tags: ["4대수당"],
     question: "후원수당은 좌/우 라인 소실적을 기반으로 한다.",
     answer: true,
-    explanation: "후원수당은 좌/우 라인 소실적 기반으로 매일 정산되는 점수제 수당이다."
+    explanation: "후원수당은 좌/우 라인 소실적 기반으로 매일 정산되는 점수제 수당이다.",
+    voiceExplanationUrl: "voice/q161.mp3"
   },
   {
     id: "q162",
@@ -2002,7 +2019,8 @@ var QUESTIONS = [
     tags: ["법적한도"],
     question: "애터미의 법적 지급 한도는 총 매출액의 38%이다.",
     answer: false,
-    explanation: "법적 지급 한도는 총 매출액의 35%이다."
+    explanation: "법적 지급 한도는 총 매출액의 35%이다.",
+    voiceExplanationUrl: "voice/q162.mp3"
   },
   {
     id: "q163",
@@ -2013,7 +2031,8 @@ var QUESTIONS = [
     question: "애터미의 4대 수당은 후원수당, 직급수당, 승급/유지 프로모션, ( )이다.",
     answer: "교육수당",
     acceptableAnswers: [],
-    explanation: "애터미의 4대 수당은 후원수당, 직급수당, 승급/유지 프로모션, 교육수당이다."
+    explanation: "애터미의 4대 수당은 후원수당, 직급수당, 승급/유지 프로모션, 교육수당이다.",
+    voiceExplanationUrl: "voice/q163.mp3"
   },
 
   /* ===================== 3단계 추가: 후원수당-정산원리 (q165-q167) ===================== */
@@ -2025,7 +2044,8 @@ var QUESTIONS = [
     tags: ["정산원리"],
     question: "본인 PV가 소실적에 합산되려면 좌/우 라인 중 하나만 존재해도 된다.",
     answer: false,
-    explanation: "좌/우 라인이 모두 존재해야 본인 발생 PV가 소실적에 합산된다."
+    explanation: "좌/우 라인이 모두 존재해야 본인 발생 PV가 소실적에 합산된다.",
+    voiceExplanationUrl: "voice/q165.mp3"
   },
   {
     id: "q166",
@@ -2036,7 +2056,8 @@ var QUESTIONS = [
     question: "후원수당 점수는 판매( )자 기준으로 매일 정산된다.",
     answer: "일",
     acceptableAnswers: ["일자"],
-    explanation: "후원수당은 판매일자 기준으로 매일 정산된다."
+    explanation: "후원수당은 판매일자 기준으로 매일 정산된다.",
+    voiceExplanationUrl: "voice/q166.mp3"
   },
   {
     id: "q167",
@@ -2047,7 +2068,8 @@ var QUESTIONS = [
     question: "후원수당 정산 시, ( )은 판매일자로 설정할 수 없다.",
     answer: "일요일",
     acceptableAnswers: [],
-    explanation: "일요일은 판매일자로 설정할 수 없으며 수당도 발생하지 않는다."
+    explanation: "일요일은 판매일자로 설정할 수 없으며 수당도 발생하지 않는다.",
+    voiceExplanationUrl: "voice/q167.mp3"
   },
 
   /* ===================== 3단계 추가: 후원수당-본인등급과 점수표 (q168-q182) ===================== */
@@ -2060,7 +2082,8 @@ var QUESTIONS = [
     question: "'특약점' 등급을 전월 하위그룹 소실적 기준으로 취득하려면 어떤 조건이 필요한가?",
     choices: ["에이전트로서 소실적 140만 PV 이상", "회원으로서 소실적 60만 PV 이상", "대리점으로서 소실적 300만 PV 이상", "총판으로서 소실적 480만 PV 이상"],
     answerIndex: 0,
-    explanation: "특약점은 누적 70만 PV 이상이거나, 에이전트로서 전월 하위그룹 소실적 140만 PV 이상일 때 취득한다."
+    explanation: "특약점은 누적 70만 PV 이상이거나, 에이전트로서 전월 하위그룹 소실적 140만 PV 이상일 때 취득한다.",
+    voiceExplanationUrl: "voice/q168.mp3"
   },
   {
     id: "q169",
@@ -2071,7 +2094,8 @@ var QUESTIONS = [
     question: "'대리점' 등급을 전월 하위그룹 소실적 기준으로 취득하는 조건은?",
     choices: ["특약점으로서 소실적 300만 PV 이상", "에이전트로서 소실적 140만 PV 이상", "대리점으로서 소실적 480만 PV 이상", "회원으로서 소실적 60만 PV 이상"],
     answerIndex: 0,
-    explanation: "대리점은 누적 150만 PV 이상이거나, 특약점으로서 전월 하위그룹 소실적 300만 PV 이상일 때 취득한다."
+    explanation: "대리점은 누적 150만 PV 이상이거나, 특약점으로서 전월 하위그룹 소실적 300만 PV 이상일 때 취득한다.",
+    voiceExplanationUrl: "voice/q169.mp3"
   },
   {
     id: "q170",
@@ -2082,7 +2106,8 @@ var QUESTIONS = [
     question: "'총판' 등급을 전월 하위그룹 소실적 기준으로 취득하는 조건은?",
     choices: ["대리점으로서 소실적 480만 PV 이상", "특약점으로서 소실적 300만 PV 이상", "에이전트로서 소실적 140만 PV 이상", "회원으로서 소실적 60만 PV 이상"],
     answerIndex: 0,
-    explanation: "총판은 누적 240만 PV 이상이거나, 대리점으로서 전월 하위그룹 소실적 480만 PV 이상일 때 취득한다."
+    explanation: "총판은 누적 240만 PV 이상이거나, 대리점으로서 전월 하위그룹 소실적 480만 PV 이상일 때 취득한다.",
+    voiceExplanationUrl: "voice/q170.mp3"
   },
   {
     id: "q171",
@@ -2093,7 +2118,8 @@ var QUESTIONS = [
     question: "'특약점' 등급은 에이전트로서 전월 하위그룹 소실적 ( )만 PV 이상일 때도 취득할 수 있다.",
     answer: "140",
     acceptableAnswers: [],
-    explanation: "특약점은 에이전트로서 전월 하위그룹 소실적 140만 PV 이상일 때도 취득할 수 있다."
+    explanation: "특약점은 에이전트로서 전월 하위그룹 소실적 140만 PV 이상일 때도 취득할 수 있다.",
+    voiceExplanationUrl: "voice/q171.mp3"
   },
   {
     id: "q172",
@@ -2104,7 +2130,8 @@ var QUESTIONS = [
     question: "'대리점' 등급은 특약점으로서 전월 하위그룹 소실적 ( )만 PV 이상일 때도 취득할 수 있다.",
     answer: "300",
     acceptableAnswers: [],
-    explanation: "대리점은 특약점으로서 전월 하위그룹 소실적 300만 PV 이상일 때도 취득할 수 있다."
+    explanation: "대리점은 특약점으로서 전월 하위그룹 소실적 300만 PV 이상일 때도 취득할 수 있다.",
+    voiceExplanationUrl: "voice/q172.mp3"
   },
   {
     id: "q173",
@@ -2115,7 +2142,8 @@ var QUESTIONS = [
     question: "'총판' 등급은 대리점으로서 전월 하위그룹 소실적 ( )만 PV 이상일 때도 취득할 수 있다.",
     answer: "480",
     acceptableAnswers: [],
-    explanation: "총판은 대리점으로서 전월 하위그룹 소실적 480만 PV 이상일 때도 취득할 수 있다."
+    explanation: "총판은 대리점으로서 전월 하위그룹 소실적 480만 PV 이상일 때도 취득할 수 있다.",
+    voiceExplanationUrl: "voice/q173.mp3"
   },
   {
     id: "q174",
@@ -2125,7 +2153,8 @@ var QUESTIONS = [
     tags: ["등급조건"],
     question: "'에이전트' 등급은 회원으로서 전월 하위그룹 소실적 60만 PV 이상일 때도 취득할 수 있다.",
     answer: true,
-    explanation: "에이전트는 누적 30만 PV 이상이거나 회원으로서 전월 하위그룹 소실적 60만 PV 이상일 때 취득한다."
+    explanation: "에이전트는 누적 30만 PV 이상이거나 회원으로서 전월 하위그룹 소실적 60만 PV 이상일 때 취득한다.",
+    voiceExplanationUrl: "voice/q174.mp3"
   },
   {
     id: "q175",
@@ -2135,7 +2164,8 @@ var QUESTIONS = [
     tags: ["등급조건"],
     question: "회원 등급에도 '전월 하위그룹 소실적' 대체 취득조건이 존재한다.",
     answer: false,
-    explanation: "전월 하위그룹 소실적 대체조건은 에이전트 등급부터 존재하며, 회원 등급은 누적 PV 조건만 있다."
+    explanation: "전월 하위그룹 소실적 대체조건은 에이전트 등급부터 존재하며, 회원 등급은 누적 PV 조건만 있다.",
+    voiceExplanationUrl: "voice/q175.mp3"
   },
   {
     id: "q176",
@@ -2146,7 +2176,8 @@ var QUESTIONS = [
     question: "8급(5점)의 본인 등급 기준은?",
     choices: ["회원", "에이전트", "특약점", "대리점"],
     answerIndex: 0,
-    explanation: "8급/5점의 본인 등급 기준은 회원이다."
+    explanation: "8급/5점의 본인 등급 기준은 회원이다.",
+    voiceExplanationUrl: "voice/q176.mp3"
   },
   {
     id: "q177",
@@ -2157,7 +2188,8 @@ var QUESTIONS = [
     question: "7급(15점)의 본인 등급 기준은?",
     choices: ["에이전트", "회원", "특약점", "대리점"],
     answerIndex: 0,
-    explanation: "7급/15점의 본인 등급 기준은 에이전트이다."
+    explanation: "7급/15점의 본인 등급 기준은 에이전트이다.",
+    voiceExplanationUrl: "voice/q177.mp3"
   },
   {
     id: "q178",
@@ -2172,7 +2204,8 @@ var QUESTIONS = [
       { left: "6급", right: "특약점" },
       { left: "5급", right: "대리점" }
     ],
-    explanation: "8급=회원, 7급=에이전트, 6급=특약점, 5급=대리점이다."
+    explanation: "8급=회원, 7급=에이전트, 6급=특약점, 5급=대리점이다.",
+    voiceExplanationUrl: "voice/q178.mp3"
   },
   {
     id: "q179",
@@ -2187,7 +2220,8 @@ var QUESTIONS = [
       { left: "대리점", right: "300만 PV" },
       { left: "총판", right: "480만 PV" }
     ],
-    explanation: "에이전트 60만, 특약점 140만, 대리점 300만, 총판 480만 PV(전월 하위그룹 소실적 기준)이다."
+    explanation: "에이전트 60만, 특약점 140만, 대리점 300만, 총판 480만 PV(전월 하위그룹 소실적 기준)이다.",
+    voiceExplanationUrl: "voice/q179.mp3"
   },
   {
     id: "q180",
@@ -2197,7 +2231,8 @@ var QUESTIONS = [
     tags: ["등급조건"],
     question: "다음 등급의 전월 하위그룹 소실적 대체 취득조건을 낮은 PV부터 순서대로 배열하시오.",
     items: ["에이전트(60만 PV)", "특약점(140만 PV)", "대리점(300만 PV)", "총판(480만 PV)"],
-    explanation: "60만 → 140만 → 300만 → 480만 PV 순으로 커진다."
+    explanation: "60만 → 140만 → 300만 → 480만 PV 순으로 커진다.",
+    voiceExplanationUrl: "voice/q180.mp3"
   },
   {
     id: "q181",
@@ -2208,7 +2243,8 @@ var QUESTIONS = [
     question: "다음 중 후원수당 점수표상 '총판' 등급에 해당하지 않는 급수는?",
     choices: ["5급", "4급", "3급", "2급"],
     answerIndex: 0,
-    explanation: "5급의 본인 등급 기준은 대리점이다. 4급부터 1급까지가 총판 기준이다."
+    explanation: "5급의 본인 등급 기준은 대리점이다. 4급부터 1급까지가 총판 기준이다.",
+    voiceExplanationUrl: "voice/q181.mp3"
   },
   {
     id: "q182",
@@ -2219,7 +2255,8 @@ var QUESTIONS = [
     question: "후원수당 점수표에서 총판 등급에 해당하는 급수는 4급부터 ( )급까지이다.",
     answer: "1",
     acceptableAnswers: [],
-    explanation: "4급, 3급, 2급, 1급이 모두 총판 등급 기준이다."
+    explanation: "4급, 3급, 2급, 1급이 모두 총판 등급 기준이다.",
+    voiceExplanationUrl: "voice/q182.mp3"
   },
 
   /* ===================== 3단계 추가: 후원수당-점수와 N가 (q183-q199) ===================== */
@@ -2232,7 +2269,8 @@ var QUESTIONS = [
     question: "7급(15점)을 취득했다. N가를 3,502원이라고 가정할 때 후원수당 금액은 얼마인가? (숫자만 입력)",
     answer: "52530",
     unit: "원",
-    explanation: "15점 × 3,502원 = 52,530원"
+    explanation: "15점 × 3,502원 = 52,530원",
+    voiceExplanationUrl: "voice/q183.mp3"
   },
   {
     id: "q184",
@@ -2243,7 +2281,8 @@ var QUESTIONS = [
     question: "6급(30점)을 취득했다. N가를 3,502원이라고 가정할 때 후원수당 금액은 얼마인가? (숫자만 입력)",
     answer: "105060",
     unit: "원",
-    explanation: "30점 × 3,502원 = 105,060원"
+    explanation: "30점 × 3,502원 = 105,060원",
+    voiceExplanationUrl: "voice/q184.mp3"
   },
   {
     id: "q185",
@@ -2254,7 +2293,8 @@ var QUESTIONS = [
     question: "6급(30점)과 7급(15점)을 함께 취득했다. N가를 3,502원이라고 가정할 때, 합산 점수 기준 후원수당 금액은 얼마인가? (숫자만 입력)",
     answer: "157590",
     unit: "원",
-    explanation: "30점 + 15점 = 45점, 45점 × 3,502원 = 157,590원"
+    explanation: "30점 + 15점 = 45점, 45점 × 3,502원 = 157,590원",
+    voiceExplanationUrl: "voice/q185.mp3"
   },
   {
     id: "q186",
@@ -2265,7 +2305,8 @@ var QUESTIONS = [
     question: "4급(90점)을 두 차례 취득했다. N가를 3,502원이라고 가정할 때, 합산 점수 기준 후원수당 금액은 얼마인가? (숫자만 입력)",
     answer: "630360",
     unit: "원",
-    explanation: "90점 + 90점 = 180점, 180점 × 3,502원 = 630,360원"
+    explanation: "90점 + 90점 = 180점, 180점 × 3,502원 = 630,360원",
+    voiceExplanationUrl: "voice/q186.mp3"
   },
   {
     id: "q187",
@@ -2276,7 +2317,8 @@ var QUESTIONS = [
     question: "5급(60점)과 4급(90점)을 함께 취득했다. N가를 3,502원이라고 가정할 때, 합산 점수 기준 후원수당 금액은 얼마인가? (숫자만 입력)",
     answer: "525300",
     unit: "원",
-    explanation: "60점 + 90점 = 150점, 150점 × 3,502원 = 525,300원"
+    explanation: "60점 + 90점 = 150점, 150점 × 3,502원 = 525,300원",
+    voiceExplanationUrl: "voice/q187.mp3"
   },
   {
     id: "q188",
@@ -2287,7 +2329,8 @@ var QUESTIONS = [
     question: "3급(150점)에 해당하는 실적과 2급(250점)에 해당하는 실적을 함께 취득했다. N가를 3,502원이라고 가정할 때, 합산 점수 기준 후원수당 금액은 얼마인가? (숫자만 입력)",
     answer: "1400800",
     unit: "원",
-    explanation: "150점 + 250점 = 400점, 400점 × 3,502원 = 1,400,800원"
+    explanation: "150점 + 250점 = 400점, 400점 × 3,502원 = 1,400,800원",
+    voiceExplanationUrl: "voice/q188.mp3"
   },
   {
     id: "q189",
