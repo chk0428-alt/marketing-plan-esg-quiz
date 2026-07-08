@@ -2886,7 +2886,8 @@ var QUESTIONS = [
     question: "스타마스터 승급 프로모션 금액은 ( )만원이다.",
     answer: "1000",
     acceptableAnswers: [],
-    explanation: "스타마스터 승급 프로모션은 1,000만원이다."
+    explanation: "스타마스터 승급 프로모션은 1,000만원이다.",
+    voiceExplanationUrl: "voice/q238.mp3"
   },
   {
     id: "q239",
@@ -2897,7 +2898,8 @@ var QUESTIONS = [
     question: "크라운마스터 유지 프로모션 금액은 ( )만원이다.",
     answer: "250",
     acceptableAnswers: [],
-    explanation: "크라운마스터 유지 프로모션은 250만원이다."
+    explanation: "크라운마스터 유지 프로모션은 250만원이다.",
+    voiceExplanationUrl: "voice/q239.mp3"
   },
   {
     id: "q240",
@@ -2908,7 +2910,8 @@ var QUESTIONS = [
     question: "임페리얼마스터 유지 프로모션 금액은 ( )만원이다.",
     answer: "800",
     acceptableAnswers: [],
-    explanation: "임페리얼마스터 유지 프로모션은 800만원이다."
+    explanation: "임페리얼마스터 유지 프로모션은 800만원이다.",
+    voiceExplanationUrl: "voice/q240.mp3"
   },
   {
     id: "q241",
@@ -2918,7 +2921,8 @@ var QUESTIONS = [
     tags: ["프로모션"],
     question: "다이아몬드마스터는 유지 프로모션이 존재하지 않는다.",
     answer: true,
-    explanation: "유지 프로모션은 로열마스터부터 존재하며, 다이아몬드마스터는 승급 프로모션만 있다."
+    explanation: "유지 프로모션은 로열마스터부터 존재하며, 다이아몬드마스터는 승급 프로모션만 있다.",
+    voiceExplanationUrl: "voice/q241.mp3"
   },
   {
     id: "q242",
@@ -2928,7 +2932,8 @@ var QUESTIONS = [
     tags: ["프로모션"],
     question: "샤론로즈마스터는 승급 프로모션만 있고 유지 프로모션은 없다.",
     answer: true,
-    explanation: "샤론로즈마스터는 승급 프로모션(200만원)만 있으며 유지 프로모션은 없다."
+    explanation: "샤론로즈마스터는 승급 프로모션(200만원)만 있으며 유지 프로모션은 없다.",
+    voiceExplanationUrl: "voice/q242.mp3"
   },
   {
     id: "q243",
@@ -2939,7 +2944,8 @@ var QUESTIONS = [
     question: "임페리얼마스터가 유지 프로모션을 2회 연속으로 받는다면 합산 금액은 얼마인가? (단위: 만원, 숫자만 입력)",
     answer: "1600",
     unit: "만원",
-    explanation: "800만원 × 2회 = 1,600만원"
+    explanation: "800만원 × 2회 = 1,600만원",
+    voiceExplanationUrl: "voice/q243.mp3"
   },
   {
     id: "q244",
@@ -2950,7 +2956,8 @@ var QUESTIONS = [
     question: "로열마스터 승급 프로모션(5,000만원)과 크라운마스터 승급 프로모션(3억원)의 금액 차이는 얼마인가? (단위: 만원, 숫자만 입력)",
     answer: "25000",
     unit: "만원",
-    explanation: "3억원(30,000만원) - 5,000만원 = 25,000만원"
+    explanation: "3억원(30,000만원) - 5,000만원 = 25,000만원",
+    voiceExplanationUrl: "voice/q244.mp3"
   },
   {
     id: "q245",
@@ -2961,7 +2968,8 @@ var QUESTIONS = [
     question: "다음 중 승급 프로모션 금액이 가장 큰 직급은?",
     choices: ["임페리얼마스터", "크라운마스터", "로열마스터", "스타마스터"],
     answerIndex: 0,
-    explanation: "임페리얼마스터의 승급 프로모션이 10억원으로 가장 크다."
+    explanation: "임페리얼마스터의 승급 프로모션이 10억원으로 가장 크다.",
+    voiceExplanationUrl: "voice/q245.mp3"
   },
   {
     id: "q246",
@@ -2972,7 +2980,8 @@ var QUESTIONS = [
     question: "다음 중 유지 프로모션 금액이 가장 큰 직급은?",
     choices: ["임페리얼마스터", "크라운마스터", "로열마스터", "스타마스터"],
     answerIndex: 0,
-    explanation: "임페리얼마스터의 유지 프로모션이 800만원으로 가장 크다."
+    explanation: "임페리얼마스터의 유지 프로모션이 800만원으로 가장 크다.",
+    voiceExplanationUrl: "voice/q246.mp3"
   },
 
   /* ===================== 3단계 추가: 교육수당 (q247-q256) ===================== */
@@ -2985,7 +2994,8 @@ var QUESTIONS = [
     question: "센터 소속회원 PV 총합이 200,000 PV일 때 교육수당은 얼마인가? (숫자만 입력)",
     answer: "12000",
     unit: "원",
-    explanation: "200,000 × 6% = 12,000원"
+    explanation: "200,000 × 6% = 12,000원",
+    voiceExplanationUrl: "voice/q247.mp3"
   },
   {
     id: "q248",
@@ -2996,7 +3006,8 @@ var QUESTIONS = [
     question: "센터 소속회원 PV 총합이 2,500,000 PV일 때 교육수당은 얼마인가? (숫자만 입력)",
     answer: "150000",
     unit: "원",
-    explanation: "2,500,000 × 6% = 150,000원"
+    explanation: "2,500,000 × 6% = 150,000원",
+    voiceExplanationUrl: "voice/q248.mp3"
   },
   {
     id: "q249",
@@ -3007,7 +3018,8 @@ var QUESTIONS = [
     question: "센터 소속회원 PV 총합이 4,000,000 PV일 때 교육수당은 얼마인가? (숫자만 입력)",
     answer: "240000",
     unit: "원",
-    explanation: "4,000,000 × 6% = 240,000원"
+    explanation: "4,000,000 × 6% = 240,000원",
+    voiceExplanationUrl: "voice/q249.mp3"
   },
   {
     id: "q250",
@@ -3018,7 +3030,8 @@ var QUESTIONS = [
     question: "교육수당이 240,000원 지급되었다면, 해당 기간 센터 소속회원 PV 총합은 얼마였는가? (숫자만 입력)",
     answer: "4000000",
     unit: "PV",
-    explanation: "240,000원 ÷ 6% = 4,000,000 PV"
+    explanation: "240,000원 ÷ 6% = 4,000,000 PV",
+    voiceExplanationUrl: "voice/q250.mp3"
   },
   {
     id: "q251",
@@ -3029,7 +3042,8 @@ var QUESTIONS = [
     question: "AX센터의 6/1~15일 합산 PV가 2,000,000 PV라면 교육수당은 얼마인가?",
     choices: ["120,000원", "100,000원", "150,000원", "200,000원"],
     answerIndex: 0,
-    explanation: "2,000,000 × 6% = 120,000원"
+    explanation: "2,000,000 × 6% = 120,000원",
+    voiceExplanationUrl: "voice/q251.mp3"
   },
   {
     id: "q252",
@@ -3040,7 +3054,8 @@ var QUESTIONS = [
     question: "교육수당과 직급수당의 공통점으로 옳은 것은?",
     choices: ["둘 다 7일, 22일에 지급된다", "둘 다 회사 총매출 PV의 20%가 재원이다", "둘 다 본인 PV만 반영한다", "둘 다 매일 정산된다"],
     answerIndex: 0,
-    explanation: "교육수당과 직급수당은 모두 산정 후 7일, 22일에 지급된다는 공통점이 있다."
+    explanation: "교육수당과 직급수당은 모두 산정 후 7일, 22일에 지급된다는 공통점이 있다.",
+    voiceExplanationUrl: "voice/q252.mp3"
   },
   {
     id: "q253",
@@ -3051,7 +3066,8 @@ var QUESTIONS = [
     question: "교육수당 계산 예시에서 AX센터의 6/1~15일 합산 PV 1,000,000 PV에 대한 교육수당은 ( )원이다.",
     answer: "60000",
     acceptableAnswers: [],
-    explanation: "1,000,000 × 6% = 60,000원"
+    explanation: "1,000,000 × 6% = 60,000원",
+    voiceExplanationUrl: "voice/q253.mp3"
   },
   {
     id: "q254",
@@ -3061,7 +3077,8 @@ var QUESTIONS = [
     tags: ["교육수당"],
     question: "교육수당은 본인 PV가 아닌 센터 소속회원 전체의 PV 총합을 기준으로 산정한다.",
     answer: true,
-    explanation: "교육수당은 센터 소속회원이 일으킨 PV 총합의 6%로 산정한다."
+    explanation: "교육수당은 센터 소속회원이 일으킨 PV 총합의 6%로 산정한다.",
+    voiceExplanationUrl: "voice/q254.mp3"
   },
   {
     id: "q255",
@@ -3071,7 +3088,8 @@ var QUESTIONS = [
     tags: ["교육수당"],
     question: "교육수당의 산정 기준일은 매월 10일과 25일이다.",
     answer: false,
-    explanation: "교육수당의 산정 기준일은 매월 15일과 말일이다."
+    explanation: "교육수당의 산정 기준일은 매월 15일과 말일이다.",
+    voiceExplanationUrl: "voice/q255.mp3"
   },
   {
     id: "q256",
@@ -3082,7 +3100,8 @@ var QUESTIONS = [
     question: "센터 소속회원 PV 총합이 5,500,000 PV일 때 교육수당은 얼마인가?",
     choices: ["330,000원", "300,000원", "350,000원", "280,000원"],
     answerIndex: 0,
-    explanation: "5,500,000 × 6% = 330,000원"
+    explanation: "5,500,000 × 6% = 330,000원",
+    voiceExplanationUrl: "voice/q256.mp3"
   }
 ];
 
@@ -3124,7 +3143,8 @@ var ESG_QUESTIONS = [
     question: "2025년 12월 기준 애터미 ESG 보고서에 실린 창업자 메시지의 주인공, 즉 애터미 회장은 누구인가?",
     choices: ["박한길", "이재훈", "박성철", "김대식"],
     answerIndex: 0,
-    explanation: "창업자 메시지는 '애터미 회장 박한길'이 작성했다고 명시되어 있다."
+    explanation: "창업자 메시지는 '애터미 회장 박한길'이 작성했다고 명시되어 있다.",
+    voiceExplanationUrl: "voice/e001.mp3"
   },
   {
     id: "e002",
@@ -3138,7 +3158,8 @@ var ESG_QUESTIONS = [
     question: "애터미 주식회사의 설립일은 언제인가?",
     choices: ["2009년 6월 1일", "2010년 5월 1일", "2008년 3월 1일", "2009년 12월 1일"],
     answerIndex: 0,
-    explanation: "CORPORATE IDENTIFY 항목에 설립일이 '2009년 6월 1일'로 명시되어 있다."
+    explanation: "CORPORATE IDENTIFY 항목에 설립일이 '2009년 6월 1일'로 명시되어 있다.",
+    voiceExplanationUrl: "voice/e002.mp3"
   },
   {
     id: "e003",
@@ -3152,7 +3173,8 @@ var ESG_QUESTIONS = [
     question: "애터미 주식회사의 본사가 위치한 지역은 어디인가?",
     choices: ["대한민국 충청남도 공주시", "대한민국 서울특별시", "대한민국 경기도 성남시", "대한민국 대전광역시"],
     answerIndex: 0,
-    explanation: "본사 주소는 '대한민국 충청남도 공주시 백제문화로 2148-21'로 명시되어 있다."
+    explanation: "본사 주소는 '대한민국 충청남도 공주시 백제문화로 2148-21'로 명시되어 있다.",
+    voiceExplanationUrl: "voice/e003.mp3"
   },
   {
     id: "e004",
@@ -3166,7 +3188,8 @@ var ESG_QUESTIONS = [
     question: "2025년 기준 애터미가 한국을 포함하여 영업하고 있는 지역은 총 몇 개인가?",
     choices: ["27개 지역", "21개 지역", "32개 지역", "19개 지역"],
     answerIndex: 0,
-    explanation: "창업자 메시지에 '2025년 기준 애터미는 한국을 포함 전 세계 27개 지역에서 영업하고 있습니다'라고 명시되어 있다."
+    explanation: "창업자 메시지에 '2025년 기준 애터미는 한국을 포함 전 세계 27개 지역에서 영업하고 있습니다'라고 명시되어 있다.",
+    voiceExplanationUrl: "voice/e004.mp3"
   },
   {
     id: "e005",
@@ -3179,7 +3202,8 @@ var ESG_QUESTIONS = [
     tags: ["글로벌", "진출대륙"],
     question: "애터미는 2025년 기준 아프리카를 포함한 전 대륙에 진출한 무점포 직접판매 유통기업이다.",
     answer: false,
-    explanation: "'글로벌 애터미' 항목에 애터미는 '전 대륙(아프리카 제외)에 진출한 국내 유일의 무점포 직접판매 유통기업'이라고 명시되어 있어, 아프리카는 진출 대상에서 제외된다."
+    explanation: "'글로벌 애터미' 항목에 애터미는 '전 대륙(아프리카 제외)에 진출한 국내 유일의 무점포 직접판매 유통기업'이라고 명시되어 있어, 아프리카는 진출 대상에서 제외된다.",
+    voiceExplanationUrl: "voice/e005.mp3"
   },
   {
     id: "e006",
@@ -3193,7 +3217,8 @@ var ESG_QUESTIONS = [
     question: "애터미의 대표적인 소비자 중심 경영 철학은 '절대품질 ( )'이다. 빈칸에 들어갈 말은?",
     answer: "절대가격",
     acceptableAnswers: [],
-    explanation: "창업자 메시지에 '그 대표적인 것이 절대품질 절대가격입니다'라고 명시되어 있다."
+    explanation: "창업자 메시지에 '그 대표적인 것이 절대품질 절대가격입니다'라고 명시되어 있다.",
+    voiceExplanationUrl: "voice/e006.mp3"
   },
   {
     id: "e007",
@@ -3207,7 +3232,8 @@ var ESG_QUESTIONS = [
     question: "애터미가 비전 실현을 위해 내세우는 '3대문화'에 해당하지 않는 것은?",
     choices: ["품질제일의 문화", "원칙중심의 문화", "동반성장의 문화", "나눔의 문화"],
     answerIndex: 0,
-    explanation: "애터미 개요에 제시된 3대문화는 '원칙중심의 문화', '동반성장의 문화', '나눔의 문화'이며, '품질제일의 문화'는 언급되지 않는다."
+    explanation: "애터미 개요에 제시된 3대문화는 '원칙중심의 문화', '동반성장의 문화', '나눔의 문화'이며, '품질제일의 문화'는 언급되지 않는다.",
+    voiceExplanationUrl: "voice/e007.mp3"
   },
   {
     id: "e008",
@@ -3220,7 +3246,8 @@ var ESG_QUESTIONS = [
     tags: ["창업이념"],
     question: "다음 애터미의 창업이념 3요소를 보고서에 제시된 순서대로 배열하시오.",
     items: ["생존", "속도", "균형"],
-    explanation: "애터미 개요의 창업이념 항목은 '생존 속도 균형' 순서로 제시되어 있다."
+    explanation: "애터미 개요의 창업이념 항목은 '생존 속도 균형' 순서로 제시되어 있다.",
+    voiceExplanationUrl: "voice/e008.mp3"
   },
   {
     id: "e009",
@@ -3234,7 +3261,8 @@ var ESG_QUESTIONS = [
     question: "애터미가 창립 이듬해에 첫 해외 법인을 설립한 도시는 어디인가?",
     choices: ["미국 시애틀", "미국 로스앤젤레스", "캐나다 밴쿠버", "일본 도쿄"],
     answerIndex: 0,
-    explanation: "'글로벌 애터미' 항목에 '창립 이듬해인 5월 미국 시애틀에 첫 해외 법인을 설립했습니다'라고 명시되어 있다."
+    explanation: "'글로벌 애터미' 항목에 '창립 이듬해인 5월 미국 시애틀에 첫 해외 법인을 설립했습니다'라고 명시되어 있다.",
+    voiceExplanationUrl: "voice/e009.mp3"
   },
   {
     id: "e010",
@@ -3248,7 +3276,8 @@ var ESG_QUESTIONS = [
     question: "2013년 12월, 애터미의 글로벌 통합 회원 수는 ( )만 명을 돌파했다. 빈칸에 들어갈 숫자는?",
     answer: "145",
     acceptableAnswers: [],
-    explanation: "GLOBAL HISTORY에 '2013년 12월 글로벌 통합 회원 145만 명 돌파(한국법인 동종업계 1위)'라고 기록되어 있다."
+    explanation: "GLOBAL HISTORY에 '2013년 12월 글로벌 통합 회원 145만 명 돌파(한국법인 동종업계 1위)'라고 기록되어 있다.",
+    voiceExplanationUrl: "voice/e010.mp3"
   },
   {
     id: "e011",
@@ -3262,7 +3291,8 @@ var ESG_QUESTIONS = [
     question: "애터미 헤모힘이 한국원자력연구원의 국책 프로젝트로 개발된 연도는?",
     choices: ["1997년", "2006년", "2001년", "1999년"],
     answerIndex: 0,
-    explanation: "'애터미 헤모힘' 항목에 '1997년 한국원자력연구원의 국책 프로젝트로 개발된 헤모힘'이라고 명시되어 있다."
+    explanation: "'애터미 헤모힘' 항목에 '1997년 한국원자력연구원의 국책 프로젝트로 개발된 헤모힘'이라고 명시되어 있다.",
+    voiceExplanationUrl: "voice/e011.mp3"
   },
   {
     id: "e012",
@@ -3276,7 +3306,8 @@ var ESG_QUESTIONS = [
     question: "애터미 헤모힘의 주원료로 언급되지 않은 것은?",
     choices: ["홍삼", "당귀", "천궁", "백작약"],
     answerIndex: 0,
-    explanation: "헤모힘은 '국내산 당귀, 천궁, 백작약을 주원료로 만들어졌다'고 명시되어 있으며, 홍삼은 언급되지 않는다."
+    explanation: "헤모힘은 '국내산 당귀, 천궁, 백작약을 주원료로 만들어졌다'고 명시되어 있으며, 홍삼은 언급되지 않는다.",
+    voiceExplanationUrl: "voice/e012.mp3"
   },
   {
     id: "e013",
@@ -3289,7 +3320,8 @@ var ESG_QUESTIONS = [
     tags: ["헤모힘", "인증"],
     question: "헤모힘은 개별인정형 건강기능식품 원료 1호로 등록되었다.",
     answer: true,
-    explanation: "헤모힘은 '2006년 식품의약품안전처의 기능성과 안전성 평가를 통과해... 개별인정형 건강기능식품 원료 1호로 등록되었다'고 명시되어 있다."
+    explanation: "헤모힘은 '2006년 식품의약품안전처의 기능성과 안전성 평가를 통과해... 개별인정형 건강기능식품 원료 1호로 등록되었다'고 명시되어 있다.",
+    voiceExplanationUrl: "voice/e013.mp3"
   },
   {
     id: "e014",
@@ -3303,7 +3335,8 @@ var ESG_QUESTIONS = [
     question: "2025년 기준 애터미 헤모힘의 누적 글로벌 매출 규모는?",
     choices: ["3조 원 돌파", "1조 원 돌파", "2조 원 돌파", "5조 원 돌파"],
     answerIndex: 0,
-    explanation: "'헤모힘은... 2025년 기준 누적 글로벌 매출 3조 원을 돌파했습니다'라고 명시되어 있다."
+    explanation: "'헤모힘은... 2025년 기준 누적 글로벌 매출 3조 원을 돌파했습니다'라고 명시되어 있다.",
+    voiceExplanationUrl: "voice/e014.mp3"
   },
   {
     id: "e015",
@@ -3317,7 +3350,8 @@ var ESG_QUESTIONS = [
     question: "'헤모힘 샷'은 2025년 ( )월에 출시되어 한 달 만에 누적 판매 100만 병을 돌파했다. 빈칸에 들어갈 숫자는?",
     answer: "8",
     acceptableAnswers: ["08"],
-    explanation: "'2025년 8월 출시된 헤모힘 샷은... 출시 한 달 만에 누적 판매 100만 병을 돌파했습니다'라고 명시되어 있다."
+    explanation: "'2025년 8월 출시된 헤모힘 샷은... 출시 한 달 만에 누적 판매 100만 병을 돌파했습니다'라고 명시되어 있다.",
+    voiceExplanationUrl: "voice/e015.mp3"
   },
   {
     id: "e016",
@@ -3331,7 +3365,8 @@ var ESG_QUESTIONS = [
     question: "애터미 앱솔루트 셀렉티브 스킨케어가 받은 상 중, 화장품 최초로 대한민국 특허청이 수여했으며 특허기술상 중 가장 높은 등급으로 소개된 상은?",
     choices: ["세종대왕상", "IR52 장영실상", "NEP인증", "차세대 세계일류상품"],
     answerIndex: 0,
-    explanation: "'화장품 최초로 대한민국 특허청 세종대왕상을 수상했습니다. 특히 세종대왕상은 특허기술상 중 가장 높은 등급의 상입니다'라고 명시되어 있다."
+    explanation: "'화장품 최초로 대한민국 특허청 세종대왕상을 수상했습니다. 특히 세종대왕상은 특허기술상 중 가장 높은 등급의 상입니다'라고 명시되어 있다.",
+    voiceExplanationUrl: "voice/e016.mp3"
   },
   {
     id: "e017",
@@ -3345,7 +3380,8 @@ var ESG_QUESTIONS = [
     question: "식품의약품안전처 발표에 따르면 애터미 치약은 2024년 기준 전체 의약외품 수출액 중 몇 위를 차지했는가?",
     choices: ["1위", "2위", "3위", "4위"],
     answerIndex: 0,
-    explanation: "'애터미 치약은 2024년 기준 수출액... 전체 의약외품 중 1위를 차지했습니다'라고 명시되어 있다."
+    explanation: "'애터미 치약은 2024년 기준 수출액... 전체 의약외품 중 1위를 차지했습니다'라고 명시되어 있다.",
+    voiceExplanationUrl: "voice/e017.mp3"
   },
   {
     id: "e018",
@@ -3358,7 +3394,8 @@ var ESG_QUESTIONS = [
     tags: ["칫솔"],
     question: "애터미 칫솔은 출시 이후 누적 판매 3억 개를 돌파했다.",
     answer: true,
-    explanation: "'애터미 칫솔은 출시 이후 누적 판매 3억 개를 돌파했습니다'라고 명시되어 있다."
+    explanation: "'애터미 칫솔은 출시 이후 누적 판매 3억 개를 돌파했습니다'라고 명시되어 있다.",
+    voiceExplanationUrl: "voice/e018.mp3"
   },
   {
     id: "e019",
@@ -3372,7 +3409,8 @@ var ESG_QUESTIONS = [
     question: "2024년 기준 애터미가 판매하는 제품은 총 몇 개 카테고리, 몇 개 제품으로 구성되는가?",
     choices: ["6개 카테고리, 568개 제품", "5개 카테고리, 450개 제품", "6개 카테고리, 620개 제품", "7개 카테고리, 568개 제품"],
     answerIndex: 0,
-    explanation: "'제품 포트폴리오' 항목에 '건강기능식품... 등 총 6개 카테고리에 568개의 제품을 판매하고 있습니다(2024년 기준)'라고 명시되어 있다."
+    explanation: "'제품 포트폴리오' 항목에 '건강기능식품... 등 총 6개 카테고리에 568개의 제품을 판매하고 있습니다(2024년 기준)'라고 명시되어 있다.",
+    voiceExplanationUrl: "voice/e019.mp3"
   },
   {
     id: "e020",
@@ -3386,7 +3424,8 @@ var ESG_QUESTIONS = [
     question: "2024년 연결 기준 애터미의 경제적 가치 창출액은 얼마인가?",
     choices: ["1조 9,178억 원", "1조 5,550억 원", "1조 8,804억 원", "1,795억 원"],
     answerIndex: 0,
-    explanation: "'경제적 성과' 항목에 '2024년 연결 기준으로... 경제적 가치 창출액은 1조 9,178억 원으로 전년 대비 2% 증가했습니다'라고 명시되어 있다."
+    explanation: "'경제적 성과' 항목에 '2024년 연결 기준으로... 경제적 가치 창출액은 1조 9,178억 원으로 전년 대비 2% 증가했습니다'라고 명시되어 있다.",
+    voiceExplanationUrl: "voice/e020.mp3"
   },
   {
     id: "e021",
@@ -3400,7 +3439,8 @@ var ESG_QUESTIONS = [
     question: "2024년 애터미의 순이익은 전년 대비 몇 % 증가했는가?",
     choices: ["44.6%", "28%", "2%", "10%"],
     answerIndex: 0,
-    explanation: "'영업이익은 1,795억 원으로 28%, 순이익은 1,223억 원으로 44.6% 늘어나며 수익성이 크게 개선되었습니다'라고 명시되어 있다."
+    explanation: "'영업이익은 1,795억 원으로 28%, 순이익은 1,223억 원으로 44.6% 늘어나며 수익성이 크게 개선되었습니다'라고 명시되어 있다.",
+    voiceExplanationUrl: "voice/e021.mp3"
   },
   {
     id: "e022",
@@ -3414,7 +3454,8 @@ var ESG_QUESTIONS = [
     question: "애터미의 순이익은 2023년 846억 원에서 2024년 1,223억 원으로 늘었다. 이 증가액은 얼마인가? (단위: 억 원, 콤마 없이 숫자만 입력)",
     answer: "377",
     unit: "억 원",
-    explanation: "1,223억 원에서 846억 원을 빼면 377억 원이며, 이는 '경제적 가치 창출액 및 분배액' 항목에 제시된 2023년과 2024년 순이익 수치의 차이다."
+    explanation: "1,223억 원에서 846억 원을 빼면 377억 원이며, 이는 '경제적 가치 창출액 및 분배액' 항목에 제시된 2023년과 2024년 순이익 수치의 차이다.",
+    voiceExplanationUrl: "voice/e022.mp3"
   },
   {
     id: "e023",
@@ -3432,7 +3473,8 @@ var ESG_QUESTIONS = [
       { left: "일본", right: "Atomy Japan Associated Company" },
       { left: "중국", right: "Atomy China Co., Ltd." }
     ],
-    explanation: "'글로벌 애터미' 지도에 각국 법인명이 미국 Atomy America Inc., 캐나다 Atomy Canada Inc., 일본 Atomy Japan Associated Company, 중국 Atomy China Co., Ltd.로 명시되어 있다."
+    explanation: "'글로벌 애터미' 지도에 각국 법인명이 미국 Atomy America Inc., 캐나다 Atomy Canada Inc., 일본 Atomy Japan Associated Company, 중국 Atomy China Co., Ltd.로 명시되어 있다.",
+    voiceExplanationUrl: "voice/e023.mp3"
   },
   {
     id: "e024",
@@ -3445,7 +3487,8 @@ var ESG_QUESTIONS = [
     tags: ["수출", "경제적성과"],
     question: "애터미는 국내 유통기업 중 유일하게 3억불 수출의 탑을 수상했다.",
     answer: true,
-    explanation: "'글로벌 수출기업으로 우뚝 서다' 항목에 '애터미는 국내 유통기업 중 유일하게 3억불 수출의 탑을 수상하며 독보적인 수출형 유통기업으로 입지를 확고히 했습니다'라고 명시되어 있다."
+    explanation: "'글로벌 수출기업으로 우뚝 서다' 항목에 '애터미는 국내 유통기업 중 유일하게 3억불 수출의 탑을 수상하며 독보적인 수출형 유통기업으로 입지를 확고히 했습니다'라고 명시되어 있다.",
+    voiceExplanationUrl: "voice/e024.mp3"
   },
   {
     id: "e025",
@@ -3459,7 +3502,8 @@ var ESG_QUESTIONS = [
     question: "애터미가 지속가능경영을 위해 소통하는 이해관계자 5개 그룹에 해당하지 않는 것은?",
     choices: ["고객·회원", "임직원", "주주총회", "정부·NGO"],
     answerIndex: 2,
-    explanation: "애터미는 고객·회원, 임직원, 합력사, 지역사회, 정부·NGO 등 총 5개 그룹을 이해관계자로 정의하고 다양한 소통채널을 운영하고 있다. '주주총회'는 이에 해당하지 않는다."
+    explanation: "애터미는 고객·회원, 임직원, 합력사, 지역사회, 정부·NGO 등 총 5개 그룹을 이해관계자로 정의하고 다양한 소통채널을 운영하고 있다. '주주총회'는 이에 해당하지 않는다.",
+    voiceExplanationUrl: "voice/e025.mp3"
   },
   {
     id: "e026",
