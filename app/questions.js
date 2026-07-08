@@ -3517,7 +3517,8 @@ var ESG_QUESTIONS = [
     question: "2025년 애터미 중대성평가를 위한 이해관계자 설문조사 및 심층 인터뷰의 응답자 수는 총 몇 명인가?",
     choices: ["199명", "229명", "283명", "475명"],
     answerIndex: 1,
-    explanation: "조사개요에 따르면 응답자 수는 총 229명(고객·회원, 임직원, 합력사, 지역사회, 정부·NGO)이다."
+    explanation: "조사개요에 따르면 응답자 수는 총 229명(고객·회원, 임직원, 합력사, 지역사회, 정부·NGO)이다.",
+    voiceExplanationUrl: "voice/e026.mp3"
   },
   {
     id: "e027",
@@ -3531,7 +3532,8 @@ var ESG_QUESTIONS = [
     question: "2025년 중대성평가를 위한 이해관계자 설문조사 및 심층 인터뷰가 진행된 조사기간은?",
     choices: ["2025.01.01~2025.01.31", "2025.07.14~2025.07.31", "2024.07.14~2024.07.31", "2025.07.01~2025.07.14"],
     answerIndex: 1,
-    explanation: "조사개요의 조사기간은 2025.07.14~2025.07.31로 명시되어 있다."
+    explanation: "조사개요의 조사기간은 2025.07.14~2025.07.31로 명시되어 있다.",
+    voiceExplanationUrl: "voice/e027.mp3"
   },
   {
     id: "e028",
@@ -3545,7 +3547,8 @@ var ESG_QUESTIONS = [
     question: "2025년 이해관계자 설문조사에서 도출된 전체 핵심이슈 TOP5 중 1위는?",
     choices: ["합력사 ESG지원 및 동반성장", "지역사회 기여 및 상생", "고객의 건강 및 안전", "재무성과 및 제품 경쟁력"],
     answerIndex: 0,
-    explanation: "조사 결과 합력사 동반성장과 지역사회 기여가 가장 높은 중요도로 나타났으며, 전체 핵심이슈 TOP5 중 1위는 '합력사 ESG지원 및 동반성장'이다."
+    explanation: "조사 결과 합력사 동반성장과 지역사회 기여가 가장 높은 중요도로 나타났으며, 전체 핵심이슈 TOP5 중 1위는 '합력사 ESG지원 및 동반성장'이다.",
+    voiceExplanationUrl: "voice/e028.mp3"
   },
   {
     id: "e029",
@@ -3559,7 +3562,8 @@ var ESG_QUESTIONS = [
     question: "애터미의 지속가능경영위원회는 어느 조직 산하에 구성되어 있는가?",
     choices: ["이사회", "CEO", "미래전략분과", "지속가능경영본부"],
     answerIndex: 1,
-    explanation: "지속가능경영을 체계적으로 추진하기 위해 CEO 산하에 지속가능경영위원회를 구성하고, 분야별 전담팀을 운영하고 있다."
+    explanation: "지속가능경영을 체계적으로 추진하기 위해 CEO 산하에 지속가능경영위원회를 구성하고, 분야별 전담팀을 운영하고 있다.",
+    voiceExplanationUrl: "voice/e029.mp3"
   },
   {
     id: "e030",
@@ -3573,7 +3577,8 @@ var ESG_QUESTIONS = [
     question: "17개 핵심이슈 순위 중 17위(가장 낮은 순위)에 해당하는 이슈는?",
     choices: ["자원순환 및 순환경제 구축", "기후변화 대응", "인권 및 노동환경 보호", "임직원 복지 및 역량 강화"],
     answerIndex: 1,
-    explanation: "중대성평가 결과표에서 17위는 환경 분야의 '기후변화 대응'이다."
+    explanation: "중대성평가 결과표에서 17위는 환경 분야의 '기후변화 대응'이다.",
+    voiceExplanationUrl: "voice/e030.mp3"
   },
   {
     id: "e031",
@@ -3587,7 +3592,8 @@ var ESG_QUESTIONS = [
     question: "17개 핵심이슈 순위 중 16위에 해당하는 이슈는?",
     choices: ["기후변화 대응", "자원순환 및 순환경제 구축", "개인정보 보호 및 정보보안", "인권 및 노동환경 보호"],
     answerIndex: 1,
-    explanation: "중대성평가 결과표에서 16위는 환경 분야의 '자원순환 및 순환경제 구축'이며, 17위는 '기후변화 대응'이다."
+    explanation: "중대성평가 결과표에서 16위는 환경 분야의 '자원순환 및 순환경제 구축'이며, 17위는 '기후변화 대응'이다.",
+    voiceExplanationUrl: "voice/e031.mp3"
   },
   {
     id: "e032",
@@ -3601,7 +3607,8 @@ var ESG_QUESTIONS = [
     question: "17개 핵심이슈 순위 중 3위에 해당하는 이슈는?",
     choices: ["고객의 건강 및 안전", "재무성과 및 제품 경쟁력", "소비자 보호 및 마케팅 윤리", "제품품질 및 고객만족"],
     answerIndex: 0,
-    explanation: "중대성평가 결과표에서 3위는 사회 분야의 '고객의 건강 및 안전'이다."
+    explanation: "중대성평가 결과표에서 3위는 사회 분야의 '고객의 건강 및 안전'이다.",
+    voiceExplanationUrl: "voice/e032.mp3"
   },
   {
     id: "e033",
@@ -3615,7 +3622,8 @@ var ESG_QUESTIONS = [
     question: "이중중대성 평가에서 '사회·환경적 영향도(Impact Materiality)'가 의미하는 관점은?",
     choices: ["Inside-out 관점: 애터미의 경영활동이 사회 및 환경에 끼칠 수 있는 영향", "Outside-in 관점: 외부의 이슈가 애터미의 재무 상태에 끼치는 영향", "이해관계자가 애터미 경영에 미치는 영향", "정부 정책이 산업 전반에 미치는 영향"],
     answerIndex: 0,
-    explanation: "사회·환경적 영향도(Impact Materiality)는 Inside-out 관점으로, 애터미의 경영활동(Inside)이 사회 및 환경(Out)에 끼칠 수 있는 긍·부정적 영향의 정도를 의미한다."
+    explanation: "사회·환경적 영향도(Impact Materiality)는 Inside-out 관점으로, 애터미의 경영활동(Inside)이 사회 및 환경(Out)에 끼칠 수 있는 긍·부정적 영향의 정도를 의미한다.",
+    voiceExplanationUrl: "voice/e033.mp3"
   },
   {
     id: "e034",
@@ -3629,7 +3637,8 @@ var ESG_QUESTIONS = [
     question: "이중중대성 평가에서 '재무적 영향도(Financial Materiality)'가 의미하는 관점은?",
     choices: ["Inside-out 관점", "Outside-in 관점: 외부의 이슈가 애터미의 재무 상태에 끼치는 영향", "합력사가 애터미에 미치는 영향", "임직원이 애터미에 미치는 영향"],
     answerIndex: 1,
-    explanation: "재무적 영향도(Financial Materiality)는 Outside-in 관점으로, 외부의 이슈(Outside)가 애터미의 재무 상태(In)에 끼칠 수 있는 긍·부정적 영향의 정도를 의미한다."
+    explanation: "재무적 영향도(Financial Materiality)는 Outside-in 관점으로, 외부의 이슈(Outside)가 애터미의 재무 상태(In)에 끼칠 수 있는 긍·부정적 영향의 정도를 의미한다.",
+    voiceExplanationUrl: "voice/e034.mp3"
   },
   {
     id: "e035",
@@ -3643,7 +3652,8 @@ var ESG_QUESTIONS = [
     question: "다음 중 애터미 지속가능경영위원회 산하 전담분과에 해당하지 않는 것은?",
     choices: ["사회공헌분과", "친환경분과", "합력상생분과", "제품품질분과"],
     answerIndex: 2,
-    explanation: "지속가능경영위원회 산하에는 사회공헌분과, 친환경분과, 제품품질분과, 미래전략분과 등 4개 분과가 있으며, '합력상생분과'는 존재하지 않는다."
+    explanation: "지속가능경영위원회 산하에는 사회공헌분과, 친환경분과, 제품품질분과, 미래전략분과 등 4개 분과가 있으며, '합력상생분과'는 존재하지 않는다.",
+    voiceExplanationUrl: "voice/e035.mp3"
   },
   {
     id: "e036",
@@ -3656,7 +3666,8 @@ var ESG_QUESTIONS = [
     tags: ["중대성평가", "핵심이슈"],
     question: "2025년 이해관계자 설문조사에서 도출된 전체 핵심이슈 TOP5에는 '기후변화 대응'이 포함된다.",
     answer: false,
-    explanation: "전체 핵심이슈 TOP5는 합력사 ESG지원 및 동반성장, 지역사회 기여 및 상생, 고객의 건강 및 안전, 재무성과 및 제품 경쟁력, 소비자 보호 및 마케팅 윤리이며, '기후변화 대응'은 17위로 TOP5에 포함되지 않는다."
+    explanation: "전체 핵심이슈 TOP5는 합력사 ESG지원 및 동반성장, 지역사회 기여 및 상생, 고객의 건강 및 안전, 재무성과 및 제품 경쟁력, 소비자 보호 및 마케팅 윤리이며, '기후변화 대응'은 17위로 TOP5에 포함되지 않는다.",
+    voiceExplanationUrl: "voice/e036.mp3"
   },
   {
     id: "e037",
@@ -3669,7 +3680,8 @@ var ESG_QUESTIONS = [
     tags: ["중대성평가", "신규이슈"],
     question: "2024년 중대성평가에서는 기후변화 대응, 자원순환 및 순환경제, 개인정보 보호, 재무성과 및 제품 경쟁력 등이 사업 지속가능성과 직결되는 신규 이슈로 추가 반영되었다.",
     answer: true,
-    explanation: "2024년 중대성 평가는 이해관계자 의견 수렴 범위 확대와 평가 기준 고도화를 반영해 수행되었으며, 기후변화 대응, 자원순환 및 순환경제, 개인정보 보호, 재무성과 및 제품 경쟁력 등 신규 이슈를 추가 반영하였다고 명시되어 있다."
+    explanation: "2024년 중대성 평가는 이해관계자 의견 수렴 범위 확대와 평가 기준 고도화를 반영해 수행되었으며, 기후변화 대응, 자원순환 및 순환경제, 개인정보 보호, 재무성과 및 제품 경쟁력 등 신규 이슈를 추가 반영하였다고 명시되어 있다.",
+    voiceExplanationUrl: "voice/e037.mp3"
   },
   {
     id: "e038",
@@ -3682,7 +3694,8 @@ var ESG_QUESTIONS = [
     tags: ["중대성평가", "프로세스"],
     question: "애터미의 중대성 평가는 GRI, SASB 등 글로벌 기준과 산업 동향, 가치사슬 분석을 바탕으로 이슈 풀을 마련한다.",
     answer: true,
-    explanation: "중대성평가 프로세스 STEP01(ESG이슈 Pool 도출)에서 GRI, SASB 등 글로벌 기준 검토, 미디어리서치 및 동종업계 벤치마킹, 산업 중요 이슈 및 법규 조사, 애터미 가치사슬 분석 등을 수행한다고 명시되어 있다."
+    explanation: "중대성평가 프로세스 STEP01(ESG이슈 Pool 도출)에서 GRI, SASB 등 글로벌 기준 검토, 미디어리서치 및 동종업계 벤치마킹, 산업 중요 이슈 및 법규 조사, 애터미 가치사슬 분석 등을 수행한다고 명시되어 있다.",
+    voiceExplanationUrl: "voice/e038.mp3"
   },
   {
     id: "e039",
@@ -3696,7 +3709,8 @@ var ESG_QUESTIONS = [
     question: "애터미는 이중중대성 원칙에 따른 평가를 통해 총 ( )개의 핵심 이슈를 선정하였다.",
     answer: "17",
     acceptableAnswers: ["17개"],
-    explanation: "영향도 분석과 내부 검토를 거쳐 17개 핵심 이슈를 선정했다고 명시되어 있다."
+    explanation: "영향도 분석과 내부 검토를 거쳐 17개 핵심 이슈를 선정했다고 명시되어 있다.",
+    voiceExplanationUrl: "voice/e039.mp3"
   },
   {
     id: "e040",
@@ -3710,7 +3724,8 @@ var ESG_QUESTIONS = [
     question: "애터미 지속가능경영 비전 및 전략 체계도에 제시된 비전은 '( )'이다.",
     answer: "초일류 글로벌 유통의 허브",
     acceptableAnswers: ["초일류 글로벌 유통 허브"],
-    explanation: "지속가능경영 비전 및 전략 체계도에서 비전은 '초일류 글로벌 유통의 허브'로 명시되어 있다."
+    explanation: "지속가능경영 비전 및 전략 체계도에서 비전은 '초일류 글로벌 유통의 허브'로 명시되어 있다.",
+    voiceExplanationUrl: "voice/e040.mp3"
   },
   {
     id: "e041",
@@ -3723,7 +3738,8 @@ var ESG_QUESTIONS = [
     tags: ["중대성평가", "프로세스"],
     question: "다음 중대성평가 프로세스를 STEP 순서대로 배열하시오.",
     items: ["ESG이슈 Pool 도출", "이해관계자 의견 수렴", "이중 중대성 평가", "ESG전략 연계 및 보고서 반영", "정기적 검토 및 갱신"],
-    explanation: "중대성평가 프로세스는 STEP01 ESG이슈 Pool 도출 → STEP02 이해관계자 의견 수렴 → STEP03 이중 중대성 평가 → STEP04 ESG전략 연계 및 보고서 반영 → STEP05 정기적 검토 및 갱신 순으로 진행된다."
+    explanation: "중대성평가 프로세스는 STEP01 ESG이슈 Pool 도출 → STEP02 이해관계자 의견 수렴 → STEP03 이중 중대성 평가 → STEP04 ESG전략 연계 및 보고서 반영 → STEP05 정기적 검토 및 갱신 순으로 진행된다.",
+    voiceExplanationUrl: "voice/e041.mp3"
   },
   {
     id: "e042",
@@ -3736,7 +3752,8 @@ var ESG_QUESTIONS = [
     tags: ["이해관계자", "소통프로세스"],
     question: "다음 이해관계자 소통 프로세스를 단계 순서대로 배열하시오.",
     items: ["사전분석 및 계획 수립", "의견수렴 및 내부 보고", "업무 적용 및 개선활동", "모니터링 및 성과 관리"],
-    explanation: "이해관계자 소통 프로세스는 1단계 사전분석 및 계획 수립(사전 분석, 소통계획 수립, 소통대상 선정) → 2단계 의견수렴 및 내부 보고(채널별 의견 수렴, 위원회·경영진 보고) → 3단계 업무 적용 및 개선활동(의견 반영, 개선과제 도출) → 4단계 모니터링 및 성과 관리(개선활동 이행 점검, 성과 관리 및 ESG보고서 발간) 순으로 진행된다."
+    explanation: "이해관계자 소통 프로세스는 1단계 사전분석 및 계획 수립(사전 분석, 소통계획 수립, 소통대상 선정) → 2단계 의견수렴 및 내부 보고(채널별 의견 수렴, 위원회·경영진 보고) → 3단계 업무 적용 및 개선활동(의견 반영, 개선과제 도출) → 4단계 모니터링 및 성과 관리(개선활동 이행 점검, 성과 관리 및 ESG보고서 발간) 순으로 진행된다.",
+    voiceExplanationUrl: "voice/e042.mp3"
   },
   {
     id: "e043",
@@ -3752,7 +3769,8 @@ var ESG_QUESTIONS = [
       { left: "사회·환경적 영향도(Impact Materiality)", right: "Inside-out 관점" },
       { left: "재무적 영향도(Financial Materiality)", right: "Outside-in 관점" }
     ],
-    explanation: "사회·환경적 영향도는 애터미의 경영활동이 사회·환경에 미치는 영향을 보는 Inside-out 관점이며, 재무적 영향도는 외부 이슈가 애터미의 재무 상태에 미치는 영향을 보는 Outside-in 관점이다."
+    explanation: "사회·환경적 영향도는 애터미의 경영활동이 사회·환경에 미치는 영향을 보는 Inside-out 관점이며, 재무적 영향도는 외부 이슈가 애터미의 재무 상태에 미치는 영향을 보는 Outside-in 관점이다.",
+    voiceExplanationUrl: "voice/e043.mp3"
   },
   {
     id: "e044",
@@ -3769,7 +3787,8 @@ var ESG_QUESTIONS = [
       { left: "PHASE 02 확산기", right: "2024년~2026년" },
       { left: "PHASE 03 정착기", right: "2027년~2030년" }
     ],
-    explanation: "지속가능경영 로드맵은 PHASE01 도입기(2021년~2023년), PHASE02 확산기(2024년~2026년), PHASE03 정착기(2027년~2030년)로 구성되어 있다."
+    explanation: "지속가능경영 로드맵은 PHASE01 도입기(2021년~2023년), PHASE02 확산기(2024년~2026년), PHASE03 정착기(2027년~2030년)로 구성되어 있다.",
+    voiceExplanationUrl: "voice/e044.mp3"
   },
   {
     id: "e045",
@@ -3783,7 +3802,8 @@ var ESG_QUESTIONS = [
     question: "애터미가 모두가 신뢰할 수 있는 품질과 가격을 실현하기 위해 핵심 전략으로 운영하는 정책은?",
     choices: ["절대품질·절대가격 정책", "최저가격·최대물량 정책", "프리미엄·한정판매 정책", "선착순 할인 정책"],
     answerIndex: 0,
-    explanation: "애터미는 대중명품(Masstige) 전략을 바탕으로 절대품질·절대가격 정책을 핵심 전략으로 운영하고 있다."
+    explanation: "애터미는 대중명품(Masstige) 전략을 바탕으로 절대품질·절대가격 정책을 핵심 전략으로 운영하고 있다.",
+    voiceExplanationUrl: "voice/e045.mp3"
   },
   {
     id: "e046",
@@ -3797,7 +3817,8 @@ var ESG_QUESTIONS = [
     question: "협력업체 등록평가 점검표에서 '거래 불가'로 판정되는 점수 기준은?",
     choices: ["59점 이하", "60~69점", "70점 이상", "80점 이상"],
     answerIndex: 0,
-    explanation: "협력업체 등록평가 점검표는 59점 이하는 거래 불가, 60~69점은 개선조치 확인 후 거래, 70점 이상은 거래 가능으로 구분한다."
+    explanation: "협력업체 등록평가 점검표는 59점 이하는 거래 불가, 60~69점은 개선조치 확인 후 거래, 70점 이상은 거래 가능으로 구분한다.",
+    voiceExplanationUrl: "voice/e046.mp3"
   },
   {
     id: "e047",
@@ -3810,7 +3831,8 @@ var ESG_QUESTIONS = [
     tags: ["협력업체 등록평가"],
     question: "협력업체 등록평가에서 60~69점을 받은 업체는 개선조치를 확인한 후 거래할 수 있다.",
     answer: true,
-    explanation: "협력업체 등록평가 점검표 기준상 60~69점은 개선조치 확인 후 거래가 가능하다."
+    explanation: "협력업체 등록평가 점검표 기준상 60~69점은 개선조치 확인 후 거래가 가능하다.",
+    voiceExplanationUrl: "voice/e047.mp3"
   },
   {
     id: "e048",
@@ -3824,7 +3846,8 @@ var ESG_QUESTIONS = [
     question: "애터미 제품 품질을 점검하는 국내 파트너 전문 3자 기관이 아닌 곳은?",
     choices: ["한국에스지에스", "한국표준협회", "한국뷰로베리타스", "한국생산성본부"],
     answerIndex: 3,
-    explanation: "애터미의 국내 파트너 3자 기관은 한국에스지에스, 한국표준협회, 한국뷰로베리타스이다."
+    explanation: "애터미의 국내 파트너 3자 기관은 한국에스지에스, 한국표준협회, 한국뷰로베리타스이다.",
+    voiceExplanationUrl: "voice/e048.mp3"
   },
   {
     id: "e049",
@@ -3838,7 +3861,8 @@ var ESG_QUESTIONS = [
     question: "전문 3자 기관의 제품 평가·진단은 연 ( )회 실시된다.",
     answer: "1회",
     acceptableAnswers: ["1", "한 번", "연 1회"],
-    explanation: "3자 기관 평가 운영은 연 1회 실시된다."
+    explanation: "3자 기관 평가 운영은 연 1회 실시된다.",
+    voiceExplanationUrl: "voice/e049.mp3"
   },
   {
     id: "e050",
@@ -3852,7 +3876,8 @@ var ESG_QUESTIONS = [
     question: "화장품 품질 불만 분석을 다루는 '화장품 품질 향상 회의'는 어떤 주기로 열리는가?",
     choices: ["매월", "분기별", "반기별", "연 1회"],
     answerIndex: 0,
-    explanation: "화장품 품질 향상 회의(화장품 품질 불만 분석 회의)는 매월 열린다."
+    explanation: "화장품 품질 향상 회의(화장품 품질 불만 분석 회의)는 매월 열린다.",
+    voiceExplanationUrl: "voice/e050.mp3"
   },
   {
     id: "e051",
@@ -3865,7 +3890,8 @@ var ESG_QUESTIONS = [
     tags: ["합력사 회의"],
     question: "합력사 간담회는 동반성장을 위한 소통 채널로 매월 열린다.",
     answer: false,
-    explanation: "합력사 간담회는 분기별로 열리며, 매월 열리는 회의는 화장품 품질 향상 회의이다."
+    explanation: "합력사 간담회는 분기별로 열리며, 매월 열리는 회의는 화장품 품질 향상 회의이다.",
+    voiceExplanationUrl: "voice/e051.mp3"
   },
   {
     id: "e052",
@@ -3878,7 +3904,8 @@ var ESG_QUESTIONS = [
     tags: ["품질관리 프로세스", "협력업체 등록평가"],
     question: "다음 협력업체 등록평가 절차를 순서대로 배열하시오.",
     items: ["제품 선정 후 대상 업체에 대한 등록 가부 평가 실시", "제품 및 업체정보 이관(상품팀 → 품질보증팀)", "대상 업체 등록평가 실시", "대상 업체 평가결과 통보(품질보증팀 → 상품팀)"],
-    explanation: "품질관리 프로세스는 01 등록 가부 평가 실시 → 02 업체정보 이관 → 03 등록평가 실시 → 04 평가결과 통보 순으로 진행된다."
+    explanation: "품질관리 프로세스는 01 등록 가부 평가 실시 → 02 업체정보 이관 → 03 등록평가 실시 → 04 평가결과 통보 순으로 진행된다.",
+    voiceExplanationUrl: "voice/e052.mp3"
   },
   {
     id: "e053",
@@ -3892,7 +3919,8 @@ var ESG_QUESTIONS = [
     question: "애터미가 창립 이후 15년간 유지해온 반품률 수준은?",
     choices: ["업계 최저 수준인 평균 0.2% 내외", "업계 평균 수준인 약 1.85%", "업계 최고 수준인 3% 이상", "매년 꾸준히 상승하는 추세"],
     answerIndex: 0,
-    explanation: "애터미는 창립 이후 15년간 업계 최저 수준인 평균 0.2% 내외의 반품률을 유지하고 있다."
+    explanation: "애터미는 창립 이후 15년간 업계 최저 수준인 평균 0.2% 내외의 반품률을 유지하고 있다.",
+    voiceExplanationUrl: "voice/e053.mp3"
   },
   {
     id: "e054",
@@ -3906,7 +3934,8 @@ var ESG_QUESTIONS = [
     question: "2024년 기준 업계 평균 반품률(1.85%)과 애터미 직접판매 반품률(0.20%)의 차이는? (단위: %p, 콤마 없이 숫자만 입력)",
     answer: "1.65",
     unit: "%p",
-    explanation: "1.85% - 0.20% = 1.65%p 차이가 난다."
+    explanation: "1.85% - 0.20% = 1.65%p 차이가 난다.",
+    voiceExplanationUrl: "voice/e054.mp3"
   },
   {
     id: "e055",
@@ -3920,7 +3949,8 @@ var ESG_QUESTIONS = [
     question: "애터미가 원산지표시 공익광고 캠페인을 위해 협약을 맺은 기관은?",
     choices: ["국립농산물품질관리원 충남지원", "한국소비자원", "식품의약품안전처", "관세청"],
     answerIndex: 0,
-    explanation: "애터미는 국립농산물품질관리원 충남지원과의 협약을 통해 제품 포장에 원산지표시 공익광고 문구를 기재하고 있다."
+    explanation: "애터미는 국립농산물품질관리원 충남지원과의 협약을 통해 제품 포장에 원산지표시 공익광고 문구를 기재하고 있다.",
+    voiceExplanationUrl: "voice/e055.mp3"
   },
   {
     id: "e056",
@@ -3934,7 +3964,8 @@ var ESG_QUESTIONS = [
     question: "애터미는 상품 선정과 가격 결정 과정에서 모든 부정과 청탁을 배제하기 위해 ( ) 원칙을 적용한다.",
     answer: "무관용",
     acceptableAnswers: ["무관용 원칙", "Zero Tolerance Policy", "무관용원칙"],
-    explanation: "애터미는 상품 선정과 가격 결정 전반에 '무관용 원칙(Zero Tolerance Policy)'을 적용해 모든 부정과 청탁을 배제한다."
+    explanation: "애터미는 상품 선정과 가격 결정 전반에 '무관용 원칙(Zero Tolerance Policy)'을 적용해 모든 부정과 청탁을 배제한다.",
+    voiceExplanationUrl: "voice/e056.mp3"
   },
   {
     id: "e057",
@@ -3947,7 +3978,8 @@ var ESG_QUESTIONS = [
     tags: ["무관용 원칙", "상품위원회"],
     question: "애터미의 상품 선정은 상품위원회가 만족스러운 결과물이 나올 때까지 여러 차례 심의를 거쳐 결정된다.",
     answer: true,
-    explanation: "상품의 선정은 상품위원회가 만족스러운 결과물이 나올 때까지 여러 차례 심의를 거쳐 결정된다."
+    explanation: "상품의 선정은 상품위원회가 만족스러운 결과물이 나올 때까지 여러 차례 심의를 거쳐 결정된다.",
+    voiceExplanationUrl: "voice/e057.mp3"
   },
   {
     id: "e058",
@@ -3961,7 +3993,8 @@ var ESG_QUESTIONS = [
     question: "애터미가 2024년 한 해 동안 지식재산권 강화를 위해 투자한 연구개발비는?",
     choices: ["5,454만 원", "5,454억 원", "5억 4,540만 원", "54억 5,400만 원"],
     answerIndex: 0,
-    explanation: "애터미는 2024년 한 해 동안 5,454만 원의 연구개발비를 투자했다."
+    explanation: "애터미는 2024년 한 해 동안 5,454만 원의 연구개발비를 투자했다.",
+    voiceExplanationUrl: "voice/e058.mp3"
   },
   {
     id: "e059",
@@ -3975,7 +4008,8 @@ var ESG_QUESTIONS = [
     question: "2025년까지 애터미가 등록한 헤모힘 관련 특허는 ( )건이다.",
     answer: "28",
     acceptableAnswers: ["28건"],
-    explanation: "2025년까지 헤모힘 관련 28건의 특허, 논문 40건(SCI급 23건)을 등록했다."
+    explanation: "2025년까지 헤모힘 관련 28건의 특허, 논문 40건(SCI급 23건)을 등록했다.",
+    voiceExplanationUrl: "voice/e059.mp3"
   },
   {
     id: "e060",
@@ -3989,7 +4023,8 @@ var ESG_QUESTIONS = [
     question: "합력사와 공동 개발한 미세전류 LED 두피케어기가 제네바 국제발명전시회에서 받은 상은?",
     choices: ["동상과 INNOPA 특별상", "금상과 대상", "은상과 우수상", "특별공로상"],
     answerIndex: 0,
-    explanation: "미세전류 LED 두피케어기는 제네바 국제발명전시회에서 동상과 INNOPA 특별상을 수상했다."
+    explanation: "미세전류 LED 두피케어기는 제네바 국제발명전시회에서 동상과 INNOPA 특별상을 수상했다.",
+    voiceExplanationUrl: "voice/e060.mp3"
   },
   {
     id: "e061",
@@ -4003,7 +4038,8 @@ var ESG_QUESTIONS = [
     question: "차세대 세계일류상품으로 선정되고 2024년 180억 원 규모의 수출을 달성한 애터미 제품은?",
     choices: ["애터미 오롯이 담은 유기농 발효 노니", "애터미 헤모힘", "애터미 간고등어", "애터미 혈당컷 여주"],
     answerIndex: 0,
-    explanation: "'애터미 오롯이 담은 유기농 발효 노니'가 차세대 세계일류상품으로 선정되고, 2024년 180억 원 규모의 수출을 달성했다."
+    explanation: "'애터미 오롯이 담은 유기농 발효 노니'가 차세대 세계일류상품으로 선정되고, 2024년 180억 원 규모의 수출을 달성했다.",
+    voiceExplanationUrl: "voice/e061.mp3"
   },
   {
     id: "e062",
@@ -4017,7 +4053,8 @@ var ESG_QUESTIONS = [
     question: "애터미 간고등어의 원재료 확보 방식에 대한 설명으로 옳은 것은?",
     choices: ["노르웨이산 고등어 중 겨울철 어획분만 선별해 영하 40℃ 이하로 급속 냉동한다", "국내산 고등어를 상온에서 자연 건조한다", "여름철 어획분만 선별해 냉장 유통한다", "산지를 매년 무작위로 변경해 수입한다"],
     answerIndex: 0,
-    explanation: "애터미 간고등어는 노르웨이산 고등어 중 육질이 가장 좋은 겨울철 어획분만을 선별해 영하 40℃ 이하에서 급속 냉동한 뒤 국내로 운송한다."
+    explanation: "애터미 간고등어는 노르웨이산 고등어 중 육질이 가장 좋은 겨울철 어획분만을 선별해 영하 40℃ 이하에서 급속 냉동한 뒤 국내로 운송한다.",
+    voiceExplanationUrl: "voice/e062.mp3"
   },
   {
     id: "e063",
@@ -4031,7 +4068,8 @@ var ESG_QUESTIONS = [
     question: "헤모힘의 안전성 연구 결과가 게재된 국제학술지와 시험 기준으로 옳은 것은?",
     choices: ["SCIE급 「Toxicological Research」에 게재, OECD 가이드라인에 따른 독성시험 수행", "SCI급 「Nature」에 게재, FDA 기준에 따른 임상시험 수행", "비영리 학술지에 게재, 자체 기준에 따른 시험 수행", "게재 없이 사내 보고서로만 관리"],
     answerIndex: 0,
-    explanation: "헤모힘은 SCIE급 국제학술지 「Toxicological Research」에 안전성 연구 결과가 게재되었으며, 해당 연구는 OECD 가이드라인에 따라 독성시험을 수행해 모든 시험에서 안전성이 확인되었다."
+    explanation: "헤모힘은 SCIE급 국제학술지 「Toxicological Research」에 안전성 연구 결과가 게재되었으며, 해당 연구는 OECD 가이드라인에 따라 독성시험을 수행해 모든 시험에서 안전성이 확인되었다.",
+    voiceExplanationUrl: "voice/e063.mp3"
   },
   {
     id: "e064",
@@ -4045,7 +4083,8 @@ var ESG_QUESTIONS = [
     question: "애터미 에코 3종에 적용된 안심 소재에 대한 설명으로 옳은 것은?",
     choices: ["비스페놀-A가 검출되지 않는 소재와 사탕수수 부산물 기반 식물성 원료를 적용했다", "전량 재활용 플라스틱만을 사용했다", "생분해 소재 없이 일반 PE만 사용했다", "해외 인증 없이 자체 기준만 적용했다"],
     answerIndex: 0,
-    explanation: "애터미 에코 3종은 비스페놀-A가 검출되지 않는 안심 소재와 사탕수수 부산물 기반 식물성 원료를 적용했으며, USDA 바이오 소재 기반 친환경 인증을 획득했다."
+    explanation: "애터미 에코 3종은 비스페놀-A가 검출되지 않는 안심 소재와 사탕수수 부산물 기반 식물성 원료를 적용했으며, USDA 바이오 소재 기반 친환경 인증을 획득했다.",
+    voiceExplanationUrl: "voice/e064.mp3"
   },
   {
     id: "e065",
@@ -4059,7 +4098,8 @@ var ESG_QUESTIONS = [
     question: "애터미 혈당컷 여주에 대한 설명으로 옳지 않은 것은?",
     choices: ["식약처 기능성 인정 개별인정형 원료를 사용했다", "국내 건강기능식품 최초로 3.0mm 초소형 정제 제형을 구현했다", "2025 식품기술대상에서 장려상을 수상했다", "수입산 원료를 위탁재배 방식으로 사용했다"],
     answerIndex: 3,
-    explanation: "혈당컷 여주는 100% 국내산 원료를 계약재배 방식으로 사용해 품질 신뢰성과 ESG 가치를 강화했다."
+    explanation: "혈당컷 여주는 100% 국내산 원료를 계약재배 방식으로 사용해 품질 신뢰성과 ESG 가치를 강화했다.",
+    voiceExplanationUrl: "voice/e065.mp3"
   },
   {
     id: "e066",
@@ -4077,7 +4117,8 @@ var ESG_QUESTIONS = [
       { left: "주방용품", right: "식품공전(기구 및 용기포장) 유해성 시험 진행" },
       { left: "의약외품", right: "생리대 등 VOCs를 연 1회 확인" }
     ],
-    explanation: "애터미는 제품군별로 식품·건강기능식품은 3차 원재료까지 확인, 생활화학제품은 법정 3년 의무 안정성 검사를 1년 1회로 강화 실시, 주방용품은 식품공전에 따른 유해성 시험, 의약외품은 생리대 등 VOCs를 연 1회 확인하는 등 맞춤형으로 관리한다."
+    explanation: "애터미는 제품군별로 식품·건강기능식품은 3차 원재료까지 확인, 생활화학제품은 법정 3년 의무 안정성 검사를 1년 1회로 강화 실시, 주방용품은 식품공전에 따른 유해성 시험, 의약외품은 생리대 등 VOCs를 연 1회 확인하는 등 맞춤형으로 관리한다.",
+    voiceExplanationUrl: "voice/e066.mp3"
   },
   {
     id: "e067",
@@ -4091,7 +4132,8 @@ var ESG_QUESTIONS = [
     question: "애터미가 플라스틱 없는 바다를 만들기 위해 수립한 중장기 친환경 전략의 명칭은 무엇인가?",
     choices: ["그린오션 프로젝트", "블루마린 프로젝트", "클린씨 프로젝트", "오션클린 프로젝트"],
     answerIndex: 1,
-    explanation: "애터미는 플라스틱 없는 바다를 만들기 위한 중장기 친환경 전략으로 '블루마린 프로젝트'를 수립하여 실천하고 있다."
+    explanation: "애터미는 플라스틱 없는 바다를 만들기 위한 중장기 친환경 전략으로 '블루마린 프로젝트'를 수립하여 실천하고 있다.",
+    voiceExplanationUrl: "voice/e067.mp3"
   },
   {
     id: "e068",
@@ -4105,7 +4147,8 @@ var ESG_QUESTIONS = [
     question: "애터미가 자원 순환과 환경영향 최소화를 위해 설정한 핵심 전략과제는?",
     choices: ["탄소중립 2050", "제로 플라스틱 및 지속가능한 제품 혁신", "친환경 물류 고도화", "그린패키징 표준화"],
     answerIndex: 1,
-    explanation: "애터미는 '제로 플라스틱 및 지속가능한 제품 혁신'을 핵심 전략과제로 설정하고, 자원 순환과 환경 영향을 최소화하는 제품 및 포장 개선 활동을 전개하고 있다."
+    explanation: "애터미는 '제로 플라스틱 및 지속가능한 제품 혁신'을 핵심 전략과제로 설정하고, 자원 순환과 환경 영향을 최소화하는 제품 및 포장 개선 활동을 전개하고 있다.",
+    voiceExplanationUrl: "voice/e068.mp3"
   },
   {
     id: "e069",
@@ -4119,7 +4162,8 @@ var ESG_QUESTIONS = [
     question: "애터미가 CJ대한통운과 함께 구축한 친환경 스마트 패키징 솔루션을 통해 매년 절감하는 플라스틱 양은?",
     choices: ["매년 100톤 이상", "매년 200톤 이상", "매년 300톤 이상", "매년 500톤 이상"],
     answerIndex: 1,
-    explanation: "완충재와 박스 테이프를 재활용 가능한 종이 소재로 바꾸고 포장 공정을 첨단화한 친환경 스마트 패키징 솔루션을 구축하여 매년 200톤 이상의 플라스틱을 절감하고 있다."
+    explanation: "완충재와 박스 테이프를 재활용 가능한 종이 소재로 바꾸고 포장 공정을 첨단화한 친환경 스마트 패키징 솔루션을 구축하여 매년 200톤 이상의 플라스틱을 절감하고 있다.",
+    voiceExplanationUrl: "voice/e069.mp3"
   },
   {
     id: "e070",
