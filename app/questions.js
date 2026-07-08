@@ -2341,7 +2341,8 @@ var QUESTIONS = [
     question: "1급(300점)에 이어 다음날 8급(5점)이 추가로 발생했다. N가를 3,502원이라고 가정할 때, 합산 점수 기준 후원수당 금액은 얼마인가? (숫자만 입력)",
     answer: "1068110",
     unit: "원",
-    explanation: "300점 + 5점 = 305점, 305점 × 3,502원 = 1,068,110원"
+    explanation: "300점 + 5점 = 305점, 305점 × 3,502원 = 1,068,110원",
+    voiceExplanationUrl: "voice/q189.mp3"
   },
   {
     id: "q190",
@@ -2352,7 +2353,8 @@ var QUESTIONS = [
     question: "과거 15점 기준 후원수당이 6만원이었다면, 당시 N가는 얼마였는가? (숫자만 입력)",
     answer: "4000",
     unit: "원",
-    explanation: "60,000원 ÷ 15점 = 4,000원"
+    explanation: "60,000원 ÷ 15점 = 4,000원",
+    voiceExplanationUrl: "voice/q190.mp3"
   },
   {
     id: "q191",
@@ -2363,7 +2365,8 @@ var QUESTIONS = [
     question: "2급(250점)과 8급(5점)을 함께 취득했다. N가를 3,502원이라고 가정할 때, 합산 점수 기준 후원수당 금액은 얼마인가? (숫자만 입력)",
     answer: "893010",
     unit: "원",
-    explanation: "250점 + 5점 = 255점, 255점 × 3,502원 = 893,010원"
+    explanation: "250점 + 5점 = 255점, 255점 × 3,502원 = 893,010원",
+    voiceExplanationUrl: "voice/q191.mp3"
   },
   {
     id: "q192",
@@ -2374,7 +2377,8 @@ var QUESTIONS = [
     question: "6급(30점)을 네 차례 취득했다. N가를 3,502원이라고 가정할 때, 합산 점수 기준 후원수당 금액은 얼마인가? (숫자만 입력)",
     answer: "420240",
     unit: "원",
-    explanation: "30점 × 4 = 120점, 120점 × 3,502원 = 420,240원"
+    explanation: "30점 × 4 = 120점, 120점 × 3,502원 = 420,240원",
+    voiceExplanationUrl: "voice/q192.mp3"
   },
   {
     id: "q193",
@@ -2385,7 +2389,8 @@ var QUESTIONS = [
     question: "N가가 하락하면 동일한 취득 점수에 대한 후원수당은 어떻게 되는가?",
     choices: ["감소한다", "증가한다", "변하지 않는다", "2배가 된다"],
     answerIndex: 0,
-    explanation: "후원수당은 취득 점수 × N가이므로 N가가 하락하면 후원수당도 감소한다."
+    explanation: "후원수당은 취득 점수 × N가이므로 N가가 하락하면 후원수당도 감소한다.",
+    voiceExplanationUrl: "voice/q193.mp3"
   },
   {
     id: "q194",
@@ -2396,7 +2401,8 @@ var QUESTIONS = [
     question: "15점을 취득했다고 가정할 때, N가가 4,000원인 경우와 3,502원인 경우의 후원수당 차이는 얼마인가?",
     choices: ["7,470원", "6,000원", "5,253원", "1,000원"],
     answerIndex: 0,
-    explanation: "N가 4,000원일 때 15×4,000=60,000원, N가 3,502원일 때 15×3,502=52,530원. 차이는 7,470원이다."
+    explanation: "N가 4,000원일 때 15×4,000=60,000원, N가 3,502원일 때 15×3,502=52,530원. 차이는 7,470원이다.",
+    voiceExplanationUrl: "voice/q194.mp3"
   },
   {
     id: "q195",
@@ -2407,7 +2413,8 @@ var QUESTIONS = [
     question: "본인 등급이 '에이전트'인 사람이 소실적 30만 PV를 달성하면 몇 점을 취득하는가?",
     choices: ["15점", "5점", "30점", "60점"],
     answerIndex: 0,
-    explanation: "에이전트 등급 기준은 7급/15점이므로, 소실적 30만 PV 달성 시 15점을 취득한다."
+    explanation: "에이전트 등급 기준은 7급/15점이므로, 소실적 30만 PV 달성 시 15점을 취득한다.",
+    voiceExplanationUrl: "voice/q195.mp3"
   },
   {
     id: "q196",
@@ -2418,7 +2425,8 @@ var QUESTIONS = [
     question: "다음 중 취득 점수가 가장 높은 급수는?",
     choices: ["1급", "3급", "5급", "7급"],
     answerIndex: 0,
-    explanation: "1급이 300점으로 가장 높다."
+    explanation: "1급이 300점으로 가장 높다.",
+    voiceExplanationUrl: "voice/q196.mp3"
   },
   {
     id: "q197",
@@ -2429,7 +2437,8 @@ var QUESTIONS = [
     question: "다음 중 N가에 대한 설명으로 옳지 않은 것은?",
     choices: ["항상 일정하게 유지된다", "최근 하락 추세이다", "취득 점수와 곱해 후원수당을 계산한다", "시기에 따라 변동되는 값이다"],
     answerIndex: 0,
-    explanation: "N가는 고정값이 아니라 시기에 따라 변동되는 값이며, 최근 지속 하락 추세를 보이고 있다."
+    explanation: "N가는 고정값이 아니라 시기에 따라 변동되는 값이며, 최근 지속 하락 추세를 보이고 있다.",
+    voiceExplanationUrl: "voice/q197.mp3"
   },
   {
     id: "q198",
@@ -2439,7 +2448,8 @@ var QUESTIONS = [
     tags: ["점수계산"],
     question: "본인 등급이 다르면 동일한 소실적이라도 취득 점수가 달라질 수 있다.",
     answer: true,
-    explanation: "회원(30만 PV→5점)과 에이전트(30만 PV→15점)처럼 등급에 따라 점수가 다르게 계산된다."
+    explanation: "회원(30만 PV→5점)과 에이전트(30만 PV→15점)처럼 등급에 따라 점수가 다르게 계산된다.",
+    voiceExplanationUrl: "voice/q198.mp3"
   },
   {
     id: "q199",
@@ -2450,7 +2460,8 @@ var QUESTIONS = [
     question: "후원수당은 취득 점수 × ( )로 계산한다.",
     answer: "N가",
     acceptableAnswers: [],
-    explanation: "후원수당 = 취득 점수 × N가로 계산된다."
+    explanation: "후원수당 = 취득 점수 × N가로 계산된다.",
+    voiceExplanationUrl: "voice/q199.mp3"
   },
 
   /* ===================== 3단계 추가: 후원수당-지급일정 (q200-q205) ===================== */
@@ -2463,7 +2474,8 @@ var QUESTIONS = [
     question: "정산 기간이 5/6(수)~5/12(화)라면, 후원수당 지급일은 언제인가?",
     choices: ["5/19(화)", "5/13(수)", "5/26(화)", "5/12(화)"],
     answerIndex: 0,
-    explanation: "정산 종료일(5/12, 화)로부터 7일 후인 5/19(화)에 지급된다."
+    explanation: "정산 종료일(5/12, 화)로부터 7일 후인 5/19(화)에 지급된다.",
+    voiceExplanationUrl: "voice/q200.mp3"
   },
   {
     id: "q201",
@@ -2474,7 +2486,8 @@ var QUESTIONS = [
     question: "후원수당 정산 기간(수요일부터 차주 화요일까지)은 총 며칠인가? (숫자만 입력)",
     answer: "7",
     unit: "일",
-    explanation: "수요일부터 차주 화요일까지는 7일간이다."
+    explanation: "수요일부터 차주 화요일까지는 7일간이다.",
+    voiceExplanationUrl: "voice/q201.mp3"
   },
   {
     id: "q202",
@@ -2485,7 +2498,8 @@ var QUESTIONS = [
     question: "정산이 종료된 후 실제 지급일까지는 정산 종료일로부터 ( )일이 소요된다.",
     answer: "7",
     acceptableAnswers: [],
-    explanation: "정산 종료일로부터 7일 후(차주 화요일)에 지급된다."
+    explanation: "정산 종료일로부터 7일 후(차주 화요일)에 지급된다.",
+    voiceExplanationUrl: "voice/q202.mp3"
   },
   {
     id: "q203",
@@ -2495,7 +2509,8 @@ var QUESTIONS = [
     tags: ["지급일정"],
     question: "다음 사건을 시간 순서대로(오래된 것부터) 배열하시오.",
     items: ["정산기간 시작(수요일)", "1주차 매일 정산 진행", "정산기간 종료(차주 화요일)", "일괄 지급(차차주 화요일)"],
-    explanation: "수요일 정산 시작 → 매일 정산 진행 → 차주 화요일 정산 종료 → 차차주 화요일 지급 순이다."
+    explanation: "수요일 정산 시작 → 매일 정산 진행 → 차주 화요일 정산 종료 → 차차주 화요일 지급 순이다.",
+    voiceExplanationUrl: "voice/q203.mp3"
   },
   {
     id: "q204",
@@ -2506,7 +2521,8 @@ var QUESTIONS = [
     question: "후원수당 정산과 지급 주기에 대한 설명으로 옳은 것은?",
     choices: ["정산은 매일, 지급은 매주 1회 일괄 처리된다", "정산과 지급이 같은 날 이루어진다", "정산은 주 1회, 지급은 매일 이루어진다", "정산과 지급 모두 월 1회이다"],
     answerIndex: 0,
-    explanation: "정산은 판매일자 기준 매일 이루어지고, 지급은 매주 화요일에 일괄 처리된다."
+    explanation: "정산은 판매일자 기준 매일 이루어지고, 지급은 매주 화요일에 일괄 처리된다.",
+    voiceExplanationUrl: "voice/q204.mp3"
   },
   {
     id: "q205",
@@ -2516,7 +2532,8 @@ var QUESTIONS = [
     tags: ["지급일정"],
     question: "후원수당 정산 기간은 월요일부터 시작된다.",
     answer: false,
-    explanation: "정산 기간은 수요일부터 시작해 차주 화요일까지이다."
+    explanation: "정산 기간은 수요일부터 시작해 차주 화요일까지이다.",
+    voiceExplanationUrl: "voice/q205.mp3"
   },
 
   /* ===================== 3단계 추가: 직급-7단계 체계 (q211-q218) ===================== */
@@ -2528,7 +2545,8 @@ var QUESTIONS = [
     tags: ["직급체계"],
     question: "모든 애터미 직급 명칭 뒤에는 '마스터'라는 호칭이 붙는다.",
     answer: true,
-    explanation: "세일즈마스터, 다이아몬드마스터처럼 모든 직급 뒤에 '마스터'를 붙여 칭한다."
+    explanation: "세일즈마스터, 다이아몬드마스터처럼 모든 직급 뒤에 '마스터'를 붙여 칭한다.",
+    voiceExplanationUrl: "voice/q211.mp3"
   },
   {
     id: "q212",
@@ -2538,7 +2556,8 @@ var QUESTIONS = [
     tags: ["승급조건"],
     question: "다이아몬드마스터 달성 조건은 각 라인에 세일즈마스터를 1명 이상 육성하는 것이다.",
     answer: false,
-    explanation: "다이아몬드마스터 달성 조건은 각 라인에 세일즈마스터를 2명 이상 육성하는 것이다."
+    explanation: "다이아몬드마스터 달성 조건은 각 라인에 세일즈마스터를 2명 이상 육성하는 것이다.",
+    voiceExplanationUrl: "voice/q212.mp3"
   },
   {
     id: "q213",
@@ -2549,7 +2568,8 @@ var QUESTIONS = [
     question: "다음 중 직급 달성 조건에서 요구되는 하위 직급 육성 인원으로 옳은 것은? (세일즈마스터 제외)",
     choices: ["각 라인 2명 이상", "각 라인 1명 이상", "각 라인 3명 이상", "전체 라인 합산 2명 이상"],
     answerIndex: 0,
-    explanation: "세일즈마스터를 제외한 모든 직급의 달성 조건은 각 라인에 하위 직급자를 2명 이상 육성하는 것이다."
+    explanation: "세일즈마스터를 제외한 모든 직급의 달성 조건은 각 라인에 하위 직급자를 2명 이상 육성하는 것이다.",
+    voiceExplanationUrl: "voice/q213.mp3"
   },
   {
     id: "q214",
@@ -2567,7 +2587,8 @@ var QUESTIONS = [
       { left: "크라운마스터", right: "8" },
       { left: "임페리얼마스터", right: "9" }
     ],
-    explanation: "직급 단계 번호는 세일즈(3)부터 임페리얼(9)까지 순서대로 매겨진다."
+    explanation: "직급 단계 번호는 세일즈(3)부터 임페리얼(9)까지 순서대로 매겨진다.",
+    voiceExplanationUrl: "voice/q214.mp3"
   },
   {
     id: "q215",
@@ -2582,7 +2603,8 @@ var QUESTIONS = [
       { left: "스타마스터", right: "샤론로즈마스터 2명" },
       { left: "로열마스터", right: "스타마스터 2명" }
     ],
-    explanation: "각 직급은 바로 아래 직급을 각 라인 2명 이상 육성해야 달성 조건을 만족한다."
+    explanation: "각 직급은 바로 아래 직급을 각 라인 2명 이상 육성해야 달성 조건을 만족한다.",
+    voiceExplanationUrl: "voice/q215.mp3"
   },
   {
     id: "q216",
@@ -2592,7 +2614,8 @@ var QUESTIONS = [
     tags: ["직급체계"],
     question: "직급 단계 번호가 낮은 것부터 순서대로 배열하시오.",
     items: ["샤론로즈마스터", "세일즈마스터", "스타마스터", "다이아몬드마스터"],
-    explanation: "세일즈(3) → 다이아몬드(4) → 샤론로즈(5) → 스타(6) 순이다."
+    explanation: "세일즈(3) → 다이아몬드(4) → 샤론로즈(5) → 스타(6) 순이다.",
+    voiceExplanationUrl: "voice/q216.mp3"
   },
   {
     id: "q217",
@@ -2603,7 +2626,8 @@ var QUESTIONS = [
     question: "각 라인에 '로열마스터'를 2명 이상 육성해야 달성할 수 있는 직급은?",
     choices: ["크라운마스터", "스타마스터", "임페리얼마스터", "샤론로즈마스터"],
     answerIndex: 0,
-    explanation: "크라운마스터의 달성 조건은 각 라인에 로열마스터를 2명 이상 육성하는 것이다."
+    explanation: "크라운마스터의 달성 조건은 각 라인에 로열마스터를 2명 이상 육성하는 것이다.",
+    voiceExplanationUrl: "voice/q217.mp3"
   },
   {
     id: "q218",
@@ -2614,7 +2638,8 @@ var QUESTIONS = [
     question: "각 라인에 '크라운마스터'를 2명 이상 육성해야 달성할 수 있는 직급은?",
     choices: ["임페리얼마스터", "크라운마스터", "로열마스터", "스타마스터"],
     answerIndex: 0,
-    explanation: "임페리얼마스터의 달성 조건은 각 라인에 크라운마스터를 2명 이상 육성하는 것이다."
+    explanation: "임페리얼마스터의 달성 조건은 각 라인에 크라운마스터를 2명 이상 육성하는 것이다.",
+    voiceExplanationUrl: "voice/q218.mp3"
   },
 
   /* ===================== 3단계 추가: 직급수당 지급 (q219-q234) ===================== */
@@ -2627,7 +2652,8 @@ var QUESTIONS = [
     question: "직급수당 지급 표에서 '다이아몬드마스터'의 자격 취득·유지 조건은?",
     choices: ["세일즈마스터 이상을 2라인 각각 2명 이상씩 육성한 대리점", "세일즈마스터 이상을 2라인 각각 2명 이상씩 육성한 특약점", "다이아몬드마스터 이상을 2라인 각각 2명 이상씩 육성한 총판", "세일즈마스터 이상을 1라인 2명 이상 육성한 대리점"],
     answerIndex: 0,
-    explanation: "다이아몬드마스터는 세일즈마스터 이상을 2라인 각각 2명 이상씩 육성한 대리점이 자격을 취득·유지한다."
+    explanation: "다이아몬드마스터는 세일즈마스터 이상을 2라인 각각 2명 이상씩 육성한 대리점이 자격을 취득·유지한다.",
+    voiceExplanationUrl: "voice/q219.mp3"
   },
   {
     id: "q220",
@@ -2638,7 +2664,8 @@ var QUESTIONS = [
     question: "직급수당 지급 표에서 '샤론로즈마스터'의 자격 취득·유지 조건은?",
     choices: ["다이아몬드마스터 이상을 2라인 각각 2명 이상씩 육성한 총판", "다이아몬드마스터 이상을 2라인 각각 2명 이상씩 육성한 대리점", "세일즈마스터 이상을 2라인 각각 2명 이상씩 육성한 총판", "샤론로즈마스터 이상을 2라인 각각 2명 이상씩 육성한 총판"],
     answerIndex: 0,
-    explanation: "샤론로즈마스터는 다이아몬드마스터 이상을 2라인 각각 2명 이상씩 육성한 총판이 자격을 취득·유지한다."
+    explanation: "샤론로즈마스터는 다이아몬드마스터 이상을 2라인 각각 2명 이상씩 육성한 총판이 자격을 취득·유지한다.",
+    voiceExplanationUrl: "voice/q220.mp3"
   },
   {
     id: "q221",
@@ -2649,7 +2676,8 @@ var QUESTIONS = [
     question: "세일즈마스터의 직급수당 자격 유지 조건에서 요구되는 산하 판매실적 기준은?",
     choices: ["2라인 각각 250만 PV 이상", "1라인 250만 PV 이상", "2라인 합산 250만 PV 이상", "2라인 각각 300만 PV 이상"],
     answerIndex: 0,
-    explanation: "1-15일/16-말일 기준 2라인 각각의 산하 판매실적이 250만 PV 이상이어야 한다."
+    explanation: "1-15일/16-말일 기준 2라인 각각의 산하 판매실적이 250만 PV 이상이어야 한다.",
+    voiceExplanationUrl: "voice/q221.mp3"
   },
   {
     id: "q222",
@@ -2660,7 +2688,8 @@ var QUESTIONS = [
     question: "직급수당 재원(총매출 PV의 20%) 중 가장 큰 비율을 배분받는 직급은?",
     choices: ["세일즈마스터", "다이아몬드마스터", "로열마스터", "임페리얼마스터"],
     answerIndex: 0,
-    explanation: "세일즈마스터가 10%로 가장 큰 비율을 배분받는다."
+    explanation: "세일즈마스터가 10%로 가장 큰 비율을 배분받는다.",
+    voiceExplanationUrl: "voice/q222.mp3"
   },
   {
     id: "q223",
@@ -2671,7 +2700,8 @@ var QUESTIONS = [
     question: "직급수당 재원 중 가장 작은 비율을 배분받는 직급은?",
     choices: ["임페리얼마스터", "크라운마스터", "로열마스터", "스타마스터"],
     answerIndex: 0,
-    explanation: "임페리얼마스터가 0.3%로 가장 작은 비율을 배분받는다."
+    explanation: "임페리얼마스터가 0.3%로 가장 작은 비율을 배분받는다.",
+    voiceExplanationUrl: "voice/q223.mp3"
   },
   {
     id: "q224",
@@ -2682,7 +2712,8 @@ var QUESTIONS = [
     question: "다이아몬드마스터의 자격 취득 조건은 세일즈마스터 이상을 2라인 각각 ( )명 이상씩 육성하는 것이다.",
     answer: "2",
     acceptableAnswers: [],
-    explanation: "다이아몬드마스터는 세일즈마스터 이상을 2라인 각각 2명 이상씩 육성해야 한다."
+    explanation: "다이아몬드마스터는 세일즈마스터 이상을 2라인 각각 2명 이상씩 육성해야 한다.",
+    voiceExplanationUrl: "voice/q224.mp3"
   },
   {
     id: "q225",
@@ -2693,7 +2724,8 @@ var QUESTIONS = [
     question: "직급수당은 매월 15일과 ( )일 기준으로 산정한다.",
     answer: "말일",
     acceptableAnswers: [],
-    explanation: "직급수당은 매월 15일·말일 기준으로 산정한다."
+    explanation: "직급수당은 매월 15일·말일 기준으로 산정한다.",
+    voiceExplanationUrl: "voice/q225.mp3"
   },
   {
     id: "q226",
@@ -2704,7 +2736,8 @@ var QUESTIONS = [
     question: "직급수당 지급일이 공휴일과 겹치면 ( )에 지급된다.",
     answer: "전일",
     acceptableAnswers: ["앞날", "전날"],
-    explanation: "공휴일인 경우 앞날(전일) 지급 처리된다."
+    explanation: "공휴일인 경우 앞날(전일) 지급 처리된다.",
+    voiceExplanationUrl: "voice/q226.mp3"
   },
   {
     id: "q227",
@@ -2714,7 +2747,8 @@ var QUESTIONS = [
     tags: ["직급수당"],
     question: "직급수당의 재원 비율은 회사 총매출 PV의 20%이다.",
     answer: true,
-    explanation: "직급수당은 회사 총 매출 PV의 20%를 재원으로 한다."
+    explanation: "직급수당은 회사 총 매출 PV의 20%를 재원으로 한다.",
+    voiceExplanationUrl: "voice/q227.mp3"
   },
   {
     id: "q228",
@@ -2724,7 +2758,8 @@ var QUESTIONS = [
     tags: ["직급수당"],
     question: "세일즈마스터의 직급수당 자격조건에는 산하 판매실적 기준이 없다.",
     answer: false,
-    explanation: "세일즈마스터는 2라인 각각의 산하 판매실적이 250만 PV 이상이어야 한다."
+    explanation: "세일즈마스터는 2라인 각각의 산하 판매실적이 250만 PV 이상이어야 한다.",
+    voiceExplanationUrl: "voice/q228.mp3"
   },
   {
     id: "q229",
@@ -2735,7 +2770,8 @@ var QUESTIONS = [
     question: "회사 전체 매출 PV가 100,000,000일 때, 전체 다이아몬드마스터 이상에게 배분되는 직급수당(5%) 총액은 얼마인가? (숫자만 입력)",
     answer: "5000000",
     unit: "원",
-    explanation: "100,000,000 × 5% = 5,000,000원"
+    explanation: "100,000,000 × 5% = 5,000,000원",
+    voiceExplanationUrl: "voice/q229.mp3"
   },
   {
     id: "q230",
@@ -2746,7 +2782,8 @@ var QUESTIONS = [
     question: "회사 전체 매출 PV가 200,000,000일 때, 전체 세일즈마스터에게 배분되는 직급수당(10%) 총액은 얼마인가? (숫자만 입력)",
     answer: "20000000",
     unit: "원",
-    explanation: "200,000,000 × 10% = 20,000,000원"
+    explanation: "200,000,000 × 10% = 20,000,000원",
+    voiceExplanationUrl: "voice/q230.mp3"
   },
   {
     id: "q231",
@@ -2757,7 +2794,8 @@ var QUESTIONS = [
     question: "회사 전체 매출 PV가 50,000,000일 때, 전체 임페리얼마스터 이상에게 배분되는 직급수당(0.3%) 총액은 얼마인가? (숫자만 입력)",
     answer: "150000",
     unit: "원",
-    explanation: "50,000,000 × 0.3% = 150,000원"
+    explanation: "50,000,000 × 0.3% = 150,000원",
+    voiceExplanationUrl: "voice/q231.mp3"
   },
   {
     id: "q232",
@@ -2774,7 +2812,8 @@ var QUESTIONS = [
       { left: "크라운마스터", right: "로열마스터 2명 이상" },
       { left: "임페리얼마스터", right: "크라운마스터 2명 이상" }
     ],
-    explanation: "직급수당 자격은 각 직급 바로 아래 직급을 2라인 각각 2명 이상 육성해야 취득·유지된다."
+    explanation: "직급수당 자격은 각 직급 바로 아래 직급을 2라인 각각 2명 이상 육성해야 취득·유지된다.",
+    voiceExplanationUrl: "voice/q232.mp3"
   },
   {
     id: "q233",
@@ -2785,7 +2824,8 @@ var QUESTIONS = [
     question: "직급수당 산정부터 지급까지, 산정일(15일/말일) 기준으로 지급일까지는 최소 며칠 후인가?",
     choices: ["7일", "1일", "15일", "22일"],
     answerIndex: 0,
-    explanation: "산정 후 7일 이후인 7일·22일에 지급된다."
+    explanation: "산정 후 7일 이후인 7일·22일에 지급된다.",
+    voiceExplanationUrl: "voice/q233.mp3"
   },
   {
     id: "q234",
@@ -2796,7 +2836,8 @@ var QUESTIONS = [
     question: "다음 중 직급수당 자격 취득·유지 조건에서 요구하는 등급이 옳게 짝지어진 것은?",
     choices: ["다이아몬드마스터 - 대리점", "샤론로즈마스터 - 대리점", "스타마스터 - 대리점", "로열마스터 - 특약점"],
     answerIndex: 0,
-    explanation: "다이아몬드마스터의 자격은 대리점이 취득한다. 샤론로즈마스터부터는 총판이 취득한다."
+    explanation: "다이아몬드마스터의 자격은 대리점이 취득한다. 샤론로즈마스터부터는 총판이 취득한다.",
+    voiceExplanationUrl: "voice/q234.mp3"
   },
 
   /* ===================== 3단계 추가: 승급-유지 프로모션 (q235-q246) ===================== */
@@ -2809,7 +2850,8 @@ var QUESTIONS = [
     question: "다음 중 승급 프로모션 금액이 1,000만원인 직급은?",
     choices: ["스타마스터", "다이아몬드마스터", "샤론로즈마스터", "로열마스터"],
     answerIndex: 0,
-    explanation: "스타마스터의 승급 프로모션은 1,000만원이다."
+    explanation: "스타마스터의 승급 프로모션은 1,000만원이다.",
+    voiceExplanationUrl: "voice/q235.mp3"
   },
   {
     id: "q236",
@@ -2820,7 +2862,8 @@ var QUESTIONS = [
     question: "다음 중 승급 프로모션 금액이 3억원인 직급은?",
     choices: ["크라운마스터", "스타마스터", "로열마스터", "임페리얼마스터"],
     answerIndex: 0,
-    explanation: "크라운마스터의 승급 프로모션은 3억원이다."
+    explanation: "크라운마스터의 승급 프로모션은 3억원이다.",
+    voiceExplanationUrl: "voice/q236.mp3"
   },
   {
     id: "q237",
@@ -2831,7 +2874,8 @@ var QUESTIONS = [
     question: "승급 프로모션 금액이 5,000만원인 직급과 그 유지 프로모션 금액을 옳게 짝지은 것은?",
     choices: ["로열마스터 - 150만원", "로열마스터 - 250만원", "크라운마스터 - 150만원", "스타마스터 - 없음(하지만 승급은 5,000만원)"],
     answerIndex: 0,
-    explanation: "로열마스터는 승급 프로모션 5,000만원, 유지 프로모션 150만원이다."
+    explanation: "로열마스터는 승급 프로모션 5,000만원, 유지 프로모션 150만원이다.",
+    voiceExplanationUrl: "voice/q237.mp3"
   },
   {
     id: "q238",
