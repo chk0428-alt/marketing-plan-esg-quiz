@@ -4177,7 +4177,8 @@ var ESG_QUESTIONS = [
     question: "애터미는 [자원의 절약과 재활용촉진에 관한 법률]에 따라 생산자책임재활용제도인 ( )를 이행하며, 한국포장재재활용사업공제조합에 가입해 재활용 의무를 공동으로 수행하고 있다.",
     answer: "EPR",
     acceptableAnswers: ["EPR", "생산자책임재활용제도"],
-    explanation: "애터미는 생산자책임재활용제도(EPR)를 이행하며 한국포장재재활용사업공제조합에 가입해 재활용 의무를 공동으로 수행하고 있다."
+    explanation: "애터미는 생산자책임재활용제도(EPR)를 이행하며 한국포장재재활용사업공제조합에 가입해 재활용 의무를 공동으로 수행하고 있다.",
+    voiceExplanationUrl: "voice/e070.mp3"
   },
   {
     id: "e071",
@@ -4191,7 +4192,8 @@ var ESG_QUESTIONS = [
     question: "애터미가 재활용의무를 이행하는 4대 포장재에 해당하지 않는 것은?",
     choices: ["종이팩", "금속캔", "유리병", "목재포장재"],
     answerIndex: 3,
-    explanation: "애터미의 재활용의무 이행 대상 4대 포장재는 종이팩, 금속캔, 유리병, 합성수지포장재이며(전지류 포함), 목재포장재는 해당하지 않는다."
+    explanation: "애터미의 재활용의무 이행 대상 4대 포장재는 종이팩, 금속캔, 유리병, 합성수지포장재이며(전지류 포함), 목재포장재는 해당하지 않는다.",
+    voiceExplanationUrl: "voice/e071.mp3"
   },
   {
     id: "e072",
@@ -4204,7 +4206,8 @@ var ESG_QUESTIONS = [
     tags: ["친환경인증"],
     question: "애터미는 녹색기술·USDA·ECOCERT 등 글로벌 친환경 인증을 통해 제품의 환경성을 입증하고 있다.",
     answer: true,
-    explanation: "애터미는 제품 개발 전 과정에서 탄소 저감과 자원 효율을 고려하며, 녹색기술·USDA·ECOCERT 등 글로벌 친환경 인증을 통해 제품의 환경성을 입증하고 있다."
+    explanation: "애터미는 제품 개발 전 과정에서 탄소 저감과 자원 효율을 고려하며, 녹색기술·USDA·ECOCERT 등 글로벌 친환경 인증을 통해 제품의 환경성을 입증하고 있다.",
+    voiceExplanationUrl: "voice/e072.mp3"
   },
   {
     id: "e073",
@@ -4218,7 +4221,8 @@ var ESG_QUESTIONS = [
     question: "애터미의 플라스틱 포장재 4R 전략 중 '리필 용기 활성화'에 해당하는 항목은?",
     choices: ["REDUCE", "RECYCLE", "REUSE", "REVERSE"],
     answerIndex: 2,
-    explanation: "4R 전략에서 REUSE는 리필 용기 활성화를 의미하며, REDUCE는 플라스틱 30% 감소, RECYCLE은 재활용 확대, REVERSE는 판매 용기의 자체 회수 노력을 의미한다."
+    explanation: "4R 전략에서 REUSE는 리필 용기 활성화를 의미하며, REDUCE는 플라스틱 30% 감소, RECYCLE은 재활용 확대, REVERSE는 판매 용기의 자체 회수 노력을 의미한다.",
+    voiceExplanationUrl: "voice/e073.mp3"
   },
   {
     id: "e074",
@@ -4232,7 +4236,8 @@ var ESG_QUESTIONS = [
     question: "애터미의 친환경 인증 제품 매출은 전체 매출의 ( )%를 차지한다.",
     answer: "16.5",
     acceptableAnswers: ["16.5%", "16.5"],
-    explanation: "친환경 인증 제품 매출이 전체의 16.5%를 차지하며, 환경성과가 실질적 경영성과로 이어지고 있다."
+    explanation: "친환경 인증 제품 매출이 전체의 16.5%를 차지하며, 환경성과가 실질적 경영성과로 이어지고 있다.",
+    voiceExplanationUrl: "voice/e074.mp3"
   },
   {
     id: "e075",
@@ -4246,7 +4251,8 @@ var ESG_QUESTIONS = [
     question: "애터미 제품 중 재활용 등급 '우수' 제품 수는 2022년 407개에서 2024년 548개로 늘었다. 이 기간 증가한 제품 수는 몇 개인가? (단위: 개, 콤마 없이 숫자만 입력)",
     answer: "141",
     unit: "개",
-    explanation: "548개-407개=141개로, 재활용 등급 '우수' 제품 수가 2년간 141개(약 35%) 증가했다."
+    explanation: "548개-407개=141개로, 재활용 등급 '우수' 제품 수가 2년간 141개(약 35%) 증가했다.",
+    voiceExplanationUrl: "voice/e075.mp3"
   },
   {
     id: "e076",
@@ -4259,7 +4265,8 @@ var ESG_QUESTIONS = [
     tags: ["재활용등급"],
     question: "애터미 제품의 재활용 등급 '어려움' 제품 수는 2022년 208개에서 2024년 185개로 감소했다.",
     answer: true,
-    explanation: "재활용 등급 '어려움' 제품 수는 2022년 208개에서 2024년 185개로 11% 감소했다."
+    explanation: "재활용 등급 '어려움' 제품 수는 2022년 208개에서 2024년 185개로 11% 감소했다.",
+    voiceExplanationUrl: "voice/e076.mp3"
   },
   {
     id: "e077",
@@ -4273,7 +4280,8 @@ var ESG_QUESTIONS = [
     question: "애터미의 플라스틱 원자재 사용량은 2022년 3,797.7톤에서 2024년 2,611.2톤으로 감소했다. 감소한 양은 몇 톤인가? (단위: 톤, 콤마 없이 숫자만 입력, 소수점 첫째 자리까지)",
     answer: "1186.5",
     unit: "톤",
-    explanation: "3,797.7톤-2,611.2톤=1,186.5톤으로, 플라스틱 사용량은 2022년 대비 2024년 약 31% 감소했다."
+    explanation: "3,797.7톤-2,611.2톤=1,186.5톤으로, 플라스틱 사용량은 2022년 대비 2024년 약 31% 감소했다.",
+    voiceExplanationUrl: "voice/e077.mp3"
   },
   {
     id: "e078",
@@ -4286,7 +4294,8 @@ var ESG_QUESTIONS = [
     tags: ["원자재총사용량"],
     question: "애터미의 전체 원자재 사용량은 2022년 대비 2024년까지 약 1,243톤(30% 이상) 줄어들었다.",
     answer: true,
-    explanation: "전체 원자재 사용량도 2년간 약 1,243톤(30%) 이상 줄어드는 성과를 거두었다(2022년 4,133.4톤 → 2024년 2,890.5톤)."
+    explanation: "전체 원자재 사용량도 2년간 약 1,243톤(30%) 이상 줄어드는 성과를 거두었다(2022년 4,133.4톤 → 2024년 2,890.5톤).",
+    voiceExplanationUrl: "voice/e078.mp3"
   },
   {
     id: "e079",
@@ -4304,7 +4313,8 @@ var ESG_QUESTIONS = [
       { left: "메탈", right: "20.0% 절감" },
       { left: "플라스틱", right: "31.2% 절감" }
     ],
-    explanation: "애터미 원자재 사용량의 2022년 대비 2024년 절감률은 종이 18.2%, 유리 15.6%, 메탈 20.0%, 플라스틱 31.2%이며, 전체 총합계는 30.1% 절감했다."
+    explanation: "애터미 원자재 사용량의 2022년 대비 2024년 절감률은 종이 18.2%, 유리 15.6%, 메탈 20.0%, 플라스틱 31.2%이며, 전체 총합계는 30.1% 절감했다.",
+    voiceExplanationUrl: "voice/e079.mp3"
   },
   {
     id: "e080",
@@ -4318,7 +4328,8 @@ var ESG_QUESTIONS = [
     question: "애터미가 2023년 한 해 동안 재활용한 폐전자제품의 양은?",
     choices: ["16,554kg", "26,554kg", "36,554kg", "46,554kg"],
     answerIndex: 1,
-    explanation: "2023년 한 해 동안 26,554kg의 폐전자제품을 재활용하고 25,643kg의 순환자원을 생산했다."
+    explanation: "2023년 한 해 동안 26,554kg의 폐전자제품을 재활용하고 25,643kg의 순환자원을 생산했다.",
+    voiceExplanationUrl: "voice/e080.mp3"
   },
   {
     id: "e081",
@@ -4332,7 +4343,8 @@ var ESG_QUESTIONS = [
     question: "애터미는 2023년 26,554kg의 폐전자제품을 재활용하여 ( )kg의 순환자원을 생산했다.",
     answer: "25643",
     acceptableAnswers: ["25,643", "25643kg", "25,643kg"],
-    explanation: "2023년 26,554kg의 폐전자제품을 재활용하고 25,643kg의 순환자원을 생산했다."
+    explanation: "2023년 26,554kg의 폐전자제품을 재활용하고 25,643kg의 순환자원을 생산했다.",
+    voiceExplanationUrl: "voice/e081.mp3"
   },
   {
     id: "e082",
@@ -4346,7 +4358,8 @@ var ESG_QUESTIONS = [
     question: "애터미가 2023년 전자제품 자원순환을 통해 달성한 온실가스 감축 효과는?",
     choices: ["53,561kgCO2-eq", "63,561kgCO2-eq", "73,561kgCO2-eq", "83,561kgCO2-eq"],
     answerIndex: 2,
-    explanation: "2023년 폐전자제품 재활용과 순환자원 생산을 통해 73,561kgCO2-eq의 온실가스 감축 효과를 달성했다."
+    explanation: "2023년 폐전자제품 재활용과 순환자원 생산을 통해 73,561kgCO2-eq의 온실가스 감축 효과를 달성했다.",
+    voiceExplanationUrl: "voice/e082.mp3"
   },
   {
     id: "e083",
@@ -4360,7 +4373,8 @@ var ESG_QUESTIONS = [
     question: "블루진 캠페인에서 청바지 125장을 업사이클링했으며, 청바지 1장당 탄소 저감 효과는 33kg이다. 125장 업사이클링으로 감축한 탄소 총량은 몇 kg인가? (콤마 없이 숫자만 입력)",
     answer: "4125",
     unit: "kg",
-    explanation: "33kg×125장=4,125kg으로, 블루진 캠페인을 통해 총 4,125kg의 탄소를 저감하였다."
+    explanation: "33kg×125장=4,125kg으로, 블루진 캠페인을 통해 총 4,125kg의 탄소를 저감하였다.",
+    voiceExplanationUrl: "voice/e083.mp3"
   },
   {
     id: "e084",
@@ -4374,7 +4388,8 @@ var ESG_QUESTIONS = [
     question: "블루진 캠페인은 언제 진행되었는가?",
     choices: ["2020년 3월", "2021년 3월", "2022년 3월", "2023년 3월"],
     answerIndex: 2,
-    explanation: "2022년 3월 애터미 사내 임직원 및 영리더스 회원의 참여로 청바지 총 125장을 수거하여 에코컵홀더로 업사이클링하는 블루진 캠페인을 진행했다."
+    explanation: "2022년 3월 애터미 사내 임직원 및 영리더스 회원의 참여로 청바지 총 125장을 수거하여 에코컵홀더로 업사이클링하는 블루진 캠페인을 진행했다.",
+    voiceExplanationUrl: "voice/e084.mp3"
   },
   {
     id: "e085",
@@ -4387,7 +4402,8 @@ var ESG_QUESTIONS = [
     tags: ["공병수거캠페인"],
     question: "애터미는 2021년 테라사이클과 함께 800여 개 교육센터가 참여하는 공병수거 캠페인을 진행했다.",
     answer: true,
-    explanation: "2021년 애터미는 글로벌 리사이클링 전개기업 테라사이클과 함께 공병수거 캠페인을 진행했으며, 800여 개 교육센터에서 참여했다."
+    explanation: "2021년 애터미는 글로벌 리사이클링 전개기업 테라사이클과 함께 공병수거 캠페인을 진행했으며, 800여 개 교육센터에서 참여했다.",
+    voiceExplanationUrl: "voice/e085.mp3"
   },
   {
     id: "e086",
@@ -4401,7 +4417,8 @@ var ESG_QUESTIONS = [
     question: "공병수거 캠페인에서 수거한 공병을 활용해 제작하여 애터미파크 내에 배치한 것은?",
     choices: ["업사이클 벤치", "업사이클 화분", "업사이클 조형물", "업사이클 벽화"],
     answerIndex: 0,
-    explanation: "공병수거 캠페인에서 모은 공병을 이용하여 업사이클 벤치를 제작해 본사인 애터미파크 내에 배치했다."
+    explanation: "공병수거 캠페인에서 모은 공병을 이용하여 업사이클 벤치를 제작해 본사인 애터미파크 내에 배치했다.",
+    voiceExplanationUrl: "voice/e086.mp3"
   },
   {
     id: "e087",
@@ -4415,7 +4432,8 @@ var ESG_QUESTIONS = [
     question: "2021년 애터미 영리더스클럽이 비치클린 캠페인을 기획한 계기가 된, 쓰레기로 인한 해양생태계 파괴 소식이 전해진 지역은?",
     choices: ["부산 해운대", "울산시 일산해수욕장", "인천 을왕리", "강릉 경포대"],
     answerIndex: 1,
-    explanation: "영리더스클럽은 울산시 일산해수욕장 일대에 관광객들이 남기고 간 쓰레기가 해양 생태계를 파괴한다는 소식을 듣고 비치클린 캠페인을 기획했다."
+    explanation: "영리더스클럽은 울산시 일산해수욕장 일대에 관광객들이 남기고 간 쓰레기가 해양 생태계를 파괴한다는 소식을 듣고 비치클린 캠페인을 기획했다.",
+    voiceExplanationUrl: "voice/e087.mp3"
   },
   {
     id: "e088",
@@ -4429,7 +4447,8 @@ var ESG_QUESTIONS = [
     question: "2022년 10월 애터미는 거점 교육센터 ( )곳에서 환경보호에 관심 있는 회원 800여 명을 대상으로 친환경 멘토링 교육을 진행했다.",
     answer: "6",
     acceptableAnswers: ["6곳", "6"],
-    explanation: "2022년 10월 애터미 거점 교육센터 6곳에서 환경보호에 관심 있는 회원 800여 명을 대상으로 친환경 멘토링 교육을 진행하였다."
+    explanation: "2022년 10월 애터미 거점 교육센터 6곳에서 환경보호에 관심 있는 회원 800여 명을 대상으로 친환경 멘토링 교육을 진행하였다.",
+    voiceExplanationUrl: "voice/e088.mp3"
   },
   {
     id: "e089",
@@ -4443,7 +4462,8 @@ var ESG_QUESTIONS = [
     question: "애터미가 2024년 본사(애터미파크) 내에 설치한 전기차 충전소는 몇 기인가?",
     choices: ["5기", "10기", "15기", "20기"],
     answerIndex: 1,
-    explanation: "애터미는 2024년 본사(애터미파크) 내 전기차 충전소 10기를 설치하고, 법인차량을 단계적으로 전기차로 전환하고 있다."
+    explanation: "애터미는 2024년 본사(애터미파크) 내 전기차 충전소 10기를 설치하고, 법인차량을 단계적으로 전기차로 전환하고 있다.",
+    voiceExplanationUrl: "voice/e089.mp3"
   },
   {
     id: "e090",
@@ -4456,7 +4476,8 @@ var ESG_QUESTIONS = [
     tags: ["친환경활동", "연혁"],
     question: "다음 애터미의 친환경 활동을 실시된 시기가 이른 순서대로 배열하시오.",
     items: ["공병수거 캠페인", "블루진 캠페인", "친환경 멘토링 교육", "사내 전기차 충전소 설치"],
-    explanation: "공병수거 캠페인은 2021년, 블루진 캠페인은 2022년 3월, 친환경 멘토링 교육은 2022년 10월, 사내 전기차 충전소 설치는 2024년에 각각 시행되었다."
+    explanation: "공병수거 캠페인은 2021년, 블루진 캠페인은 2022년 3월, 친환경 멘토링 교육은 2022년 10월, 사내 전기차 충전소 설치는 2024년에 각각 시행되었다.",
+    voiceExplanationUrl: "voice/e090.mp3"
   },
   {
     id: "e091",
@@ -4470,7 +4491,8 @@ var ESG_QUESTIONS = [
     question: "애터미가 '협력사' 대신 '합력사'라는 용어를 사용하는 이유로 가장 적절한 것은?",
     choices: ["계약으로 맺어진 갑을 관계임을 강조하기 위해", "합(合)이 협(協)보다 법적 구속력이 강하기 때문에", "계약으로 맺어진 갑을 관계가 아닌 한 가족이 되어 함께 성공하는 관계를 강조하기 위해", "정부 지침에 따라 명칭을 통일하기 위해"],
     answerIndex: 2,
-    explanation: "협력(協力)이 하나의 일을 완성하기 위해 서로 돕는다는 의미라면, 합력(合力)은 계약으로 맺어진 갑을 관계가 아닌 한 가족이 되어 함께 성공하는 관계를 강조하는 것입니다."
+    explanation: "협력(協力)이 하나의 일을 완성하기 위해 서로 돕는다는 의미라면, 합력(合力)은 계약으로 맺어진 갑을 관계가 아닌 한 가족이 되어 함께 성공하는 관계를 강조하는 것입니다.",
+    voiceExplanationUrl: "voice/e091.mp3"
   },
   {
     id: "e092",
@@ -4484,7 +4506,8 @@ var ESG_QUESTIONS = [
     question: "2024년 애터미의 합력사는 총 몇 개인가?",
     choices: ["76개", "78개", "88개", "82개"],
     answerIndex: 2,
-    explanation: "애터미의 2024년 합력사는 88개로 모두 제조업체입니다."
+    explanation: "애터미의 2024년 합력사는 88개로 모두 제조업체입니다.",
+    voiceExplanationUrl: "voice/e092.mp3"
   },
   {
     id: "e093",
@@ -4498,7 +4521,8 @@ var ESG_QUESTIONS = [
     question: "2024년 애터미 합력사와의 연간 구매금액은 얼마인가?",
     choices: ["6,944억원", "6,431억원", "6,374억원", "5,374억원"],
     answerIndex: 2,
-    explanation: "2024년 합력사 연간 구매금액은 6,374억원이며, 2022년 6,944억원, 2023년 6,431억원에서 변화한 수치입니다."
+    explanation: "2024년 합력사 연간 구매금액은 6,374억원이며, 2022년 6,944억원, 2023년 6,431억원에서 변화한 수치입니다.",
+    voiceExplanationUrl: "voice/e093.mp3"
   },
   {
     id: "e094",
@@ -4512,7 +4536,8 @@ var ESG_QUESTIONS = [
     question: "합력사 품질레벨업 활동지원을 위한 비용은 누가 부담하는가?",
     choices: ["합력사와 애터미가 절반씩 부담", "전적으로 애터미가 부담", "정부 보조금으로 충당", "합력사가 전액 부담"],
     answerIndex: 1,
-    explanation: "제3자 전문기관과 협력하여 합동 품질 관리 점검을 하며, 품질 향상을 위한 비용은 전적으로 애터미가 부담하고 있습니다."
+    explanation: "제3자 전문기관과 협력하여 합동 품질 관리 점검을 하며, 품질 향상을 위한 비용은 전적으로 애터미가 부담하고 있습니다.",
+    voiceExplanationUrl: "voice/e094.mp3"
   },
   {
     id: "e095",
@@ -4526,7 +4551,8 @@ var ESG_QUESTIONS = [
     question: "애터미 합력사 ESG 평가 결과 도출 시 참고한 외부 전문기관은?",
     choices: ["DNV", "KPMG", "TÜV", "SGS"],
     answerIndex: 0,
-    explanation: "외부 전문기관(DNV)의 평가 기준을 참고한 합력사 ESG 평가 결과에는 인권경영, 안전보건, 유해물질 관리 등 주요 사회·환경 이슈가 포함되어 있습니다."
+    explanation: "외부 전문기관(DNV)의 평가 기준을 참고한 합력사 ESG 평가 결과에는 인권경영, 안전보건, 유해물질 관리 등 주요 사회·환경 이슈가 포함되어 있습니다.",
+    voiceExplanationUrl: "voice/e095.mp3"
   },
   {
     id: "e096",
@@ -4540,7 +4566,8 @@ var ESG_QUESTIONS = [
     question: "애터미 합력사의 환경 부문 인증 합력사 비율이 2022~2024년 중 가장 높았던 해와 그 비율로 옳은 것은?",
     choices: ["2022년 35.9%", "2023년 46.1%", "2024년 39.8%", "2023년 64.5%"],
     answerIndex: 1,
-    explanation: "환경 부문 인증 합력사 비율은 2022년 35.9%, 2023년 46.1%, 2024년 39.8%로 2023년이 가장 높습니다. (64.5%는 사회 부문 2023년 수치입니다.)"
+    explanation: "환경 부문 인증 합력사 비율은 2022년 35.9%, 2023년 46.1%, 2024년 39.8%로 2023년이 가장 높습니다. (64.5%는 사회 부문 2023년 수치입니다.)",
+    voiceExplanationUrl: "voice/e096.mp3"
   },
   {
     id: "e097",
@@ -4554,7 +4581,8 @@ var ESG_QUESTIONS = [
     question: "2017년 '합력사 발굴 프로젝트'에서 총 582개 기업이 응모한 끝에 최종 선정되어 종이컵을 생산하게 된 사회적기업의 이름은?",
     choices: ["제일산업", "삼일제지", "한국제지", "대한산업"],
     answerIndex: 0,
-    explanation: "2017년 총 582개 기업이 응모해 한 사회적기업이 최종 선정되었으며, 이를 통해 제일산업은 안정적인 판로를 확보하고 시장에 안착할 수 있었습니다."
+    explanation: "2017년 총 582개 기업이 응모해 한 사회적기업이 최종 선정되었으며, 이를 통해 제일산업은 안정적인 판로를 확보하고 시장에 안착할 수 있었습니다.",
+    voiceExplanationUrl: "voice/e097.mp3"
   },
   {
     id: "e098",
@@ -4568,7 +4596,8 @@ var ESG_QUESTIONS = [
     question: "무라벨 '애터미 해양심층수'를 애터미와 공동 개발한 주요 합력사는?",
     choices: ["강원심층수", "제일산업", "애터미오롯", "해양수산공사"],
     answerIndex: 0,
-    explanation: "주요 합력사인 강원심층수와 협력해 무라벨 '애터미 해양심층수'를 공동 개발함으로써 재활용 효율을 향상시켰습니다."
+    explanation: "주요 합력사인 강원심층수와 협력해 무라벨 '애터미 해양심층수'를 공동 개발함으로써 재활용 효율을 향상시켰습니다.",
+    voiceExplanationUrl: "voice/e098.mp3"
   },
   {
     id: "e099",
@@ -4582,7 +4611,8 @@ var ESG_QUESTIONS = [
     question: "애터미오롯이 기능성 소재 전문 중소기업과 공동 개발해 싱가포르, 대만 등에 수출한 제품군은?",
     choices: ["포스트바이오틱스", "프로바이오틱스 유산균", "콜라겐 펩타이드", "비타민 복합제"],
     answerIndex: 0,
-    explanation: "애터미오롯은 기능성 소재 전문 중소기업과 협력해 차세대 포스트바이오틱스 제품을 공동 개발하고 싱가포르와 대만 등 해외시장에 수출하고 있습니다."
+    explanation: "애터미오롯은 기능성 소재 전문 중소기업과 협력해 차세대 포스트바이오틱스 제품을 공동 개발하고 싱가포르와 대만 등 해외시장에 수출하고 있습니다.",
+    voiceExplanationUrl: "voice/e099.mp3"
   },
   {
     id: "e100",
@@ -4595,7 +4625,8 @@ var ESG_QUESTIONS = [
     tags: ["ESG평가"],
     question: "애터미 합력사 ESG 평가는 업체 규모 및 특성에 따라 빈도를 차등 적용하되 최소 연 1회 이상 정기 평가를 실시한다.",
     answer: true,
-    explanation: "합력사 ESG 평가는 업체 규모 및 특성을 고려하여 평가 빈도를 차등 적용하며, 최소 연 1회 이상 정기 평가를 실시하고 있습니다."
+    explanation: "합력사 ESG 평가는 업체 규모 및 특성을 고려하여 평가 빈도를 차등 적용하며, 최소 연 1회 이상 정기 평가를 실시하고 있습니다.",
+    voiceExplanationUrl: "voice/e100.mp3"
   },
   {
     id: "e101",
@@ -4608,7 +4639,8 @@ var ESG_QUESTIONS = [
     tags: ["1품1사"],
     question: "1품1사 원칙에 따라 한 번 인연을 맺은 합력사는 도덕적인 문제가 없는 이상 변경하거나 이원화하지 않는다.",
     answer: true,
-    explanation: "1품1사 원칙에서는 한 번 인연을 맺은 합력사는 도덕적인 문제가 발생하지 않는 이상 변경하거나 이원화하지 않습니다."
+    explanation: "1품1사 원칙에서는 한 번 인연을 맺은 합력사는 도덕적인 문제가 발생하지 않는 이상 변경하거나 이원화하지 않습니다.",
+    voiceExplanationUrl: "voice/e101.mp3"
   },
   {
     id: "e102",
@@ -4621,7 +4653,8 @@ var ESG_QUESTIONS = [
     tags: ["ESG평가"],
     question: "애터미의 합력사 ESG 평가 기준은 신규 합력사에게만 적용되며 기존 합력사에게는 적용되지 않는다.",
     answer: false,
-    explanation: "해당 평가는 기존 합력사와 신규 합력사에 동일한 기준을 적용하여 공정하게 운영하고 있습니다."
+    explanation: "해당 평가는 기존 합력사와 신규 합력사에 동일한 기준을 적용하여 공정하게 운영하고 있습니다.",
+    voiceExplanationUrl: "voice/e102.mp3"
   },
   {
     id: "e103",
@@ -4634,7 +4667,8 @@ var ESG_QUESTIONS = [
     tags: ["합력사", "현황"],
     question: "2024년 기준 애터미의 합력사 88개는 모두 제조업체이다.",
     answer: true,
-    explanation: "애터미의 2024년 합력사는 88개로 모두 제조업체입니다."
+    explanation: "애터미의 2024년 합력사는 88개로 모두 제조업체입니다.",
+    voiceExplanationUrl: "voice/e103.mp3"
   },
   {
     id: "e104",
@@ -4648,7 +4682,8 @@ var ESG_QUESTIONS = [
     question: "애터미는 선투자가 필요한 생산업체를 돕기 위해 제품 납품 후 ( ) 이내 전액 현금으로 대금을 지급한다.",
     answer: "일주일",
     acceptableAnswers: ["1주일", "일 주일"],
-    explanation: "제품 납품 후 일주일 이내 전액 현금으로 대금을 지급하고, 사정이 여의치 않은 업체는 즉시 지급하고 있습니다."
+    explanation: "제품 납품 후 일주일 이내 전액 현금으로 대금을 지급하고, 사정이 여의치 않은 업체는 즉시 지급하고 있습니다.",
+    voiceExplanationUrl: "voice/e104.mp3"
   },
   {
     id: "e105",
@@ -4662,7 +4697,8 @@ var ESG_QUESTIONS = [
     question: "2017년 '합력사 발굴 프로젝트'에는 총 ( )개 기업이 응모하였다.",
     answer: "582",
     acceptableAnswers: ["582개"],
-    explanation: "2017년에는 총 582개 기업이 응모해 한 사회적기업(제일산업)이 최종 선정되었습니다."
+    explanation: "2017년에는 총 582개 기업이 응모해 한 사회적기업(제일산업)이 최종 선정되었습니다.",
+    voiceExplanationUrl: "voice/e105.mp3"
   },
   {
     id: "e106",
@@ -4676,7 +4712,8 @@ var ESG_QUESTIONS = [
     question: "2024년 품질활동레벨업 활동지원금(3자 기관 점검 비용)은 ( )이다.",
     answer: "5,434만원",
     acceptableAnswers: ["5434만원", "5,434", "5434"],
-    explanation: "품질활동레벨업 활동지원금(3자 기관 점검 비용)은 2022년 1억4,177만원, 2023년 1억929만원, 2024년 5,434만원입니다."
+    explanation: "품질활동레벨업 활동지원금(3자 기관 점검 비용)은 2022년 1억4,177만원, 2023년 1억929만원, 2024년 5,434만원입니다.",
+    voiceExplanationUrl: "voice/e106.mp3"
   },
   {
     id: "e107",
@@ -4689,7 +4726,8 @@ var ESG_QUESTIONS = [
     tags: ["CASE"],
     question: "다음 합력성선 CASE를 보고서에 소개된 순서대로 배열하시오.",
     items: ["사회적기업의 판로 확보 및 시장 안착", "합력사 ESG 평가 기반의 정기 소통 및 우수사례 확산 성과", "합력사 품질·환경 개선을 통한 ESG생산체계 구축", "중소기업과의 기술 협력을 통한 글로벌 시장 동반 진출"],
-    explanation: "보고서에는 CASE1 사회적기업 판로 확보(제일산업), CASE2 ESG 평가 기반 정기 소통, CASE3 강원심층수와의 ESG생산체계 구축, CASE4 애터미오롯의 기술 협력 순으로 소개됩니다."
+    explanation: "보고서에는 CASE1 사회적기업 판로 확보(제일산업), CASE2 ESG 평가 기반 정기 소통, CASE3 강원심층수와의 ESG생산체계 구축, CASE4 애터미오롯의 기술 협력 순으로 소개됩니다.",
+    voiceExplanationUrl: "voice/e107.mp3"
   },
   {
     id: "e108",
@@ -4707,7 +4745,8 @@ var ESG_QUESTIONS = [
       { left: "1품1사 원칙", right: "한 품목을 한 업체와만 거래하는 MD(Merchandising) 전략" },
       { left: "납품 대금 결제 정책", right: "납품 후 일주일 이내 100% 현금으로 결제함" }
     ],
-    explanation: "중소기업 우선 정책, 합리적인 매입가 정책, 1품1사 원칙, 납품 후 일주일 이내 100% 현금결제는 모두 합력성선을 위한 애터미의 지원 정책입니다."
+    explanation: "중소기업 우선 정책, 합리적인 매입가 정책, 1품1사 원칙, 납품 후 일주일 이내 100% 현금결제는 모두 합력성선을 위한 애터미의 지원 정책입니다.",
+    voiceExplanationUrl: "voice/e108.mp3"
   },
   {
     id: "e109",
@@ -4721,7 +4760,8 @@ var ESG_QUESTIONS = [
     question: "2025 ATOMY ESG REPORT에 따르면 2024년 애터미의 전체 고용인원은 몇 명인가?",
     choices: ["752명", "767명", "770명", "683명"],
     answerIndex: 0,
-    explanation: "2024년 기준 전체 고용인원은 752명이다(2022년 767명, 2023년 770명)."
+    explanation: "2024년 기준 전체 고용인원은 752명이다(2022년 767명, 2023년 770명).",
+    voiceExplanationUrl: "voice/e109.mp3"
   },
   {
     id: "e110",
@@ -4735,7 +4775,8 @@ var ESG_QUESTIONS = [
     question: "애터미의 사훈으로, '사람을 먼저 생각하는 기업문화'의 바탕이 되는 문구는?",
     choices: ["영혼을 소중히 여긴다", "고객이 왕이다", "정직이 최선이다", "함께 나누는 성공"],
     answerIndex: 0,
-    explanation: "애터미는 '영혼을 소중히 여긴다'는 사훈 아래 '행복한 일터 조성'과 '인권존중 문화 내재화'를 기업의 기본 의무로 삼고 있다."
+    explanation: "애터미는 '영혼을 소중히 여긴다'는 사훈 아래 '행복한 일터 조성'과 '인권존중 문화 내재화'를 기업의 기본 의무로 삼고 있다.",
+    voiceExplanationUrl: "voice/e110.mp3"
   },
   {
     id: "e111",
@@ -4748,7 +4789,8 @@ var ESG_QUESTIONS = [
     tags: ["임직원현황", "지역별비율"],
     question: "2024년 애터미 임직원의 지역별 비율은 해외인력 비율(64.2%)이 국내인력 비율(35.8%)보다 높다.",
     answer: true,
-    explanation: "2024년 지역별 비율은 국내 35.8%, 해외 64.2%로 해외인력 비율이 더 높다."
+    explanation: "2024년 지역별 비율은 국내 35.8%, 해외 64.2%로 해외인력 비율이 더 높다.",
+    voiceExplanationUrl: "voice/e111.mp3"
   },
   {
     id: "e112",
@@ -4762,7 +4804,8 @@ var ESG_QUESTIONS = [
     question: "2024년 애터미의 여성 직원 비율은 ( )%이다.",
     answer: "50.3",
     acceptableAnswers: [],
-    explanation: "2024년 성별 비율은 남성 49.7%, 여성 50.3%로 여성 비율이 조금 더 높다."
+    explanation: "2024년 성별 비율은 남성 49.7%, 여성 50.3%로 여성 비율이 조금 더 높다.",
+    voiceExplanationUrl: "voice/e112.mp3"
   },
   {
     id: "e113",
@@ -4776,7 +4819,8 @@ var ESG_QUESTIONS = [
     question: "2024년 애터미의 정규직 비율은?",
     choices: ["90.6%", "85.0%", "88.4%", "92.3%"],
     answerIndex: 0,
-    explanation: "2024년 정규직 비율은 90.6%로 전년 대비 소폭 증가하였다."
+    explanation: "2024년 정규직 비율은 90.6%로 전년 대비 소폭 증가하였다.",
+    voiceExplanationUrl: "voice/e113.mp3"
   },
   {
     id: "e114",
