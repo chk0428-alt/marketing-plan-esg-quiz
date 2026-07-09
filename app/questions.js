@@ -4834,7 +4834,8 @@ var ESG_QUESTIONS = [
     question: "2024년 애터미 임직원의 연령별 분포 중 가장 높은 비중을 차지하는 연령대는?",
     choices: ["30대", "40대", "20대", "50대 이상"],
     answerIndex: 0,
-    explanation: "2024년 연령별 분포는 30대 48.0%, 40대 26.2%, 20대 18.4%, 50대 이상 7.4% 순이다."
+    explanation: "2024년 연령별 분포는 30대 48.0%, 40대 26.2%, 20대 18.4%, 50대 이상 7.4% 순이다.",
+    voiceExplanationUrl: "voice/e114.mp3"
   },
   {
     id: "e115",
@@ -4848,7 +4849,8 @@ var ESG_QUESTIONS = [
     question: "애터미 전체 임직원 수는 2022년 767명, 2024년 752명이다. 2022년 대비 2024년 감소한 인원은 몇 명인가? (단위: 명, 콤마 없이 숫자만 입력)",
     answer: "15",
     unit: "명",
-    explanation: "767명(2022년)에서 752명(2024년)으로 15명 감소했다."
+    explanation: "767명(2022년)에서 752명(2024년)으로 15명 감소했다.",
+    voiceExplanationUrl: "voice/e115.mp3"
   },
   {
     id: "e116",
@@ -4862,7 +4864,8 @@ var ESG_QUESTIONS = [
     question: "2024년 애터미 임직원 수는 국내 269명, 해외 483명이다. 해외가 국내보다 몇 명 더 많은가? (단위: 명, 콤마 없이 숫자만 입력)",
     answer: "214",
     unit: "명",
-    explanation: "483명(해외)에서 269명(국내)을 빼면 214명 차이가 난다."
+    explanation: "483명(해외)에서 269명(국내)을 빼면 214명 차이가 난다.",
+    voiceExplanationUrl: "voice/e116.mp3"
   },
   {
     id: "e117",
@@ -4876,7 +4879,8 @@ var ESG_QUESTIONS = [
     question: "애터미 임직원 현황 표에서 '해외 고위관리자'로 집계되는 직급 기준은?",
     choices: ["BM(Branch Manager) 이상의 법인장", "팀장 이상", "이사 이상 등기임원", "본부장 이상"],
     answerIndex: 0,
-    explanation: "해외 고위관리자 직급은 BM(Branch Manager) 이상의 법인장으로, 법인설립 및 운영관리 등을 총괄한다."
+    explanation: "해외 고위관리자 직급은 BM(Branch Manager) 이상의 법인장으로, 법인설립 및 운영관리 등을 총괄한다.",
+    voiceExplanationUrl: "voice/e117.mp3"
   },
   {
     id: "e118",
@@ -4890,7 +4894,8 @@ var ESG_QUESTIONS = [
     question: "애터미 임직원 현황에서 '국내'는 애터미 한국법인 기준으로 본사, 홍삼단, 아자, 오롯, ( )를 포함한다.",
     answer: "실로아트",
     acceptableAnswers: [],
-    explanation: "국내 임직원 수는 본사, 홍삼단, 아자, 오롯, 실로아트 등 애터미 한국법인 기준으로 집계된다."
+    explanation: "국내 임직원 수는 본사, 홍삼단, 아자, 오롯, 실로아트 등 애터미 한국법인 기준으로 집계된다.",
+    voiceExplanationUrl: "voice/e118.mp3"
   },
   {
     id: "e119",
@@ -4903,7 +4908,8 @@ var ESG_QUESTIONS = [
     tags: ["다양성", "권역별"],
     question: "2024년 애터미 권역별 직원 비율에서 Asia가 81.0%로 가장 높은 비중을 차지한다.",
     answer: true,
-    explanation: "2024년 권역별 직원 비율은 Asia 81.0%, Europe 8.8%, Central&South America 4.0%, North America 3.9%, Oceania 2.4% 순이다."
+    explanation: "2024년 권역별 직원 비율은 Asia 81.0%, Europe 8.8%, Central&South America 4.0%, North America 3.9%, Oceania 2.4% 순이다.",
+    voiceExplanationUrl: "voice/e119.mp3"
   },
   {
     id: "e120",
@@ -4917,7 +4923,8 @@ var ESG_QUESTIONS = [
     question: "2024년 애터미 권역별 직원 비율 중 Europe이 차지하는 비중은?",
     choices: ["8.8%", "4.0%", "3.9%", "2.4%"],
     answerIndex: 0,
-    explanation: "2024년 권역별 직원 비율에서 Europe은 8.8%를 차지한다."
+    explanation: "2024년 권역별 직원 비율에서 Europe은 8.8%를 차지한다.",
+    voiceExplanationUrl: "voice/e120.mp3"
   },
   {
     id: "e121",
@@ -4931,7 +4938,8 @@ var ESG_QUESTIONS = [
     question: "2024년 남성 1인 평균 급여 대비 여성 1인 평균 급여 비율(기본급 기준)은?",
     choices: ["85.8%", "90.2%", "78.5%", "95.0%"],
     answerIndex: 0,
-    explanation: "2024년 남성 대비 여성 임금 비율은 기본급 85.8%, 기본급+연말상여금 86.2%이다."
+    explanation: "2024년 남성 대비 여성 임금 비율은 기본급 85.8%, 기본급+연말상여금 86.2%이다.",
+    voiceExplanationUrl: "voice/e121.mp3"
   },
   {
     id: "e122",
@@ -4944,7 +4952,8 @@ var ESG_QUESTIONS = [
     tags: ["다양성", "장애인고용"],
     question: "애터미의 장애인 고용인원(재직인원 기준)은 2022년, 2023년, 2024년 모두 5명으로 동일하다.",
     answer: true,
-    explanation: "장애인 고용인원은 2022년 5명, 2023년 5명, 2024년 5명으로 동일하게 유지되었다."
+    explanation: "장애인 고용인원은 2022년 5명, 2023년 5명, 2024년 5명으로 동일하게 유지되었다.",
+    voiceExplanationUrl: "voice/e122.mp3"
   },
   {
     id: "e123",
@@ -4958,7 +4967,8 @@ var ESG_QUESTIONS = [
     question: "애터미가 조직의 핵심 연결축인 중간 리더를 육성하기 위해 도입한 프로그램은?",
     choices: ["AVD(Atomy Value Driver)", "이바위", "후츠파워크숍", "애터미 칼리지"],
     answerIndex: 0,
-    explanation: "AVD(Atomy Value Driver)는 중간 리더를 육성해 기업 가치와 전략을 현장에서 실행·정착시키는 중간 리더십 프로젝트다."
+    explanation: "AVD(Atomy Value Driver)는 중간 리더를 육성해 기업 가치와 전략을 현장에서 실행·정착시키는 중간 리더십 프로젝트다.",
+    voiceExplanationUrl: "voice/e123.mp3"
   },
   {
     id: "e124",
@@ -4972,7 +4982,8 @@ var ESG_QUESTIONS = [
     question: "애터미의 직원 주도 자발적 개선 활동인 '이바위'는 '( )'의 줄임말이다.",
     answer: "이것만은 바꾸어 봅시다",
     acceptableAnswers: [],
-    explanation: "'이바위'는 '이것만은 바꾸어 봅시다'의 줄임말로, 구성원이 업무 개선 아이디어를 주도적으로 제안하는 프로그램이다."
+    explanation: "'이바위'는 '이것만은 바꾸어 봅시다'의 줄임말로, 구성원이 업무 개선 아이디어를 주도적으로 제안하는 프로그램이다.",
+    voiceExplanationUrl: "voice/e124.mp3"
   },
   {
     id: "e125",
@@ -4990,7 +5001,8 @@ var ESG_QUESTIONS = [
       { left: "후츠파정신", right: "히브리어로 형식과 권위에 얽매이지 않는 담대함과 저돌성을 뜻함" },
       { left: "절대목표", right: "상대목표가 아닌 절대목표 도전으로 독보적인 경쟁력을 추구함" }
     ],
-    explanation: "애터미 조직문화 키워드는 각각 아메바조직(프로젝트팀 기반 조직), 자장격지(스스로 의사결정), 후츠파정신(히브리어 유래 담대함), 절대목표(비교불가한 경쟁력 추구)를 의미한다."
+    explanation: "애터미 조직문화 키워드는 각각 아메바조직(프로젝트팀 기반 조직), 자장격지(스스로 의사결정), 후츠파정신(히브리어 유래 담대함), 절대목표(비교불가한 경쟁력 추구)를 의미한다.",
+    voiceExplanationUrl: "voice/e125.mp3"
   },
   {
     id: "e126",
@@ -5003,7 +5015,8 @@ var ESG_QUESTIONS = [
     tags: ["생애설계", "복지"],
     question: "다음 애터미 人 생애설계 로드맵을 입사 이후 시간 순서대로 배열하시오.",
     items: ["애터미 人 1막 (성과창출, 전문성 강화)", "애터미 人 2막 (완전 휴식, 리더양성, 3막 준비)", "애터미 人 3막 (새로운 가치 추구, 꿈의 실현, 사회공헌)"],
-    explanation: "생애설계 로드맵은 입사 후 1막(성과창출·전문성 강화), 50세 이후 2막(완전휴식·리더양성), 62세 정년 이후 3막(새로운 가치 추구·사회공헌) 순으로 이어진다."
+    explanation: "생애설계 로드맵은 입사 후 1막(성과창출·전문성 강화), 50세 이후 2막(완전휴식·리더양성), 62세 정년 이후 3막(새로운 가치 추구·사회공헌) 순으로 이어진다.",
+    voiceExplanationUrl: "voice/e126.mp3"
   },
   {
     id: "e127",
@@ -5017,7 +5030,8 @@ var ESG_QUESTIONS = [
     question: "애터미 생애설계 지원 대상 중 '정년 몇 년 전' 임직원이 Life Coaching을 통한 생애설계 방향성 수립 지원 대상에 포함되는가?",
     choices: ["정년 5년 전", "정년 3년 전", "정년 1년 전", "정년 10년 전"],
     answerIndex: 0,
-    explanation: "생애설계 지원 대상은 결혼·휴직 후 복귀 직원, 전직 결심 직원, 정년 5년 전 임직원이다."
+    explanation: "생애설계 지원 대상은 결혼·휴직 후 복귀 직원, 전직 결심 직원, 정년 5년 전 임직원이다.",
+    voiceExplanationUrl: "voice/e127.mp3"
   },
   {
     id: "e128",
@@ -5031,7 +5045,8 @@ var ESG_QUESTIONS = [
     question: "애터미가 3자녀 출산 시 지급하는 출산장려금은?",
     choices: ["2,000만 원", "1,000만 원", "1,500만 원", "500만 원"],
     answerIndex: 0,
-    explanation: "출산장려금은 1·2자녀 1,000만 원, 3자녀 2,000만 원이 지급된다."
+    explanation: "출산장려금은 1·2자녀 1,000만 원, 3자녀 2,000만 원이 지급된다.",
+    voiceExplanationUrl: "voice/e128.mp3"
   },
   {
     id: "e129",
@@ -5045,7 +5060,8 @@ var ESG_QUESTIONS = [
     question: "애터미는 임직원에게 월 ( )만 원 상당의 자사 제품을 지급한다.",
     answer: "25",
     acceptableAnswers: ["25만", "월 25만"],
-    explanation: "생활 부문 복지로 월 25만 원 상당의 자사 제품을 지급한다."
+    explanation: "생활 부문 복지로 월 25만 원 상당의 자사 제품을 지급한다.",
+    voiceExplanationUrl: "voice/e129.mp3"
   },
   {
     id: "e130",
@@ -5059,7 +5075,8 @@ var ESG_QUESTIONS = [
     question: "애터미는 몇 년부터 임직원 100% 확정기여형 퇴직연금제도를 운용하고 있는가?",
     choices: ["2010년", "2015년", "2005년", "2020년"],
     answerIndex: 0,
-    explanation: "애터미는 2010년부터 임직원 100% 확정기여형 퇴직연금제도를 운용하고 있다."
+    explanation: "애터미는 2010년부터 임직원 100% 확정기여형 퇴직연금제도를 운용하고 있다.",
+    voiceExplanationUrl: "voice/e130.mp3"
   },
   {
     id: "e131",
@@ -5073,7 +5090,8 @@ var ESG_QUESTIONS = [
     question: "2024년 애터미 월례회 교육 중 CCM교육 참여인원은 128명, 임직원 대상 보상플랜 교육 참여인원은 192명이었다. 두 교육의 참여인원 합계는 몇 명인가? (단위: 명, 콤마 없이 숫자만 입력)",
     answer: "320",
     unit: "명",
-    explanation: "CCM교육 128명과 보상플랜 교육 192명을 더하면 320명이다."
+    explanation: "CCM교육 128명과 보상플랜 교육 192명을 더하면 320명이다.",
+    voiceExplanationUrl: "voice/e131.mp3"
   },
   {
     id: "e132",
@@ -5086,7 +5104,8 @@ var ESG_QUESTIONS = [
     tags: ["역량강화", "후츠파워크숍"],
     question: "'공동학습'을 위한 후츠파워크숍은 연 2회 개최된다.",
     answer: true,
-    explanation: "후츠파워크숍은 과거 연 2회 전사 워크숍으로 운영되며 애터미 자회사, 해외법인이 참여했다."
+    explanation: "후츠파워크숍은 과거 연 2회 전사 워크숍으로 운영되며 애터미 자회사, 해외법인이 참여했다.",
+    voiceExplanationUrl: "voice/e132.mp3"
   },
   {
     id: "e133",
@@ -5100,7 +5119,8 @@ var ESG_QUESTIONS = [
     question: "애터미 사이버 연수원에서 지원하는 온라인 학습 콘텐츠는 약 몇 개인가?",
     choices: ["3600여 개", "1000여 개", "5000여 개", "2000여 개"],
     answerIndex: 0,
-    explanation: "애터미 사이버 연수원은 3600여 개의 온라인 학습을 지원한다."
+    explanation: "애터미 사이버 연수원은 3600여 개의 온라인 학습을 지원한다.",
+    voiceExplanationUrl: "voice/e133.mp3"
   },
   {
     id: "e134",
@@ -5114,7 +5134,8 @@ var ESG_QUESTIONS = [
     question: "애터미의 4대 인권존중 원칙 중 '유연근무제 신청 사원을 보수·복리후생·승진·전보·교육훈련·근무성적평정 등에서 차별하지 않는다'는 내용은 몇 번째 원칙인가?",
     choices: ["원칙4", "원칙1", "원칙2", "원칙3"],
     answerIndex: 0,
-    explanation: "원칙4는 회사가 유연근무제를 적극 시행하도록 노력하며 유연근무제 신청 사원을 차별하지 않는다는 내용이다."
+    explanation: "원칙4는 회사가 유연근무제를 적극 시행하도록 노력하며 유연근무제 신청 사원을 차별하지 않는다는 내용이다.",
+    voiceExplanationUrl: "voice/e134.mp3"
   },
   {
     id: "e135",
@@ -5128,7 +5149,8 @@ var ESG_QUESTIONS = [
     question: "애터미가 '고객·회원과 함께 가치를 나누는 성장 공동체' 챕터에서 설정한 전략테마는 무엇인가?",
     choices: ["고객·회원과 함께 가치를 나누는 성장 공동체", "임직원과 함께하는 지속가능 경영", "글로벌 시장 확대를 위한 성장 전략", "친환경 제품 개발 중심 경영"],
     answerIndex: 0,
-    explanation: "애터미는 '고객·회원과 함께 가치를 나누는 성장 공동체'라는 전략테마 아래 고객을 모든 의사결정의 기준으로 설정하고 있습니다."
+    explanation: "애터미는 '고객·회원과 함께 가치를 나누는 성장 공동체'라는 전략테마 아래 고객을 모든 의사결정의 기준으로 설정하고 있습니다.",
+    voiceExplanationUrl: "voice/e135.mp3"
   },
   {
     id: "e136",
@@ -5142,7 +5164,8 @@ var ESG_QUESTIONS = [
     question: "다음 중 애터미가 설정한 전략과제에 해당하는 것은?",
     choices: ["고객의 성공추구 및 역량강화", "고객 데이터 보안 강화", "글로벌 물류망 확충", "임직원 복지 확대"],
     answerIndex: 0,
-    explanation: "애터미는 '고객 만족도 제고 및 브랜드관리'와 '고객의 성공추구 및 역량강화'를 전략과제로 설정하고 고객 권익을 최우선에 둔 활동을 전개했습니다."
+    explanation: "애터미는 '고객 만족도 제고 및 브랜드관리'와 '고객의 성공추구 및 역량강화'를 전략과제로 설정하고 고객 권익을 최우선에 둔 활동을 전개했습니다.",
+    voiceExplanationUrl: "voice/e136.mp3"
   },
   {
     id: "e137",
@@ -5156,7 +5179,8 @@ var ESG_QUESTIONS = [
     question: "애터미의 MISSION(Responsibility, 의무)에 해당하는 문구는?",
     choices: ["회사의 성공이 아닌 고객 섬김", "고객의 성공적인 삶", "절대품질! 절대가격! 절대서비스!", "편리, 즐거움, 진정성"],
     answerIndex: 0,
-    explanation: "MISSION(Responsibility 의무)은 '회사의 성공이 아닌 고객 섬김(Not Success, But Service)'이며, VISION(Target 목표)은 '고객의 성공적인 삶', CATCHPHRASE(Method 방법)는 '절대품질! 절대가격! 절대서비스!'입니다."
+    explanation: "MISSION(Responsibility 의무)은 '회사의 성공이 아닌 고객 섬김(Not Success, But Service)'이며, VISION(Target 목표)은 '고객의 성공적인 삶', CATCHPHRASE(Method 방법)는 '절대품질! 절대가격! 절대서비스!'입니다.",
+    voiceExplanationUrl: "voice/e137.mp3"
   },
   {
     id: "e138",
@@ -5170,7 +5194,8 @@ var ESG_QUESTIONS = [
     question: "애터미가 고객만족경영 강화를 위해 취득한 국제표준 인증은?",
     choices: ["ISO10002", "ISO9001", "ISO14001", "ISO26000"],
     answerIndex: 0,
-    explanation: "애터미는 ISO9001(품질경영)과 ISO10002(고객만족경영) 인증을 취득해 표준화된 운영체계와 고객 응대 프로세스를 제도화했습니다."
+    explanation: "애터미는 ISO9001(품질경영)과 ISO10002(고객만족경영) 인증을 취득해 표준화된 운영체계와 고객 응대 프로세스를 제도화했습니다.",
+    voiceExplanationUrl: "voice/e138.mp3"
   },
   {
     id: "e139",
@@ -5184,7 +5209,8 @@ var ESG_QUESTIONS = [
     question: "다음 중 애터미 고객행복센터의 상담원 역량 강화 프로그램에 해당하지 않는 것은?",
     choices: ["해외 지사 순환근무 제도", "우수상담원 승진 및 해외 연수", "상담사·관리자·전문가로 나눈 맞춤교육", "힐링 워크숍 등 동기부여 프로그램"],
     answerIndex: 0,
-    explanation: "고객행복센터는 CS스킬업·경영철학 이해 훈련, 우수상담원 승진 및 해외연수, 맞춤교육, 힐링 워크숍 등을 운영하며 해외 지사 순환근무 제도는 언급되지 않았습니다."
+    explanation: "고객행복센터는 CS스킬업·경영철학 이해 훈련, 우수상담원 승진 및 해외연수, 맞춤교육, 힐링 워크숍 등을 운영하며 해외 지사 순환근무 제도는 언급되지 않았습니다.",
+    voiceExplanationUrl: "voice/e139.mp3"
   },
   {
     id: "e140",
@@ -5198,7 +5224,8 @@ var ESG_QUESTIONS = [
     question: "2025년 영남권 산불 당시 SOS나눔회가 회원 모금을 통해 실현한 긴급지원 규모는?",
     choices: ["2억 2,550만원", "1억원", "5,000만원", "3억원"],
     answerIndex: 0,
-    explanation: "2025년 영남권 산불 당시 783명의 회원이 자발적으로 참여해 1억 원을 모금했고, 이를 통해 2억 2,550만 원 규모의 긴급 지원을 실현했습니다."
+    explanation: "2025년 영남권 산불 당시 783명의 회원이 자발적으로 참여해 1억 원을 모금했고, 이를 통해 2억 2,550만 원 규모의 긴급 지원을 실현했습니다.",
+    voiceExplanationUrl: "voice/e140.mp3"
   },
   {
     id: "e141",
@@ -5212,7 +5239,8 @@ var ESG_QUESTIONS = [
     question: "2025년 12월 애터미가 고객 중심 경영 성과를 인정받아 수상한 상은?",
     choices: ["한국소비자학회 '소비자대상'", "대한민국 브랜드대상", "고객만족경영대상", "산업통상자원부 장관상"],
     answerIndex: 0,
-    explanation: "애터미는 2025년 12월 한국소비자학회 '소비자대상'을 수상하며 고객 중심 경영 성과를 공식적으로 인정받았습니다."
+    explanation: "애터미는 2025년 12월 한국소비자학회 '소비자대상'을 수상하며 고객 중심 경영 성과를 공식적으로 인정받았습니다.",
+    voiceExplanationUrl: "voice/e141.mp3"
   },
   {
     id: "e142",
@@ -5226,7 +5254,8 @@ var ESG_QUESTIONS = [
     question: "다음 중 애터미가 디지털 소통 강화를 위해 활용한다고 언급된 공식 SNS 채널이 아닌 것은?",
     choices: ["카카오스토리", "유튜브", "인스타그램", "블로그"],
     answerIndex: 0,
-    explanation: "애터미는 유튜브, 인스타그램, 블로그 등 공식 SNS 채널을 통해 고객 참여형 콘텐츠와 실시간 소통을 강화하고 있습니다."
+    explanation: "애터미는 유튜브, 인스타그램, 블로그 등 공식 SNS 채널을 통해 고객 참여형 콘텐츠와 실시간 소통을 강화하고 있습니다.",
+    voiceExplanationUrl: "voice/e142.mp3"
   },
   {
     id: "e143",
@@ -5240,7 +5269,8 @@ var ESG_QUESTIONS = [
     question: "'그날엔 보라지유' 제품은 섭취 편의성을 높이기 위해 어떻게 개선되었는가?",
     choices: ["캡슐의 수분 함량을 낮췄다", "캡슐 크기를 키웠다", "캡슐 색상을 변경했다", "캡슐 개수를 늘렸다"],
     answerIndex: 0,
-    explanation: "'그날엔 보라지유'는 섭취 편의성을 높여 달라는 회원들의 요청에 따라 캡슐의 수분 함량을 낮추어 개선 후 출시했습니다."
+    explanation: "'그날엔 보라지유'는 섭취 편의성을 높여 달라는 회원들의 요청에 따라 캡슐의 수분 함량을 낮추어 개선 후 출시했습니다.",
+    voiceExplanationUrl: "voice/e143.mp3"
   },
   {
     id: "e144",
@@ -5254,7 +5284,8 @@ var ESG_QUESTIONS = [
     question: "애터미가 2024년까지 누적 개최한 온·오프라인 세미나 횟수는?",
     choices: ["14,602회", "10,402회", "20,000회", "5,602회"],
     answerIndex: 0,
-    explanation: "애터미는 2024년까지 누적 14,602회의 세미나를 개최했으며, 온·오프라인을 통해 전 세계 회원이 참여할 수 있도록 지원하고 있습니다."
+    explanation: "애터미는 2024년까지 누적 14,602회의 세미나를 개최했으며, 온·오프라인을 통해 전 세계 회원이 참여할 수 있도록 지원하고 있습니다.",
+    voiceExplanationUrl: "voice/e144.mp3"
   },
   {
     id: "e145",
@@ -5268,7 +5299,8 @@ var ESG_QUESTIONS = [
     question: "2025년 디지털고객만족도(HTHI) 조사는 몇 개 기업을 대상으로 실시되었는가?",
     choices: ["296개", "150개", "500개", "1,000개"],
     answerIndex: 0,
-    explanation: "2025년 HTHI 조사는 296개 기업을 대상으로 실시됐으며, 애터미는 2024·2025년 2년 연속 네트워크마케팅 업종 1위를 기록했습니다."
+    explanation: "2025년 HTHI 조사는 296개 기업을 대상으로 실시됐으며, 애터미는 2024·2025년 2년 연속 네트워크마케팅 업종 1위를 기록했습니다.",
+    voiceExplanationUrl: "voice/e145.mp3"
   },
   {
     id: "e146",
@@ -5282,7 +5314,8 @@ var ESG_QUESTIONS = [
     question: "경제적 위기 속에서 재기하여 로열마스터로 성장한 B씨의 현재 월평균 소득은?",
     choices: ["약 2,000만 원", "약 9,000만 원", "약 500만 원", "약 1,000만 원"],
     answerIndex: 0,
-    explanation: "B씨는 미용실 운영 실패로 적자 상태였으나 애터미 사업을 시작해 로열마스터로 성장, 모든 채무를 상환하고 월 2,000만 원의 소득을 올렸습니다."
+    explanation: "B씨는 미용실 운영 실패로 적자 상태였으나 애터미 사업을 시작해 로열마스터로 성장, 모든 채무를 상환하고 월 2,000만 원의 소득을 올렸습니다.",
+    voiceExplanationUrl: "voice/e146.mp3"
   },
   {
     id: "e147",
@@ -5295,7 +5328,8 @@ var ESG_QUESTIONS = [
     tags: ["속리산포레스트"],
     question: "2025년 문을 연 속리산포레스트는 연간 10만 명 이상의 회원 방문이 기대되는 복합 교육·연수 공간이다.",
     answer: true,
-    explanation: "2025년 문을 연 속리산포레스트는 온·오프라인을 연계한 글로벌 학습 인프라로, 연간 10만 명 이상의 회원 방문이 기대되고 있습니다."
+    explanation: "2025년 문을 연 속리산포레스트는 온·오프라인을 연계한 글로벌 학습 인프라로, 연간 10만 명 이상의 회원 방문이 기대되고 있습니다.",
+    voiceExplanationUrl: "voice/e147.mp3"
   },
   {
     id: "e148",
@@ -5308,7 +5342,8 @@ var ESG_QUESTIONS = [
     tags: ["일본법인", "CCM"],
     question: "애터미 일본법인은 일본 소비자청으로부터 업계 최초로 'CCM 인증'을 획득했다.",
     answer: false,
-    explanation: "일본 법인은 일본 소비자청으로부터 업계 최초로 '소비자지향경영' 자주선언 인정을 받은 것이며, CCM 인증을 획득한 것이 아닙니다."
+    explanation: "일본 법인은 일본 소비자청으로부터 업계 최초로 '소비자지향경영' 자주선언 인정을 받은 것이며, CCM 인증을 획득한 것이 아닙니다.",
+    voiceExplanationUrl: "voice/e148.mp3"
   },
   {
     id: "e149",
@@ -5321,7 +5356,8 @@ var ESG_QUESTIONS = [
     tags: ["SOS나눔회"],
     question: "SOS나눔회는 2016년 회원들의 자발적 참여로 설립되었으며, 2024년까지 약 23억 원의 누적 기부와 1,358건의 지원을 이어왔다.",
     answer: true,
-    explanation: "2016년 설립된 SOS나눔회는 긴급구호 단체로, 2024년까지 약 23억 원의 누적 기부와 1,358건의 지원 실적을 기록했습니다."
+    explanation: "2016년 설립된 SOS나눔회는 긴급구호 단체로, 2024년까지 약 23억 원의 누적 기부와 1,358건의 지원 실적을 기록했습니다.",
+    voiceExplanationUrl: "voice/e149.mp3"
   },
   {
     id: "e150",
@@ -5335,7 +5371,8 @@ var ESG_QUESTIONS = [
     question: "고객행복센터는 VOC(고객의 소리)를 ( )시간 이내 처리하는 프로세스를 구축했다.",
     answer: "24",
     acceptableAnswers: [],
-    explanation: "고객행복센터는 VOC(고객의 소리)를 24시간 이내 처리하는 프로세스를 구축해 신속한 대응이 가능합니다."
+    explanation: "고객행복센터는 VOC(고객의 소리)를 24시간 이내 처리하는 프로세스를 구축해 신속한 대응이 가능합니다.",
+    voiceExplanationUrl: "voice/e150.mp3"
   },
   {
     id: "e151",
@@ -5349,7 +5386,8 @@ var ESG_QUESTIONS = [
     question: "애터미는 국내 최초로 소비자중심경영(CCM) ( )회 연속 인증을 획득했다.",
     answer: "3",
     acceptableAnswers: [],
-    explanation: "애터미는 국내 최초로 소비자중심경영(CCM) 3회 연속 인증을 획득하며 소비자 권익을 최우선에 둔 경영철학을 제도화했습니다."
+    explanation: "애터미는 국내 최초로 소비자중심경영(CCM) 3회 연속 인증을 획득하며 소비자 권익을 최우선에 둔 경영철학을 제도화했습니다.",
+    voiceExplanationUrl: "voice/e151.mp3"
   },
   {
     id: "e152",
@@ -5363,7 +5401,8 @@ var ESG_QUESTIONS = [
     question: "고객과 회원의 의견을 반영해 100년 기업을 만들어간다는 목표 아래 운영되는 참여형 제안 플랫폼은 ( )이다.",
     answer: "아이디어스퀘어",
     acceptableAnswers: [],
-    explanation: "애터미는 100년 기업을 만들어간다는 목표 아래 참여형 제안 플랫폼 '아이디어스퀘어'를 운영하며 고객의 참여를 제도화하고 있습니다."
+    explanation: "애터미는 100년 기업을 만들어간다는 목표 아래 참여형 제안 플랫폼 '아이디어스퀘어'를 운영하며 고객의 참여를 제도화하고 있습니다.",
+    voiceExplanationUrl: "voice/e152.mp3"
   },
   {
     id: "e153",
@@ -5376,7 +5415,8 @@ var ESG_QUESTIONS = [
     tags: ["CCM로드맵"],
     question: "다음 소비자중심경영(CCM) 로드맵의 단계를 순서대로 배열하시오.",
     items: ["도입기", "확산기", "정착기"],
-    explanation: "CCM 로드맵은 보고서에 제시된 순서대로 도입기(CCM추진위원회 신설, CCM인증 등)→확산기(고객서비스 헌장 수립, 임직원 CCM 역량 강화 등)→정착기(고객가치 제고 혁신, 고객 옴부즈맨 제도 운영 등) 순으로 진행됩니다."
+    explanation: "CCM 로드맵은 보고서에 제시된 순서대로 도입기(CCM추진위원회 신설, CCM인증 등)→확산기(고객서비스 헌장 수립, 임직원 CCM 역량 강화 등)→정착기(고객가치 제고 혁신, 고객 옴부즈맨 제도 운영 등) 순으로 진행됩니다.",
+    voiceExplanationUrl: "voice/e153.mp3"
   },
   {
     id: "e154",
@@ -5390,7 +5430,8 @@ var ESG_QUESTIONS = [
     question: "'메디쿡 세라믹 프라이팬'은 음식물 끼임 현상을 줄이기 위해 오일로드 높이를 기존 0.15mm에서 0.1mm로 조정했다. 낮아진 높이는 얼마인가? (단위: mm, 콤마 없이 숫자만 입력)",
     answer: "0.05",
     unit: "mm",
-    explanation: "오일로드 높이가 0.15mm에서 0.1mm로 조정되어 0.05mm 낮아졌습니다."
+    explanation: "오일로드 높이가 0.15mm에서 0.1mm로 조정되어 0.05mm 낮아졌습니다.",
+    voiceExplanationUrl: "voice/e154.mp3"
   },
   {
     id: "e155",
@@ -5408,7 +5449,8 @@ var ESG_QUESTIONS = [
       { left: "글로벌 분과위원회", right: "글로벌 사업 절차 및 윤리규정 논의" },
       { left: "센터 분과위원회", right: "센터 설립, 활성화 관련 제안 및 의견 조정" }
     ],
-    explanation: "애터미는 상품, 윤리, 글로벌, 센터 등 다양한 분야의 분과위원회를 운영하며 각기 다른 역할을 수행합니다."
+    explanation: "애터미는 상품, 윤리, 글로벌, 센터 등 다양한 분야의 분과위원회를 운영하며 각기 다른 역할을 수행합니다.",
+    voiceExplanationUrl: "voice/e155.mp3"
   },
   {
     id: "e156",
@@ -5426,7 +5468,8 @@ var ESG_QUESTIONS = [
       { left: "애터미 티켓 APP", right: "애터미 글로벌 세미나 정보 제공" },
       { left: "ABC(Atomy Business College)", right: "애터미 전문가로 성장하는 비즈니스 양성 과정" }
     ],
-    explanation: "애터미는 애터미 샵 APP, At.G몰, 애터미 티켓 APP, ABC 등 다양한 온라인 성공시스템 플랫폼을 통해 회원의 사업 활동을 지원합니다."
+    explanation: "애터미는 애터미 샵 APP, At.G몰, 애터미 티켓 APP, ABC 등 다양한 온라인 성공시스템 플랫폼을 통해 회원의 사업 활동을 지원합니다.",
+    voiceExplanationUrl: "voice/e156.mp3"
   },
   {
     id: "e157",
@@ -5440,7 +5483,8 @@ var ESG_QUESTIONS = [
     question: "애터미의 최근 3년간(2022~2024년) 매출 대비 평균 기부금 비중은 얼마입니까?",
     choices: ["0.9%", "1.9%", "2.9%", "3.9%"],
     answerIndex: 1,
-    explanation: "애터미는 최근 3년간 매출 대비 평균 기부금 비중이 1.9%에 달하며, 국내 매출 상위 38개 유통기업과 비교했을 때 가장 높은 수준을 기록했습니다."
+    explanation: "애터미는 최근 3년간 매출 대비 평균 기부금 비중이 1.9%에 달하며, 국내 매출 상위 38개 유통기업과 비교했을 때 가장 높은 수준을 기록했습니다.",
+    voiceExplanationUrl: "voice/e157.mp3"
   },
   {
     id: "e158",
