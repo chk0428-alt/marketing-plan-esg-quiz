@@ -558,7 +558,6 @@ summary:focus-visible,
 /* ---------------- Start screen: 메인 이미지 ---------------- */
 
 .start-hero {
-  max-width: 420px;
   margin: 0 auto 20px;
 }
 
@@ -567,12 +566,6 @@ summary:focus-visible,
   height: auto;
   display: block;
   border-radius: var(--radius-lg);
-}
-
-@media (min-width: 640px) {
-  .start-hero {
-    max-width: 500px;
-  }
 }
 
 .start-panel {
