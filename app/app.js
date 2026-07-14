@@ -500,6 +500,22 @@
     return "hard";
   }
 
+  // 웹 브라우저 뒤로가기 지원: 시작화면을 벗어날 때 더미 history 항목을 하나
+  // 쌓아두고(hasBackGuard), 뒤로가기로 그 항목을 지나오면(popstate) 시작화면으로
+  // 되돌린다. 시작화면에서는 더미 항목이 없어야 뒤로가기 한 번에 실제 이전
+  // 페이지로 이동하므로, 시작화면으로 돌아올 때는 항목을 소비/정리해 둔다.
+  var currentScreenName = "start";
+  var hasBackGuard = false;
+
+  function pushBackGuard() {
+    try {
+      history.pushState({ atomyQuizBackGuard: true }, "", location.href);
+      hasBackGuard = true;
+    } catch (e) {
+      /* history API를 쓸 수 없는 환경(예: file://)에서는 조용히 무시 */
+    }
+  }
+
   function setScreen(name) {
     screenStart.hidden = name !== "start";
     screenQuiz.hidden = name !== "quiz";
@@ -510,7 +526,31 @@
     screenAdminForm.hidden = name !== "admin-form";
     screenAdminStats.hidden = name !== "admin-stats";
     window.scrollTo(0, 0);
+
+    if (currentScreenName === "start" && name !== "start") {
+      pushBackGuard();
+    } else if (name === "start" && hasBackGuard) {
+      // 뒤로가기가 아니라 버튼 클릭 등으로 시작화면에 돌아온 경우, 남아있는
+      // 더미 항목을 지나가서 정리해둔다(다음 popstate는 이미 시작화면이라 무시됨).
+      hasBackGuard = false;
+      history.back();
+    }
+    currentScreenName = name;
   }
+
+  window.addEventListener("popstate", function () {
+    hasBackGuard = false;
+    if (!screenQuiz.hidden) {
+      if (confirm("퀴즈를 종료하고 처음 화면으로 돌아갈까요? 진행 상황은 저장되지 않습니다.")) {
+        setScreen("start");
+        renderCategoryList();
+      } else {
+        pushBackGuard();
+      }
+    } else if (screenStart.hidden) {
+      setScreen("start");
+    }
+  });
 
   /* ------------------------------------------------------------
    * 4-1. 도메인(과목) 전환
