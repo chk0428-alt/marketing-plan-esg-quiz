@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>가입 확인 - Marketing Plan & ESG 퀴즈</title>
+<style>
+  :root { color-scheme: light; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f4f6fb;
+    font-family: -apple-system, "Segoe UI", "Malgun Gothic", sans-serif;
+    color: #1a1a1a;
+    padding: 24px;
+    box-sizing: border-box;
+  }
+  .card {
+    max-width: 420px;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 32px 28px;
+    box-shadow: 0 8px 24px rgba(11, 61, 140, 0.12);
+    text-align: center;
+  }
+  h1 {
+    font-size: 18px;
+    margin: 0 0 8px;
+    color: #0b3d8c;
+  }
+  p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #444;
+    margin: 0 0 16px;
+  }
+  .btn {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 20px;
+    background: #0b3d8c;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  .btn-secondary {
+    background: none;
+    color: #0b3d8c;
+    font-weight: 500;
+    font-size: 13px;
+    margin-top: 6px;
+  }
+  .status {
+    font-size: 13px;
+    margin-top: 12px;
+    min-height: 18px;
+  }
+  .status.error { color: #b3261e; }
+  .status.ok { color: #1a7a3c; }
+  .hidden { display: none; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <h1 id="title">가입 확인 처리 중</h1>
+    <p id="lead">잠시만 기다려주세요. 휴대폰에 앱이 설치되어 있다면 자동으로 앱이 열립니다.</p>
+
+    <a href="./index.html" class="btn hidden" id="continue-web-btn">웹에서 계속하기</a>
+    <button type="button" class="btn btn-secondary hidden" id="open-app-btn">대신 휴대폰 앱에서 열기</button>
+
+    <div class="status" id="status"></div>
+  </div>
+
+  <script src="vendor/supabase.js"></script>
+  <script src="supabase-config.js"></script>
+  <script>
+    (function () {
+      var hash = window.location.hash || "";
+      var deepLink = "atomyquiz://signup-callback" + hash;
+      var params = {};
+      hash.replace(/^#/, "").split("&").forEach(function (pair) {
+        if (!pair) return;
+        var kv = pair.split("=");
+        params[decodeURIComponent(kv[0])] = decodeURIComponent(kv[1] || "");
+      });
+
+      var elTitle = document.getElementById("title");
+      var elLead = document.getElementById("lead");
+      var elStatus = document.getElementById("status");
+      var elContinueWebBtn = document.getElementById("continue-web-btn");
+      var elOpenAppBtn = document.getElementById("open-app-btn");
+
+      elOpenAppBtn.addEventListener("click", function () {
+        window.location.href = deepLink;
+      });
+
+      function setStatus(text, kind) {
+        elStatus.textContent = text || "";
+        elStatus.className = "status" + (kind ? " " + kind : "");
+      }
+
+      function fail(message) {
+        elTitle.textContent = "유효하지 않은 링크입니다";
+        elLead.textContent = message;
+        elContinueWebBtn.classList.add("hidden");
+        elOpenAppBtn.classList.add("hidden");
+      }
+
+      function showFallback() {
+        elTitle.textContent = "가입 확인 완료";
+        elLead.textContent = "이메일 인증이 완료되었습니다. 앱이 자동으로 열리지 않았다면 아래 버튼을 이용해주세요.";
+        elContinueWebBtn.classList.remove("hidden");
+        elOpenAppBtn.classList.remove("hidden");
+      }
+
+      if (!params.access_token || !params.refresh_token) {
+        fail("링크가 만료되었거나 잘못되었습니다. 앱에서 가입을 다시 시도해주세요.");
+        return;
+      }
+
+      if (typeof window.supabase === "undefined" || typeof window.supabase.createClient !== "function") {
+        fail("페이지를 불러오는 중 문제가 발생했습니다. 새로고침 후 다시 시도해주세요.");
+        return;
+      }
+
+      // 이 기기에 앱이 설치되어 있으면 브라우저가 커스텀 스킴으로 전환되며 이 페이지를
+      // 벗어난다. 설치되어 있지 않으면(PC 등) 아무 일도 일어나지 않으므로, 잠시 뒤
+      // 웹에서 바로 로그인을 이어갈 수 있는 안내로 전환한다.
+      window.location.href = deepLink;
+
+      var client = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+      client.auth.setSession({ access_token: params.access_token, refresh_token: params.refresh_token }).then(function (res) {
+        if (res.error) {
+          fail("링크가 만료되었거나 이미 사용되었습니다. 앱에서 가입을 다시 시도해주세요.");
+          return;
+        }
+        setStatus("");
+      });
+
+      setTimeout(function () {
+        if (document.visibilityState === "hidden") {
+          return; // 앱으로 전환된 것으로 보고 아무 것도 표시하지 않는다.
+        }
+        showFallback();
+      }, 1200);
+    })();
+  </script>
+</body>
+</html>

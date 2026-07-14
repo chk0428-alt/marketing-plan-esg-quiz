@@ -53,7 +53,9 @@
 
   // 가입 확인 메일 링크를 눌렀을 때 돌아올 주소. 지정하지 않으면 Supabase 대시보드의
   // 기본 Site URL로 리다이렉트되는데, 그 값이 이 앱 주소와 다르면 404가 난다.
-  var SIGNUP_CONFIRM_REDIRECT_URL = "https://chk0428-alt.github.io/marketing-plan-esg-quiz/";
+  // 이 페이지는 로드 즉시 atomyquiz://signup-callback 커스텀 스킴으로 앱을 열어본다
+  // (앱이 없는 환경에서는 웹에서 바로 로그인 상태로 이어짐). app/signup-redirect.html 참고.
+  var SIGNUP_CONFIRM_REDIRECT_URL = "https://chk0428-alt.github.io/marketing-plan-esg-quiz/signup-redirect.html";
 
   var elNicknameRow = document.getElementById("account-nickname-row");
   var elNicknameInput = document.getElementById("account-nickname-input");
@@ -417,6 +419,26 @@
   if (window.__atomyQuizRecovery) {
     window.__atomyQuizApplyRecovery(window.__atomyQuizRecovery);
     window.__atomyQuizRecovery = null;
+  }
+
+  // 네이티브(MainActivity)가 가입 확인 딥링크(atomyquiz://signup-callback)를
+  // 가로챘을 때 호출하는 진입점. 비밀번호 재설정과 달리 새 비밀번호 입력 없이
+  // 그대로 로그인 상태로 이어간다.
+  window.__atomyQuizApplySignupConfirm = function (payload) {
+    if (!payload || !payload.access_token || !payload.refresh_token) {
+      return;
+    }
+    openPanel();
+    setMessage("이메일 인증이 완료되어 로그인되었습니다.");
+    client.auth.setSession({ access_token: payload.access_token, refresh_token: payload.refresh_token }).then(function (res) {
+      if (res.error) {
+        setMessage(describeAuthError(res.error), true);
+      }
+    });
+  };
+  if (window.__atomyQuizSignupConfirm) {
+    window.__atomyQuizApplySignupConfirm(window.__atomyQuizSignupConfirm);
+    window.__atomyQuizSignupConfirm = null;
   }
 
   // --- 닉네임 (랭킹에 표시되는 이름) ---------------------------------------

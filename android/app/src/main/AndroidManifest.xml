@@ -25,6 +25,13 @@
                 <category android:name="android.intent.category.BROWSABLE" />
                 <data android:scheme="atomyquiz" android:host="reset-callback" />
             </intent-filter>
+            <!-- 가입 확인 이메일 링크가 브라우저를 거쳐 앱으로 바로 돌아오기 위한 커스텀 URL 스킴 -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="atomyquiz" android:host="signup-callback" />
+            </intent-filter>
         </activity>
 
         <provider

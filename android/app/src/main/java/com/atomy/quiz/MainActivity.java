@@ -15,8 +15,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class MainActivity extends BridgeActivity {
-    private static final String RESET_SCHEME = "atomyquiz";
+    private static final String AUTH_SCHEME = "atomyquiz";
     private static final String RESET_HOST = "reset-callback";
+    private static final String SIGNUP_HOST = "signup-callback";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,23 +50,36 @@ public class MainActivity extends BridgeActivity {
             }
         });
 
-        handlePasswordResetDeepLink(getIntent());
+        handleAuthDeepLink(getIntent());
     }
 
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
-        handlePasswordResetDeepLink(intent);
+        handleAuthDeepLink(intent);
     }
 
-    // 비밀번호 재설정 이메일의 "atomyquiz://reset-callback#access_token=...&refresh_token=..." 링크를
-    // 눌러 앱이 열렸을 때, 그 토큰을 웹뷰(JS)로 전달해 auth.js가 세션을 복구하도록 한다.
-    private void handlePasswordResetDeepLink(Intent intent) {
+    // 비밀번호 재설정("atomyquiz://reset-callback#...") 또는 가입 확인
+    // ("atomyquiz://signup-callback#...") 이메일 링크를 눌러 앱이 열렸을 때,
+    // 그 토큰을 웹뷰(JS)로 전달해 auth.js가 세션을 복구/확정하도록 한다.
+    private void handleAuthDeepLink(Intent intent) {
         if (intent == null) {
             return;
         }
         Uri uri = intent.getData();
-        if (uri == null || !RESET_SCHEME.equals(uri.getScheme()) || !RESET_HOST.equals(uri.getHost())) {
+        if (uri == null || !AUTH_SCHEME.equals(uri.getScheme())) {
+            return;
+        }
+        String host = uri.getHost();
+        final String jsCallback;
+        final String jsStash;
+        if (RESET_HOST.equals(host)) {
+            jsCallback = "window.__atomyQuizApplyRecovery";
+            jsStash = "window.__atomyQuizRecovery";
+        } else if (SIGNUP_HOST.equals(host)) {
+            jsCallback = "window.__atomyQuizApplySignupConfirm";
+            jsStash = "window.__atomyQuizSignupConfirm";
+        } else {
             return;
         }
         String fragment = uri.getFragment();
@@ -99,9 +113,9 @@ public class MainActivity extends BridgeActivity {
             payload.put("access_token", accessToken);
             payload.put("refresh_token", refreshToken);
             js = "(function(){"
-                + "window.__atomyQuizRecovery = " + payload.toString() + ";"
-                + "if (typeof window.__atomyQuizApplyRecovery === 'function') {"
-                + "window.__atomyQuizApplyRecovery(window.__atomyQuizRecovery);"
+                + jsStash + " = " + payload.toString() + ";"
+                + "if (typeof " + jsCallback + " === 'function') {"
+                + jsCallback + "(" + jsStash + ");"
                 + "}"
                 + "})();";
         } catch (JSONException e) {

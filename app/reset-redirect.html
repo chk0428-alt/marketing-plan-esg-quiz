@@ -160,6 +160,11 @@
         return;
       }
 
+      // 이 기기에 앱이 설치되어 있으면 브라우저가 즉시 커스텀 스킴으로 전환되어 앱이
+      // 열린다(이 페이지는 벗어나게 된다). 설치되어 있지 않으면(PC 등) 아무 일도
+      // 일어나지 않으므로 아래 웹 재설정 화면을 계속 사용하면 된다.
+      window.location.href = deepLink;
+
       var client = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
       setStatus("링크를 확인하는 중입니다...");
