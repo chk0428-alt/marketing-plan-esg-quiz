@@ -51,6 +51,10 @@
   // 환경에서는 안내 문구를 보여준다). app/reset-redirect.html 참고.
   var RESET_REDIRECT_URL = "https://chk0428-alt.github.io/marketing-plan-esg-quiz/reset-redirect.html";
 
+  // 가입 확인 메일 링크를 눌렀을 때 돌아올 주소. 지정하지 않으면 Supabase 대시보드의
+  // 기본 Site URL로 리다이렉트되는데, 그 값이 이 앱 주소와 다르면 404가 난다.
+  var SIGNUP_CONFIRM_REDIRECT_URL = "https://chk0428-alt.github.io/marketing-plan-esg-quiz/";
+
   var elNicknameRow = document.getElementById("account-nickname-row");
   var elNicknameInput = document.getElementById("account-nickname-input");
   var elSaveNicknameBtn = document.getElementById("btn-account-save-nickname");
@@ -319,7 +323,7 @@
     }
     setBusy(true);
     setMessage("가입 처리 중입니다...");
-    client.auth.signUp({ email: email, password: password }).then(function (res) {
+    client.auth.signUp({ email: email, password: password, options: { emailRedirectTo: SIGNUP_CONFIRM_REDIRECT_URL } }).then(function (res) {
       setBusy(false);
       if (res.error) {
         setMessage(describeAuthError(res.error), true);
