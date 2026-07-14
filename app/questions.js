@@ -150,18 +150,6 @@ var QUESTIONS = [
     voiceExplanationUrl: "voice/q012.mp3"
   },
   {
-    id: "q013",
-    category: "후원수당-정산원리",
-    type: "mc",
-    difficulty: "초급",
-    tags: ["정산원리", "소실적"],
-    question: "소비자 회원으로 등록된 경우 점수 계산은 어떻게 되는가?",
-    choices: ["2배로 계산된다", "점수 계산에서 제외된다", "별도 우대율이 적용된다", "연말에 합산 정산된다"],
-    answerIndex: 1,
-    explanation: "소비자 회원으로 등록된 경우 점수 계산에서 제외된다.",
-    voiceExplanationUrl: "voice/q013.mp3"
-  },
-  {
     id: "q014",
     category: "후원수당-정산원리",
     type: "mc",
@@ -174,18 +162,6 @@ var QUESTIONS = [
     voiceExplanationUrl: "voice/q014.mp3"
   },
   {
-    id: "q015",
-    category: "후원수당-정산원리",
-    type: "mc",
-    difficulty: "중급",
-    tags: ["정산원리", "소실적"],
-    question: "소실적은 어떻게 산출되는가?",
-    choices: ["좌/우 라인 하위회원 PV를 라인별로 합산", "본인 PV만 단독 집계", "센터 전체 PV를 균등 배분", "상위 라인 PV를 제외하고 집계"],
-    answerIndex: 0,
-    explanation: "좌/우 라인 하위회원 PV를 라인별로 합산하여 소실적을 산출한다.",
-    voiceExplanationUrl: "voice/q015.mp3"
-  },
-  {
     id: "q017",
     category: "후원수당-정산원리",
     type: "mc",
@@ -196,18 +172,6 @@ var QUESTIONS = [
     answerIndex: 1,
     explanation: "일요일은 판매일자로 설정할 수 없으며 수당도 발생하지 않는다.",
     voiceExplanationUrl: "voice/q017.mp3"
-  },
-  {
-    id: "q019",
-    category: "후원수당-정산원리",
-    type: "mc",
-    difficulty: "중급",
-    tags: ["정산원리", "소실적"],
-    question: "다음 중 후원수당 점수 계산에서 제외되는 경우는?",
-    choices: ["에이전트 등급 회원", "소비자 회원으로 등록된 경우", "특약점 등급 회원", "총판 등급 회원"],
-    answerIndex: 1,
-    explanation: "소비자 회원으로 등록된 경우 점수 계산에서 제외된다.",
-    voiceExplanationUrl: "voice/q019.mp3"
   },
   {
     id: "q020",
@@ -296,18 +260,6 @@ var QUESTIONS = [
     voiceExplanationUrl: "voice/q026.mp3"
   },
   {
-    id: "q027",
-    category: "후원수당-본인등급과 점수표",
-    type: "mc",
-    difficulty: "중급",
-    tags: ["등급조건", "점수표"],
-    question: "8급(회원)의 점수와 필요 일일 소실적은?",
-    choices: ["5점, 30만 PV 이상", "15점, 30만 PV 이상", "30점, 70만 PV 이상", "60점, 150만 PV 이상"],
-    answerIndex: 0,
-    explanation: "8급(회원)은 5점이며 일일 소실적 30만 PV 이상이 필요하다.",
-    voiceExplanationUrl: "voice/q027.mp3"
-  },
-  {
     id: "q028",
     category: "후원수당-본인등급과 점수표",
     type: "mc",
@@ -363,10 +315,10 @@ var QUESTIONS = [
     type: "mc",
     difficulty: "고급",
     tags: ["N가", "점수계산", "계산"],
-    question: "N가를 3,502원이라고 가정할 때, 15점을 취득했다면 후원수당 금액은 얼마인가?",
-    choices: ["45,530원", "52,530원", "60,000원", "35,020원"],
-    answerIndex: 1,
-    explanation: "15점 × 3,502원 = 52,530원이다.",
+    question: "N가를 4,000원이라고 가정할 때, 15점을 취득했다면 후원수당 금액은 얼마인가?",
+    choices: ["40,000원", "45,000원", "60,000원", "80,000원"],
+    answerIndex: 2,
+    explanation: "15점 × 4,000원 = 60,000원이다.",
     voiceExplanationUrl: "voice/q033.mp3"
   },
   {
@@ -380,42 +332,6 @@ var QUESTIONS = [
     answerIndex: 0,
     explanation: "동일한 소실적이라도 본인 등급이 '회원'이면 8급 기준인 5점만 취득한다.",
     voiceExplanationUrl: "voice/q034.mp3"
-  },
-  {
-    id: "q035",
-    category: "후원수당-점수와 N가",
-    type: "mc",
-    difficulty: "초급",
-    tags: ["N가", "점수계산"],
-    question: "N가의 최근 추세로 옳은 것은?",
-    choices: ["지속 상승 추세", "지속 하락 추세", "변동 없이 고정", "분기마다 급등락"],
-    answerIndex: 1,
-    explanation: "N가는 지속 하락 추세를 보이고 있다.",
-    voiceExplanationUrl: "voice/q035.mp3"
-  },
-  {
-    id: "q036",
-    category: "후원수당-점수와 N가",
-    type: "mc",
-    difficulty: "고급",
-    tags: ["N가", "점수계산", "계산"],
-    question: "과거 15점 기준 후원수당은 대략 얼마였는가?",
-    choices: ["약 3만원", "약 4.5만원", "약 6만원", "약 8만원"],
-    answerIndex: 2,
-    explanation: "15점 기준 후원수당은 과거 약 6만원 수준이었다.",
-    voiceExplanationUrl: "voice/q036.mp3"
-  },
-  {
-    id: "q037",
-    category: "후원수당-점수와 N가",
-    type: "mc",
-    difficulty: "고급",
-    tags: ["N가", "점수계산", "계산"],
-    question: "N가를 3,502원이라고 가정할 때, 15점 기준 후원수당은 대략 얼마인가?",
-    choices: ["약 3.5만원", "약 4.2만원", "약 5.2만원", "약 6.5만원"],
-    answerIndex: 2,
-    explanation: "15점 × 3,502원 = 52,530원으로 약 5.2만원이다.",
-    voiceExplanationUrl: "voice/q037.mp3"
   },
   {
     id: "q038",
@@ -447,10 +363,10 @@ var QUESTIONS = [
     type: "mc",
     difficulty: "고급",
     tags: ["N가", "점수계산", "계산"],
-    question: "N가를 3,502원이라고 가정할 때, 30점을 취득했다면 후원수당 금액은 얼마인가?",
-    choices: ["52,530원", "105,060원", "150,000원", "35,020원"],
-    answerIndex: 1,
-    explanation: "30점 × 3,502원 = 105,060원이다.",
+    question: "N가를 4,000원이라고 가정할 때, 30점을 취득했다면 후원수당 금액은 얼마인가?",
+    choices: ["80,000원", "100,000원", "120,000원", "140,000원"],
+    answerIndex: 2,
+    explanation: "30점 × 4,000원 = 120,000원이다.",
     voiceExplanationUrl: "voice/q040.mp3"
   },
 
@@ -480,30 +396,6 @@ var QUESTIONS = [
     voiceExplanationUrl: "voice/q042.mp3"
   },
   {
-    id: "q043",
-    category: "후원수당-지급일정",
-    type: "mc",
-    difficulty: "고급",
-    tags: ["지급일정", "계산"],
-    question: "3/3~3/9 기간 동안 매일 정산된 후원수당은 언제 지급되는가?",
-    choices: ["3/9(월)", "3/10(화)", "3/16(월)", "3/16(화)"],
-    answerIndex: 3,
-    explanation: "PRD 예시에 따르면 3/3~3/9 정산분은 3/16(화)에 일괄 지급된다.",
-    voiceExplanationUrl: "voice/q043.mp3"
-  },
-  {
-    id: "q044",
-    category: "후원수당-지급일정",
-    type: "mc",
-    difficulty: "초급",
-    tags: ["지급일정"],
-    question: "후원수당은 매주 무슨 요일에 지급되는가?",
-    choices: ["월요일", "화요일", "수요일", "금요일"],
-    answerIndex: 1,
-    explanation: "후원수당은 매주 화요일에 지급된다.",
-    voiceExplanationUrl: "voice/q044.mp3"
-  },
-  {
     id: "q045",
     category: "후원수당-지급일정",
     type: "mc",
@@ -516,18 +408,6 @@ var QUESTIONS = [
     voiceExplanationUrl: "voice/q045.mp3"
   },
   {
-    id: "q046",
-    category: "후원수당-지급일정",
-    type: "mc",
-    difficulty: "고급",
-    tags: ["지급일정"],
-    question: "후원수당 정산 기간과 지급일 사이의 간격으로 옳은 것은?",
-    choices: ["정산 종료 당일 지급", "정산 종료 후 1주일 뒤(차주 화요일) 지급", "정산 종료 후 1개월 뒤 지급", "정산 기간 중간에 지급"],
-    answerIndex: 1,
-    explanation: "정산 종료 후 1주일 뒤인 차주 화요일에 지급된다.",
-    voiceExplanationUrl: "voice/q046.mp3"
-  },
-  {
     id: "q047",
     category: "후원수당-지급일정",
     type: "mc",
@@ -538,18 +418,6 @@ var QUESTIONS = [
     answerIndex: 0,
     explanation: "후원수당은 매일 정산되고 일주일간 합산되어 차주 화요일에 지급된다.",
     voiceExplanationUrl: "voice/q047.mp3"
-  },
-  {
-    id: "q050",
-    category: "후원수당-지급일정",
-    type: "mc",
-    difficulty: "고급",
-    tags: ["지급일정", "계산"],
-    question: "후원수당 예시(3/3~3/9 정산 → 3/16 지급)에서 정산 종료일과 지급일 사이의 기간은?",
-    choices: ["3일", "7일", "14일", "10일"],
-    answerIndex: 1,
-    explanation: "3/9(정산종료)부터 3/16(지급일)까지는 7일이다.",
-    voiceExplanationUrl: "voice/q050.mp3"
   },
 
   /* ===================== 6. 직급-7단계 체계 (q051-q060) ===================== */
@@ -602,66 +470,6 @@ var QUESTIONS = [
     voiceExplanationUrl: "voice/q054.mp3"
   },
   {
-    id: "q055",
-    category: "직급-7단계 체계",
-    type: "mc",
-    difficulty: "중급",
-    tags: ["직급체계", "승급조건"],
-    question: "스타마스터의 승급 조건은?",
-    choices: ["샤론로즈 3회 이상 달성", "스타 3회 이상 달성", "로열 3회 이상 달성", "승급조건 없음"],
-    answerIndex: 0,
-    explanation: "스타마스터로 승급하려면 샤론로즈를 3회 이상 달성해야 한다.",
-    voiceExplanationUrl: "voice/q055.mp3"
-  },
-  {
-    id: "q056",
-    category: "직급-7단계 체계",
-    type: "mc",
-    difficulty: "중급",
-    tags: ["직급체계", "승급조건"],
-    question: "로열마스터의 승급 조건은?",
-    choices: ["샤론로즈 3회 이상 달성", "스타 3회 이상 달성", "크라운 3회 이상 달성", "승급조건 없음"],
-    answerIndex: 1,
-    explanation: "로열마스터로 승급하려면 스타를 3회 이상 달성해야 한다.",
-    voiceExplanationUrl: "voice/q056.mp3"
-  },
-  {
-    id: "q057",
-    category: "직급-7단계 체계",
-    type: "mc",
-    difficulty: "중급",
-    tags: ["직급체계", "승급조건"],
-    question: "크라운마스터의 승급 조건은?",
-    choices: ["스타 3회 이상 달성", "로열 3회 이상 달성", "임페리얼 3회 이상 달성", "승급조건 없음"],
-    answerIndex: 1,
-    explanation: "크라운마스터로 승급하려면 로열을 3회 이상 달성해야 한다.",
-    voiceExplanationUrl: "voice/q057.mp3"
-  },
-  {
-    id: "q058",
-    category: "직급-7단계 체계",
-    type: "mc",
-    difficulty: "중급",
-    tags: ["직급체계", "승급조건"],
-    question: "임페리얼마스터의 승급 조건은?",
-    choices: ["로열 3회 이상 달성", "크라운 3회 이상 달성", "스타 3회 이상 달성", "승급조건 없음"],
-    answerIndex: 1,
-    explanation: "임페리얼마스터로 승급하려면 크라운을 3회 이상 달성해야 한다.",
-    voiceExplanationUrl: "voice/q058.mp3"
-  },
-  {
-    id: "q059",
-    category: "직급-7단계 체계",
-    type: "mc",
-    difficulty: "초급",
-    tags: ["직급체계", "승급조건"],
-    question: "다음 중 승급 조건이 '없는' 직급은?",
-    choices: ["세일즈마스터", "스타마스터", "로열마스터", "크라운마스터"],
-    answerIndex: 0,
-    explanation: "세일즈, 다이아몬드, 샤론로즈마스터는 승급조건이 없으며 달성조건만 존재한다.",
-    voiceExplanationUrl: "voice/q059.mp3"
-  },
-  {
     id: "q060",
     category: "직급-7단계 체계",
     type: "mc",
@@ -712,66 +520,6 @@ var QUESTIONS = [
     voiceExplanationUrl: "voice/q063.mp3"
   },
   {
-    id: "q064",
-    category: "직급수당 지급",
-    type: "mc",
-    difficulty: "초급",
-    tags: ["직급수당", "배분율"],
-    question: "샤론로즈마스터의 직급수당 배분율은?",
-    choices: ["5%", "2%", "1.2%", "0.5%"],
-    answerIndex: 1,
-    explanation: "샤론로즈마스터의 배분율은 2%이다.",
-    voiceExplanationUrl: "voice/q064.mp3"
-  },
-  {
-    id: "q065",
-    category: "직급수당 지급",
-    type: "mc",
-    difficulty: "초급",
-    tags: ["직급수당", "배분율"],
-    question: "스타마스터의 직급수당 배분율은?",
-    choices: ["2%", "1.2%", "1%", "0.5%"],
-    answerIndex: 1,
-    explanation: "스타마스터의 배분율은 1.2%이다.",
-    voiceExplanationUrl: "voice/q065.mp3"
-  },
-  {
-    id: "q066",
-    category: "직급수당 지급",
-    type: "mc",
-    difficulty: "초급",
-    tags: ["직급수당", "배분율"],
-    question: "로열마스터의 직급수당 배분율은?",
-    choices: ["1.2%", "1%", "0.5%", "0.3%"],
-    answerIndex: 1,
-    explanation: "로열마스터의 배분율은 1%이다.",
-    voiceExplanationUrl: "voice/q066.mp3"
-  },
-  {
-    id: "q067",
-    category: "직급수당 지급",
-    type: "mc",
-    difficulty: "초급",
-    tags: ["직급수당", "배분율"],
-    question: "크라운마스터의 직급수당 배분율은?",
-    choices: ["1%", "0.5%", "0.3%", "2%"],
-    answerIndex: 1,
-    explanation: "크라운마스터의 배분율은 0.5%이다.",
-    voiceExplanationUrl: "voice/q067.mp3"
-  },
-  {
-    id: "q068",
-    category: "직급수당 지급",
-    type: "mc",
-    difficulty: "초급",
-    tags: ["직급수당", "배분율"],
-    question: "임페리얼마스터의 직급수당 배분율은?",
-    choices: ["0.5%", "0.3%", "1%", "1.2%"],
-    answerIndex: 1,
-    explanation: "임페리얼마스터의 배분율은 0.3%이다.",
-    voiceExplanationUrl: "voice/q068.mp3"
-  },
-  {
     id: "q069",
     category: "직급수당 지급",
     type: "mc",
@@ -803,10 +551,10 @@ var QUESTIONS = [
     type: "mc",
     difficulty: "중급",
     tags: ["프로모션"],
-    question: "세일즈마스터 승급 프로모션 금액은?",
+    question: "세일즈마스터 승급시 현금 지급액 금액은?",
     choices: ["50만원", "150만원", "200만원", "1,000만원"],
     answerIndex: 0,
-    explanation: "세일즈마스터 승급 프로모션은 50만원이다.",
+    explanation: "세일즈마스터 승급시 현금 지급액은 50만원이다.",
     voiceExplanationUrl: "voice/q071.mp3"
   },
   {
@@ -815,10 +563,10 @@ var QUESTIONS = [
     type: "mc",
     difficulty: "중급",
     tags: ["프로모션"],
-    question: "다이아몬드마스터 승급 프로모션 금액은?",
+    question: "다이아몬드마스터 승급시 현금 지급액 금액은?",
     choices: ["50만원", "150만원", "200만원", "1,000만원"],
     answerIndex: 1,
-    explanation: "다이아몬드마스터 승급 프로모션은 150만원이다.",
+    explanation: "다이아몬드마스터 승급시 현금 지급액은 150만원이다.",
     voiceExplanationUrl: "voice/q072.mp3"
   },
   {
@@ -827,10 +575,10 @@ var QUESTIONS = [
     type: "mc",
     difficulty: "중급",
     tags: ["프로모션"],
-    question: "샤론로즈마스터 승급 프로모션 금액은?",
+    question: "샤론로즈마스터 승급시 현금 지급액 금액은?",
     choices: ["150만원", "200만원", "1,000만원", "5,000만원"],
     answerIndex: 1,
-    explanation: "샤론로즈마스터 승급 프로모션은 200만원이다.",
+    explanation: "샤론로즈마스터 승급시 현금 지급액은 200만원이다.",
     voiceExplanationUrl: "voice/q073.mp3"
   },
   {
@@ -839,10 +587,10 @@ var QUESTIONS = [
     type: "mc",
     difficulty: "중급",
     tags: ["프로모션"],
-    question: "스타마스터 승급 프로모션 금액은?",
+    question: "스타마스터 승급시 현금 지급액 금액은?",
     choices: ["200만원", "1,000만원", "5,000만원", "3억원"],
     answerIndex: 1,
-    explanation: "스타마스터 승급 프로모션은 1,000만원이다.",
+    explanation: "스타마스터 승급시 현금 지급액은 1,000만원이다.",
     voiceExplanationUrl: "voice/q074.mp3"
   },
   {
@@ -851,10 +599,10 @@ var QUESTIONS = [
     type: "mc",
     difficulty: "중급",
     tags: ["프로모션"],
-    question: "로열마스터 승급 프로모션 금액은?",
+    question: "로열마스터 승급시 현금 지급액 금액은?",
     choices: ["1,000만원", "5,000만원", "3억원", "10억원"],
     answerIndex: 1,
-    explanation: "로열마스터 승급 프로모션은 5,000만원이다.",
+    explanation: "로열마스터 승급시 현금 지급액은 5,000만원이다.",
     voiceExplanationUrl: "voice/q075.mp3"
   },
   {
@@ -863,10 +611,10 @@ var QUESTIONS = [
     type: "mc",
     difficulty: "중급",
     tags: ["프로모션"],
-    question: "크라운마스터 승급 프로모션 금액은?",
+    question: "크라운마스터 승급시 현금 지급액 금액은?",
     choices: ["5,000만원", "1억원", "3억원", "10억원"],
     answerIndex: 2,
-    explanation: "크라운마스터 승급 프로모션은 3억원이다.",
+    explanation: "크라운마스터 승급시 현금 지급액은 3억원이다.",
     voiceExplanationUrl: "voice/q076.mp3"
   },
   {
@@ -875,10 +623,10 @@ var QUESTIONS = [
     type: "mc",
     difficulty: "중급",
     tags: ["프로모션"],
-    question: "임페리얼마스터 승급 프로모션 금액은?",
+    question: "임페리얼마스터 승급시 현금 지급액 금액은?",
     choices: ["3억원", "5억원", "10억원", "15억원"],
     answerIndex: 2,
-    explanation: "임페리얼마스터 승급 프로모션은 10억원이다.",
+    explanation: "임페리얼마스터 승급시 현금 지급액은 10억원이다.",
     voiceExplanationUrl: "voice/q077.mp3"
   },
   {
@@ -919,18 +667,6 @@ var QUESTIONS = [
   },
 
   /* ===================== 9. 교육수당 (q081-q090) ===================== */
-  {
-    id: "q081",
-    category: "교육수당",
-    type: "mc",
-    difficulty: "중급",
-    tags: ["교육수당"],
-    question: "교육수당 산정 공식은?",
-    choices: ["센터 소속회원 PV 총합 × 6%", "본인 PV × 20%", "직급수당 × 6%", "센터 소속회원 수 × 6%"],
-    answerIndex: 0,
-    explanation: "교육수당은 센터 소속회원이 일으킨 PV 총합에 6%를 곱해 산정한다.",
-    voiceExplanationUrl: "voice/q081.mp3"
-  },
   {
     id: "q082",
     category: "교육수당",
@@ -980,18 +716,6 @@ var QUESTIONS = [
     voiceExplanationUrl: "voice/q085.mp3"
   },
   {
-    id: "q086",
-    category: "교육수당",
-    type: "mc",
-    difficulty: "중급",
-    tags: ["교육수당"],
-    question: "교육수당 계산에 사용되는 비율은?",
-    choices: ["6%", "20%", "35%", "44%"],
-    answerIndex: 0,
-    explanation: "교육수당은 센터 소속회원 PV 총합의 6%를 원화로 산정한다.",
-    voiceExplanationUrl: "voice/q086.mp3"
-  },
-  {
     id: "q087",
     category: "교육수당",
     type: "mc",
@@ -1002,18 +726,6 @@ var QUESTIONS = [
     answerIndex: 1,
     explanation: "지급일이 공휴일인 경우 앞날 지급한다.",
     voiceExplanationUrl: "voice/q087.mp3"
-  },
-  {
-    id: "q088",
-    category: "교육수당",
-    type: "mc",
-    difficulty: "중급",
-    tags: ["교육수당"],
-    question: "교육수당과 직급수당의 지급일이 같은 이유로 옳은 것은?",
-    choices: ["둘 다 7일·22일 지급 규정을 따르기 때문", "우연히 같은 날짜가 겹쳤기 때문", "법적으로 강제된 동일 지급일이기 때문", "무작위 배정이기 때문"],
-    answerIndex: 0,
-    explanation: "직급수당과 교육수당 모두 산정 후 7일·22일 지급 규정을 따른다.",
-    voiceExplanationUrl: "voice/q088.mp3"
   },
   {
     id: "q089",
@@ -1041,54 +753,6 @@ var QUESTIONS = [
   },
 
   /* ===================== 보강: 후원수당-본인등급과 점수표 (6급/5급/4급/2급 구간, q091-q094) ===================== */
-  {
-    id: "q091",
-    category: "후원수당-본인등급과 점수표",
-    type: "mc",
-    difficulty: "중급",
-    tags: ["등급조건", "점수표"],
-    question: "6급(특약점)의 점수와 필요 일일 소실적은?",
-    choices: ["15점, 30만 PV 이상", "30점, 70만 PV 이상", "60점, 150만 PV 이상", "90점, 240만 PV 이상"],
-    answerIndex: 1,
-    explanation: "6급(특약점)은 30점이며 일일 소실적 70만 PV 이상이 필요하다.",
-    voiceExplanationUrl: "voice/q091.mp3"
-  },
-  {
-    id: "q092",
-    category: "후원수당-본인등급과 점수표",
-    type: "mc",
-    difficulty: "중급",
-    tags: ["등급조건", "점수표"],
-    question: "5급(대리점)의 점수와 필요 일일 소실적은?",
-    choices: ["30점, 70만 PV 이상", "60점, 150만 PV 이상", "90점, 240만 PV 이상", "150점, 600만 PV 이상"],
-    answerIndex: 1,
-    explanation: "5급(대리점)은 60점이며 일일 소실적 150만 PV 이상이 필요하다.",
-    voiceExplanationUrl: "voice/q092.mp3"
-  },
-  {
-    id: "q093",
-    category: "후원수당-본인등급과 점수표",
-    type: "mc",
-    difficulty: "중급",
-    tags: ["등급조건", "점수표"],
-    question: "4급(총판)의 점수와 필요 일일 소실적은?",
-    choices: ["60점, 150만 PV 이상", "90점, 240만 PV 이상", "150점, 600만 PV 이상", "250점, 2,000만 PV 이상"],
-    answerIndex: 1,
-    explanation: "4급(총판)은 90점이며 일일 소실적 240만 PV 이상이 필요하다.",
-    voiceExplanationUrl: "voice/q093.mp3"
-  },
-  {
-    id: "q094",
-    category: "후원수당-본인등급과 점수표",
-    type: "mc",
-    difficulty: "중급",
-    tags: ["등급조건", "점수표"],
-    question: "2급(총판)의 점수와 필요 일일 소실적은?",
-    choices: ["90점, 240만 PV 이상", "150점, 600만 PV 이상", "250점, 2,000만 PV 이상", "300점, 5,000만 PV 이상"],
-    answerIndex: 2,
-    explanation: "2급(총판)은 250점이며 일일 소실적 2,000만 PV 이상이 필요하다.",
-    voiceExplanationUrl: "voice/q094.mp3"
-  },
 
   /* ===================== 2단계 추가: OX 퀴즈 (q095-q110) ===================== */
   {
@@ -1178,17 +842,6 @@ var QUESTIONS = [
     answer: true,
     explanation: "세일즈마스터부터 임페리얼마스터까지 총 7단계이다.",
     voiceExplanationUrl: "voice/q103.mp3"
-  },
-  {
-    id: "q104",
-    category: "직급-7단계 체계",
-    type: "ox",
-    difficulty: "중급",
-    tags: ["승급조건"],
-    question: "크라운마스터로 승급하려면 스타를 3회 이상 달성해야 한다.",
-    answer: false,
-    explanation: "크라운마스터로 승급하려면 로열을 3회 이상 달성해야 한다.",
-    voiceExplanationUrl: "voice/q104.mp3"
   },
   {
     id: "q105",
@@ -1558,10 +1211,10 @@ var QUESTIONS = [
     type: "calc",
     difficulty: "고급",
     tags: ["N가", "점수계산", "계산"],
-    question: "본인 등급이 '회원'인 사람이 8급 점수(5점)를 취득했다. N가를 3,502원이라고 가정할 때 후원수당 금액은 얼마인가? (단위: 원, 콤마 없이 숫자만 입력)",
-    answer: "17510",
+    question: "본인 등급이 '회원'인 사람이 8급 점수(5점)를 취득했다. N가를 4,000원이라고 가정할 때 후원수당 금액은 얼마인가? (단위: 원, 콤마 없이 숫자만 입력)",
+    answer: "20000",
     unit: "원",
-    explanation: "5점 × 3,502원 = 17,510원",
+    explanation: "5점 × 4,000원 = 20,000원",
     voiceExplanationUrl: "voice/q137.mp3"
   },
   {
@@ -1570,10 +1223,10 @@ var QUESTIONS = [
     type: "calc",
     difficulty: "고급",
     tags: ["N가", "점수계산", "계산"],
-    question: "5급(60점)을 취득했다. N가를 3,502원이라고 가정할 때 후원수당 금액은 얼마인가? (숫자만 입력)",
-    answer: "210120",
+    question: "5급(60점)을 취득했다. N가를 4,000원이라고 가정할 때 후원수당 금액은 얼마인가? (숫자만 입력)",
+    answer: "240000",
     unit: "원",
-    explanation: "60점 × 3,502원 = 210,120원",
+    explanation: "60점 × 4,000원 = 240,000원",
     voiceExplanationUrl: "voice/q138.mp3"
   },
   {
@@ -1582,10 +1235,10 @@ var QUESTIONS = [
     type: "calc",
     difficulty: "고급",
     tags: ["N가", "점수계산", "계산"],
-    question: "4급(90점)을 취득했다. N가를 3,502원이라고 가정할 때 후원수당 금액은 얼마인가? (숫자만 입력)",
-    answer: "315180",
+    question: "4급(90점)을 취득했다. N가를 4,000원이라고 가정할 때 후원수당 금액은 얼마인가? (숫자만 입력)",
+    answer: "360000",
     unit: "원",
-    explanation: "90점 × 3,502원 = 315,180원",
+    explanation: "90점 × 4,000원 = 360,000원",
     voiceExplanationUrl: "voice/q139.mp3"
   },
   {
@@ -1594,10 +1247,10 @@ var QUESTIONS = [
     type: "calc",
     difficulty: "고급",
     tags: ["N가", "점수계산", "계산"],
-    question: "3급(150점)을 취득했다. N가를 3,502원이라고 가정할 때 후원수당 금액은 얼마인가? (숫자만 입력)",
-    answer: "525300",
+    question: "3급(150점)을 취득했다. N가를 4,000원이라고 가정할 때 후원수당 금액은 얼마인가? (숫자만 입력)",
+    answer: "600000",
     unit: "원",
-    explanation: "150점 × 3,502원 = 525,300원",
+    explanation: "150점 × 4,000원 = 600,000원",
     voiceExplanationUrl: "voice/q140.mp3"
   },
   {
@@ -1606,10 +1259,10 @@ var QUESTIONS = [
     type: "calc",
     difficulty: "고급",
     tags: ["N가", "점수계산", "계산"],
-    question: "2급(250점)을 취득했다. N가를 3,502원이라고 가정할 때 후원수당 금액은 얼마인가? (숫자만 입력)",
-    answer: "875500",
+    question: "2급(250점)을 취득했다. N가를 4,000원이라고 가정할 때 후원수당 금액은 얼마인가? (숫자만 입력)",
+    answer: "1000000",
     unit: "원",
-    explanation: "250점 × 3,502원 = 875,500원",
+    explanation: "250점 × 4,000원 = 1,000,000원",
     voiceExplanationUrl: "voice/q141.mp3"
   },
   {
@@ -1618,10 +1271,10 @@ var QUESTIONS = [
     type: "calc",
     difficulty: "고급",
     tags: ["N가", "점수계산", "계산"],
-    question: "1급(300점)을 취득했다. N가를 3,502원이라고 가정할 때 후원수당 금액은 얼마인가? (숫자만 입력)",
-    answer: "1050600",
+    question: "1급(300점)을 취득했다. N가를 4,000원이라고 가정할 때 후원수당 금액은 얼마인가? (숫자만 입력)",
+    answer: "1200000",
     unit: "원",
-    explanation: "300점 × 3,502원 = 1,050,600원",
+    explanation: "300점 × 4,000원 = 1,200,000원",
     voiceExplanationUrl: "voice/q142.mp3"
   },
   {
@@ -1678,10 +1331,10 @@ var QUESTIONS = [
     type: "calc",
     difficulty: "고급",
     tags: ["N가", "점수계산", "계산"],
-    question: "본인 등급이 '회원'인 사람이 소실적 30만 PV 달성으로 5점을 두 차례 취득했다. 합산 점수 기준, N가를 3,502원이라고 가정할 때 후원수당 금액은 얼마인가? (숫자만 입력)",
-    answer: "35020",
+    question: "본인 등급이 '회원'인 사람이 소실적 30만 PV 달성으로 5점을 두 차례 취득했다. 합산 점수 기준, N가를 4,000원이라고 가정할 때 후원수당 금액은 얼마인가? (숫자만 입력)",
+    answer: "40000",
     unit: "원",
-    explanation: "5점 + 5점 = 10점, 10점 × 3,502원 = 35,020원",
+    explanation: "5점 + 5점 = 10점, 10점 × 4,000원 = 40,000원",
     voiceExplanationUrl: "voice/q147.mp3"
   },
   {
@@ -2266,10 +1919,10 @@ var QUESTIONS = [
     type: "calc",
     difficulty: "고급",
     tags: ["N가", "점수계산", "계산"],
-    question: "7급(15점)을 취득했다. N가를 3,502원이라고 가정할 때 후원수당 금액은 얼마인가? (숫자만 입력)",
-    answer: "52530",
+    question: "7급(15점)을 취득했다. N가를 4,000원이라고 가정할 때 후원수당 금액은 얼마인가? (숫자만 입력)",
+    answer: "60000",
     unit: "원",
-    explanation: "15점 × 3,502원 = 52,530원",
+    explanation: "15점 × 4,000원 = 60,000원",
     voiceExplanationUrl: "voice/q183.mp3"
   },
   {
@@ -2278,10 +1931,10 @@ var QUESTIONS = [
     type: "calc",
     difficulty: "고급",
     tags: ["N가", "점수계산", "계산"],
-    question: "6급(30점)을 취득했다. N가를 3,502원이라고 가정할 때 후원수당 금액은 얼마인가? (숫자만 입력)",
-    answer: "105060",
+    question: "6급(30점)을 취득했다. N가를 4,000원이라고 가정할 때 후원수당 금액은 얼마인가? (숫자만 입력)",
+    answer: "120000",
     unit: "원",
-    explanation: "30점 × 3,502원 = 105,060원",
+    explanation: "30점 × 4,000원 = 120,000원",
     voiceExplanationUrl: "voice/q184.mp3"
   },
   {
@@ -2290,10 +1943,10 @@ var QUESTIONS = [
     type: "calc",
     difficulty: "고급",
     tags: ["N가", "점수계산", "계산"],
-    question: "6급(30점)과 7급(15점)을 함께 취득했다. N가를 3,502원이라고 가정할 때, 합산 점수 기준 후원수당 금액은 얼마인가? (숫자만 입력)",
-    answer: "157590",
+    question: "6급(30점)과 7급(15점)을 함께 취득했다. N가를 4,000원이라고 가정할 때, 합산 점수 기준 후원수당 금액은 얼마인가? (숫자만 입력)",
+    answer: "180000",
     unit: "원",
-    explanation: "30점 + 15점 = 45점, 45점 × 3,502원 = 157,590원",
+    explanation: "30점 + 15점 = 45점, 45점 × 4,000원 = 180,000원",
     voiceExplanationUrl: "voice/q185.mp3"
   },
   {
@@ -2302,10 +1955,10 @@ var QUESTIONS = [
     type: "calc",
     difficulty: "고급",
     tags: ["N가", "점수계산", "계산"],
-    question: "4급(90점)을 두 차례 취득했다. N가를 3,502원이라고 가정할 때, 합산 점수 기준 후원수당 금액은 얼마인가? (숫자만 입력)",
-    answer: "630360",
+    question: "4급(90점)을 두 차례 취득했다. N가를 4,000원이라고 가정할 때, 합산 점수 기준 후원수당 금액은 얼마인가? (숫자만 입력)",
+    answer: "720000",
     unit: "원",
-    explanation: "90점 + 90점 = 180점, 180점 × 3,502원 = 630,360원",
+    explanation: "90점 + 90점 = 180점, 180점 × 4,000원 = 720,000원",
     voiceExplanationUrl: "voice/q186.mp3"
   },
   {
@@ -2314,10 +1967,10 @@ var QUESTIONS = [
     type: "calc",
     difficulty: "고급",
     tags: ["N가", "점수계산", "계산"],
-    question: "5급(60점)과 4급(90점)을 함께 취득했다. N가를 3,502원이라고 가정할 때, 합산 점수 기준 후원수당 금액은 얼마인가? (숫자만 입력)",
-    answer: "525300",
+    question: "5급(60점)과 4급(90점)을 함께 취득했다. N가를 4,000원이라고 가정할 때, 합산 점수 기준 후원수당 금액은 얼마인가? (숫자만 입력)",
+    answer: "600000",
     unit: "원",
-    explanation: "60점 + 90점 = 150점, 150점 × 3,502원 = 525,300원",
+    explanation: "60점 + 90점 = 150점, 150점 × 4,000원 = 600,000원",
     voiceExplanationUrl: "voice/q187.mp3"
   },
   {
@@ -2326,10 +1979,10 @@ var QUESTIONS = [
     type: "calc",
     difficulty: "고급",
     tags: ["N가", "점수계산", "계산"],
-    question: "3급(150점)에 해당하는 실적과 2급(250점)에 해당하는 실적을 함께 취득했다. N가를 3,502원이라고 가정할 때, 합산 점수 기준 후원수당 금액은 얼마인가? (숫자만 입력)",
-    answer: "1400800",
+    question: "3급(150점)에 해당하는 실적과 2급(250점)에 해당하는 실적을 함께 취득했다. N가를 4,000원이라고 가정할 때, 합산 점수 기준 후원수당 금액은 얼마인가? (숫자만 입력)",
+    answer: "1600000",
     unit: "원",
-    explanation: "150점 + 250점 = 400점, 400점 × 3,502원 = 1,400,800원",
+    explanation: "150점 + 250점 = 400점, 400점 × 4,000원 = 1,600,000원",
     voiceExplanationUrl: "voice/q188.mp3"
   },
   {
@@ -2338,10 +1991,10 @@ var QUESTIONS = [
     type: "calc",
     difficulty: "고급",
     tags: ["N가", "점수계산", "계산"],
-    question: "1급(300점)에 이어 다음날 8급(5점)이 추가로 발생했다. N가를 3,502원이라고 가정할 때, 합산 점수 기준 후원수당 금액은 얼마인가? (숫자만 입력)",
-    answer: "1068110",
+    question: "1급(300점)에 이어 다음날 8급(5점)이 추가로 발생했다. N가를 4,000원이라고 가정할 때, 합산 점수 기준 후원수당 금액은 얼마인가? (숫자만 입력)",
+    answer: "1220000",
     unit: "원",
-    explanation: "300점 + 5점 = 305점, 305점 × 3,502원 = 1,068,110원",
+    explanation: "300점 + 5점 = 305점, 305점 × 4,000원 = 1,220,000원",
     voiceExplanationUrl: "voice/q189.mp3"
   },
   {
@@ -2362,10 +2015,10 @@ var QUESTIONS = [
     type: "calc",
     difficulty: "고급",
     tags: ["N가", "점수계산", "계산"],
-    question: "2급(250점)과 8급(5점)을 함께 취득했다. N가를 3,502원이라고 가정할 때, 합산 점수 기준 후원수당 금액은 얼마인가? (숫자만 입력)",
-    answer: "893010",
+    question: "2급(250점)과 8급(5점)을 함께 취득했다. N가를 4,000원이라고 가정할 때, 합산 점수 기준 후원수당 금액은 얼마인가? (숫자만 입력)",
+    answer: "1020000",
     unit: "원",
-    explanation: "250점 + 5점 = 255점, 255점 × 3,502원 = 893,010원",
+    explanation: "250점 + 5점 = 255점, 255점 × 4,000원 = 1,020,000원",
     voiceExplanationUrl: "voice/q191.mp3"
   },
   {
@@ -2374,10 +2027,10 @@ var QUESTIONS = [
     type: "calc",
     difficulty: "고급",
     tags: ["N가", "점수계산", "계산"],
-    question: "6급(30점)을 네 차례 취득했다. N가를 3,502원이라고 가정할 때, 합산 점수 기준 후원수당 금액은 얼마인가? (숫자만 입력)",
-    answer: "420240",
+    question: "6급(30점)을 네 차례 취득했다. N가를 4,000원이라고 가정할 때, 합산 점수 기준 후원수당 금액은 얼마인가? (숫자만 입력)",
+    answer: "480000",
     unit: "원",
-    explanation: "30점 × 4 = 120점, 120점 × 3,502원 = 420,240원",
+    explanation: "30점 × 4 = 120점, 120점 × 4,000원 = 480,000원",
     voiceExplanationUrl: "voice/q192.mp3"
   },
   {
