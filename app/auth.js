@@ -562,20 +562,25 @@
         console.error("학습 이력 서버 조회 실패:", describeAuthError(err));
         setMessage("학습 이력을 불러오지 못했습니다: " + describeAuthError(err), true);
       });
-    }
-    // 5-1단계: 로그인 시점에도 컬렉션을 한 번 판정해둔다(다른 사용자의 활동으로 TOP20
-    // 순위가 바뀌었거나, 과거 학습 이력만으로 이미 조건을 채운 경우를 놓치지 않기 위함).
-    // setTimeout으로 한 틱 늦추는 이유: 세션이 로컬에 이미 있으면(새로고침 등)
-    // onAuthStateChange의 초기 콜백이 뒤에 오는 <script src="collections.js">가
-    // 로드되기도 전에(마이크로태스크 타이밍) 실행돼, window.QuizCollections가
-    // 아직 없어 이 훅이 조용히 무시되는 경우가 있었다 — 다음 태스크로 미뤄 모든
-    // 스크립트가 로드된 뒤 확실히 호출되게 한다.
-    if (user) {
-      setTimeout(function () {
-        if (window.QuizCollections && typeof window.QuizCollections.onLogin === "function") {
-          window.QuizCollections.onLogin();
-        }
-      }, 0);
+      // 5-1단계: 로그인 시점에도 컬렉션을 한 번 판정해둔다(다른 사용자의 활동으로 TOP20
+      // 순위가 바뀌었거나, 과거 학습 이력만으로 이미 조건을 채운 경우를 놓치지 않기 위함).
+      // pullRemoteProgress와 같은 lastPulledUserId 가드 안에 둬서, onAuthStateChange와
+      // getSession()이 같은 사용자에 대해 handleUser를 중복 호출해도 딱 한 번만 실행되게 한다.
+      //
+      // 콜드 스타트 타이밍 문제(2026-07-05, 안드로이드 딥링크 JS 주입에서 같은 종류의
+      // 버그를 겪음 -- MEMORY 참고): 세션이 로컬에 이미 있으면(새로고침 등) 뒤에 오는
+      // <script src="collections.js">가 아직 로드되기 전에 이 콜백이 실행될 수 있어,
+      // 한 번만 지연시키는 것으로는 타이밍이 흔들릴 때마다 조용히 무시되곤 했다(새로고침마다
+      // NEW 표시가 들쭉날쭉했던 원인). onLogin()은 매번 서버에서 다시 조회해 화면을 그
+      // 시점의 정확한 상태로 맞추는 멱등 동작이라, 여러 지연 간격으로 반복 시도해도
+      // 안전하다 -- 그중 한 번이라도 성공하면 최종적으로 항상 정확한 상태로 안정된다.
+      [0, 300, 800, 1500].forEach(function (delay) {
+        setTimeout(function () {
+          if (window.QuizCollections && typeof window.QuizCollections.onLogin === "function") {
+            window.QuizCollections.onLogin();
+          }
+        }, delay);
+      });
     }
     if (!user) {
       // 로그인해 있다가 로그아웃(또는 세션 만료)한 경우, 서버에서 받아와 화면/로컬에

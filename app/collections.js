@@ -269,6 +269,20 @@
     elNavDots.forEach(function (dot) { dot.hidden = !hasUnseen; });
   }
 
+  // onLogin/onQuizCompleted처럼 클릭 없이 자동으로 트리거되는 판정은 겹쳐 호출될 수
+  // 있다(예: 로그인 이벤트가 두 경로에서 중복 발화). 나중에 "발사한" 요청의 결과만
+  // 반영해 먼저 보낸 요청의 응답이 늦게 도착해 화면을 덮어써 깜빡이는 것을 막는다.
+  var badgeFetchSeq = 0;
+  function refreshBadgeState(onSuccess) {
+    var seq = ++badgeFetchSeq;
+    return fetchBadges().then(function (rows) {
+      if (seq !== badgeFetchSeq) {
+        return;
+      }
+      onSuccess(rows);
+    });
+  }
+
   function escapeHtmlLocal(str) {
     var div = document.createElement("div");
     div.textContent = str;
@@ -578,7 +592,7 @@
       if (!isLoggedIn()) {
         return;
       }
-      fetchBadges().then(function (rows) {
+      refreshBadgeState(function (rows) {
         updateNavDots(rows);
         announceNewBadges(rows);
       }).catch(function (err) {
@@ -586,7 +600,7 @@
       });
     },
     onLogin: function () {
-      fetchBadges().then(updateNavDots).catch(function (err) {
+      refreshBadgeState(updateNavDots).catch(function (err) {
         console.error("컬렉션 판정 실패:", describeError(err));
       });
     },
