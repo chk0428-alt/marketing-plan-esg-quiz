@@ -45,6 +45,7 @@
   var screenAdmin = document.getElementById("screen-admin");
   var screenAdminForm = document.getElementById("screen-admin-form");
   var screenAdminStats = document.getElementById("screen-admin-stats");
+  var screenCollections = document.getElementById("screen-collections");
 
   var domainSwitcherEl = document.getElementById("domain-switcher");
   var domainEmptyNoticeEl = document.getElementById("domain-empty-notice");
@@ -246,6 +247,11 @@
     store.wrongIds = Array.from(wrongIdSet);
     persistStore();
     updateNotebookCountUI();
+
+    // 5-3단계: 문제를 1개 이상 채점한 날을 "학습 참여일"로 기록한다(정답 여부 무관).
+    if (window.QuizCollections && typeof window.QuizCollections.recordStudyActivity === "function") {
+      window.QuizCollections.recordStudyActivity();
+    }
   }
 
   function updateNotebookCountUI() {
@@ -525,6 +531,9 @@
     screenAdmin.hidden = name !== "admin";
     screenAdminForm.hidden = name !== "admin-form";
     screenAdminStats.hidden = name !== "admin-stats";
+    if (screenCollections) {
+      screenCollections.hidden = name !== "collections";
+    }
     window.scrollTo(0, 0);
 
     if (currentScreenName === "start" && name !== "start") {
@@ -1184,6 +1193,10 @@
       // 도메인별 슬롯에 독립적으로 기록해 마케팅플랜/ESG 오늘의 퀴즈를 각각 1회씩 운영한다.
       store.dailyQuiz[currentDomain] = { date: todayKey(), correct: correct, total: total };
       persistStore();
+      // 5-3단계: 오늘의 퀴즈 스트릭(정답 여부 무관, 참여 자체를 기록)
+      if (window.QuizCollections && typeof window.QuizCollections.recordDailyQuizActivity === "function") {
+        window.QuizCollections.recordDailyQuizActivity();
+      }
     }
 
     resultScoreNum.textContent = correct + " / " + total;
@@ -1208,6 +1221,11 @@
     });
 
     setScreen("result");
+
+    // 5-1단계: 퀴즈 제출 직후 컬렉션 발급 여부를 판정한다(로그인 상태가 아니면 아무 일도 안 함).
+    if (window.QuizCollections && typeof window.QuizCollections.onQuizCompleted === "function") {
+      window.QuizCollections.onQuizCompleted();
+    }
   }
 
   function buildResultMessage(percent) {

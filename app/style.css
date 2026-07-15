@@ -52,6 +52,16 @@
   --transition-base: 0.2s cubic-bezier(0.2, 0.7, 0.3, 1);
 
   --max-width: 720px;
+
+  /* --- 내 컬렉션 카드 전용 팔레트(5-2단계 디자인 시안 기반) --- */
+  --badge-mp-1: #0f5c34;
+  --badge-mp-2: #1a7d4a;
+  --badge-mp-3: #4caf7d;
+  --badge-esg-1: #082a63;
+  --badge-esg-2: #0b3d8c;
+  --badge-esg-3: #1f8a7a;
+  --badge-gold-1: #f0c419;
+  --badge-gold-2: #fff4c2;
 }
 
 * {
@@ -1218,6 +1228,16 @@ summary:focus-visible,
   font-size: 1rem;
 }
 
+.result-badge-notice {
+  margin-top: 10px;
+  padding: 10px 14px;
+  border-radius: var(--radius);
+  background: var(--color-accent-soft);
+  color: var(--color-accent-dark);
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+
 .result-category-table {
   background: var(--color-surface);
   border-radius: var(--radius-lg);
@@ -1791,6 +1811,583 @@ summary:focus-visible,
   background: var(--color-surface);
   border-radius: var(--radius);
   box-shadow: var(--shadow-sm);
+}
+
+/* ---------------- 내 컬렉션 (5-2단계: 시안 디자인 이식 — 별점 기반 희귀도 카드) ---------------- */
+
+.collections-summary {
+  margin-bottom: 16px;
+  font-weight: 700;
+  color: var(--color-text-muted);
+}
+
+.badge-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.badge-card,
+.badge-card-outer {
+  width: 100%;
+  max-width: 230px;
+}
+
+.badge-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  isolation: isolate;
+  transition: filter var(--transition-base), opacity var(--transition-base);
+}
+
+/* 레전더리 카드는 .badge-card-outer(회전 테두리) 안에 .badge-card가 한 겹 더 있어서,
+   flex 자동 stretch가 바깥 outer까지만 적용된다 -- 안쪽도 그 높이를 그대로 채우게 한다. */
+.badge-card-outer > .badge-card {
+  height: 100%;
+}
+
+.badge-card.dom-mp { --c1: var(--badge-mp-1); --c2: var(--badge-mp-2); --c3: var(--badge-mp-3); }
+.badge-card.dom-esg { --c1: var(--badge-esg-1); --c2: var(--badge-esg-2); --c3: var(--badge-esg-3); }
+/* 5-3단계: 학습 스트릭(sun=주황 불꽃 톤)/오늘의 퀴즈 스트릭(mint=민트 톤) — 도메인 무관 공통 트랙 */
+.badge-card.dom-sun { --c1: #ff6a3d; --c2: #ffb648; --c3: #fff2a8; }
+.badge-card.dom-mint { --c1: #0f8f66; --c2: #3ecf9a; --c3: #eafff5; }
+
+.badge-card__face {
+  position: relative;
+  border-radius: inherit;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 300px;
+  padding: 16px 14px 14px;
+  color: #eef1f7;
+  box-sizing: border-box;
+}
+
+.badge-card__badge {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.badge-card__domain {
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  opacity: 0.85;
+}
+
+.badge-card__icon {
+  position: relative;
+  margin: 8px auto 4px;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  border: 3px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  perspective: 340px;
+  overflow: hidden;
+}
+
+/* 캐릭터 발밑 그림자 -- 뜨고 가라앉는 움직임에 맞춰 커지고 작아진다 */
+.badge-card__icon::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  bottom: 10%;
+  left: 50%;
+  width: 46%;
+  height: 10%;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35), transparent 72%);
+  border-radius: 50%;
+  transform: translateX(-50%);
+  animation: badgeMascotShadow 3.6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* 캐릭터 뒤 컬러 후광 -- 도메인 톤(--c2)으로 은은하게 숨쉬며, 크로스도메인 카드는 골드로 대신한다 */
+.badge-icon-glow {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  width: 140%;
+  height: 140%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--c2, var(--badge-gold-1)) 0%, transparent 72%);
+  filter: blur(10px);
+  opacity: 0.45;
+  animation: badgeIconGlowPulse 3.6s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes badgeIconGlowPulse {
+  0%, 100% { opacity: 0.3; transform: translate(-50%, -50%) scale(0.86); }
+  50%      { opacity: 0.7; transform: translate(-50%, -50%) scale(1.1); }
+}
+
+/* 캐릭터가 화면 앞으로 불쑥 튀어나왔다 들어가는 입체 애니메이션 */
+.badge-card__icon svg,
+.badge-mascot-svg {
+  position: relative;
+  z-index: 2;
+  width: 68%;
+  height: 68%;
+  transform-style: preserve-3d;
+  filter: drop-shadow(0 6px 6px rgba(0, 0, 0, 0.3));
+  animation: badgeMascotFloat 3.6s ease-in-out infinite;
+  will-change: transform;
+}
+@keyframes badgeMascotFloat {
+  0%, 100% { transform: translateY(0) translateZ(0) rotateY(0deg) rotateZ(0deg); }
+  25%      { transform: translateY(-4px) translateZ(14px) rotateY(14deg) rotateZ(-2deg); }
+  50%      { transform: translateY(-7px) translateZ(24px) rotateY(0deg) rotateZ(0deg); }
+  75%      { transform: translateY(-4px) translateZ(14px) rotateY(-14deg) rotateZ(2deg); }
+}
+@keyframes badgeMascotShadow {
+  0%, 100% { transform: translateX(-50%) scale(1); opacity: 0.5; }
+  50%      { transform: translateX(-50%) scale(0.6); opacity: 0.25; }
+}
+
+/* 애터미 정품 인증 도장(seal) -- 카드 우상단 고정 */
+.badge-card__face .seal {
+  position: absolute;
+  top: 9px;
+  right: 9px;
+  width: 30px;
+  height: 30px;
+  z-index: 5;
+  border-radius: 50%;
+  transform: rotate(-9deg);
+  filter: url(#sealGrunge) drop-shadow(0 2px 3px rgba(0, 0, 0, 0.5));
+  background: transparent;
+  box-shadow:
+    0 0 0 1.6px rgba(255, 255, 255, 0.85),
+    0 0 0 2.9px #8a1620,
+    0 0 0 4px rgba(255, 255, 255, 0.85),
+    0 0 0 4.8px #8a1620;
+}
+.badge-card__face .seal-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 3px;
+  box-sizing: border-box;
+  background: transparent;
+}
+
+/* 상품명 라벨(회장님 카드는 표시하지 않음) */
+.product-tag {
+  width: fit-content;
+  margin: 6px auto 0;
+  padding: 2px 11px;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1.4px solid;
+  border-radius: var(--radius-pill);
+  position: relative;
+  z-index: 4;
+}
+
+.badge-card__title {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 800;
+  margin-top: 10px;
+  line-height: 1.3;
+}
+
+.badge-card__desc {
+  margin-top: auto;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.5;
+  opacity: 0.9;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.badge-card__status {
+  margin-top: 8px;
+  text-align: center;
+  font-size: 11.5px;
+  font-weight: 700;
+}
+
+.badge-sparkle {
+  position: absolute;
+  border-radius: 50%;
+  background: #fff;
+}
+
+@keyframes badgeTwinkle {
+  0%, 100% { opacity: 0.15; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.15); }
+}
+
+.badge-card__sheen {
+  position: absolute;
+  top: -40%;
+  left: -60%;
+  width: 60%;
+  height: 180%;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.22), transparent);
+  transform: rotate(20deg);
+  animation: badgeSheenMove 4.5s ease-in-out infinite;
+}
+
+@keyframes badgeSheenMove {
+  0% { left: -60%; }
+  55% { left: 130%; }
+  100% { left: 130%; }
+}
+
+/* ---- 커먼(★1): 정적인 그라데이션, 애니메이션 없음 ---- */
+.badge-card.tier-common .badge-card__face {
+  background:
+    radial-gradient(160px 120px at 75% 10%, rgba(255, 255, 255, 0.10), transparent 70%),
+    linear-gradient(160deg, var(--c2) 0%, var(--c1) 100%);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+.badge-card.tier-common {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+.badge-card.tier-common .badge-card__badge {
+  background: rgba(255, 255, 255, 0.16);
+  color: #eafff2;
+}
+.badge-card.tier-common .badge-sparkle {
+  opacity: 0.25;
+}
+
+/* ---- 레어(★2): 은은한 글로우 + 반짝임 + 스윕 ---- */
+.badge-card.tier-rare {
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.35),
+    0 8px 24px rgba(0, 0, 0, 0.35),
+    0 0 26px color-mix(in srgb, var(--c3) 55%, transparent);
+}
+.badge-card.tier-rare .badge-card__face {
+  background:
+    radial-gradient(220px 160px at 20% 0%, color-mix(in srgb, var(--c3) 45%, transparent), transparent 60%),
+    radial-gradient(200px 140px at 90% 100%, color-mix(in srgb, var(--c2) 45%, transparent), transparent 60%),
+    linear-gradient(150deg, var(--c2) 0%, var(--c1) 55%, #0b0f1e 100%);
+}
+.badge-card.tier-rare .badge-card__badge {
+  background: color-mix(in srgb, var(--c3) 35%, transparent);
+  color: #fff;
+  box-shadow: 0 0 10px color-mix(in srgb, var(--c3) 60%, transparent);
+}
+.badge-card.tier-rare .badge-sparkle {
+  animation: badgeTwinkle 2.6s ease-in-out infinite;
+}
+
+/* ---- 에픽(★3): 더 화려한 다중 글로우 + 골드 포인트 ---- */
+.badge-card.tier-epic {
+  box-shadow:
+    0 0 0 1px rgba(240, 196, 25, 0.5),
+    0 8px 26px rgba(0, 0, 0, 0.4),
+    0 0 32px color-mix(in srgb, var(--c3) 40%, transparent);
+}
+.badge-card.tier-epic .badge-card__face {
+  background:
+    radial-gradient(220px 170px at 15% 0%, color-mix(in srgb, var(--c3) 45%, transparent), transparent 60%),
+    radial-gradient(240px 200px at 50% 120%, rgba(240, 196, 25, 0.25), transparent 65%),
+    linear-gradient(160deg, var(--c1) 0%, #10182a 100%);
+  background-size: 130% 130%;
+  animation: badgeAuroraShift 7s ease-in-out infinite;
+}
+@keyframes badgeAuroraShift {
+  0%, 100% { background-position: 0% 0%, 50% 100%, 0 0; }
+  50% { background-position: 20% 20%, 60% 80%, 0 0; }
+}
+.badge-card.tier-epic .badge-card__badge {
+  background: linear-gradient(90deg, rgba(240, 196, 25, 0.35), color-mix(in srgb, var(--c3) 35%, transparent));
+  color: #fff7dd;
+  box-shadow: 0 0 12px rgba(240, 196, 25, 0.5);
+}
+.badge-card.tier-epic .badge-sparkle {
+  animation: badgeTwinkle 2.4s ease-in-out infinite;
+}
+
+/* ---- 레전더리(★4, 도메인 퍼펙트): 회전 홀로그램 테두리 + 오로라 + 골드 텍스트 ---- */
+.badge-card-outer.tier-legendary {
+  position: relative;
+  border-radius: 22px;
+  padding: 3px;
+  overflow: hidden;
+}
+.badge-card-outer.tier-legendary::before {
+  content: "";
+  position: absolute;
+  inset: -60%;
+  background: conic-gradient(from 0deg, var(--badge-gold-1), var(--c3), var(--c1), var(--badge-gold-1));
+  animation: badgeHoloRotate 5s linear infinite;
+}
+@keyframes badgeHoloRotate {
+  to { transform: rotate(360deg); }
+}
+.badge-card.tier-legendary {
+  z-index: 1;
+  border-radius: 19px;
+  animation: badgeGlowPulse 3s ease-in-out infinite;
+}
+@keyframes badgeGlowPulse {
+  0%, 100% { box-shadow: 0 0 26px rgba(240, 196, 25, 0.3), 0 10px 28px rgba(0, 0, 0, 0.5); }
+  50% { box-shadow: 0 0 42px rgba(240, 196, 25, 0.55), 0 10px 28px rgba(0, 0, 0, 0.5); }
+}
+.badge-card.tier-legendary .badge-card__face {
+  background:
+    radial-gradient(240px 200px at 15% -10%, color-mix(in srgb, var(--c3) 55%, transparent), transparent 55%),
+    radial-gradient(260px 220px at 50% 120%, color-mix(in srgb, var(--c2) 55%, transparent), transparent 60%),
+    linear-gradient(160deg, #241b4d 0%, #0b0f1e 100%);
+  background-size: 140% 140%;
+  animation: badgeAuroraShift 8s ease-in-out infinite;
+}
+.badge-card.tier-legendary .badge-card__badge {
+  background: linear-gradient(90deg, var(--badge-gold-1), var(--badge-gold-2), var(--badge-gold-1));
+  background-size: 200% auto;
+  color: #4a3b00;
+  animation: badgeGoldShine 3s linear infinite;
+  box-shadow: 0 0 14px rgba(240, 196, 25, 0.7);
+}
+@keyframes badgeGoldShine {
+  0% { background-position: 0% 0; }
+  100% { background-position: 200% 0; }
+}
+.badge-card.tier-legendary .badge-sparkle {
+  animation: badgeTwinkle 2.2s ease-in-out infinite;
+}
+.badge-card.tier-legendary .badge-card__title {
+  background: linear-gradient(90deg, #fff, var(--badge-gold-2), #fff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 18px rgba(240, 196, 25, 0.5);
+}
+
+/* ---- 레전더리 · 크로스도메인(★5, 애터미 퍼펙트): 마케팅플랜×ESG×골드 3색 오로라 ---- */
+.badge-card-outer.tier-legendary-cross::before {
+  background: conic-gradient(from 0deg,
+    var(--badge-gold-1), var(--badge-mp-3), var(--badge-esg-3), var(--badge-gold-1));
+}
+.badge-card.tier-legendary-cross {
+  box-shadow:
+    0 0 30px rgba(240, 196, 25, 0.35),
+    0 0 60px rgba(31, 138, 122, 0.3),
+    0 10px 28px rgba(0, 0, 0, 0.5);
+}
+.badge-card.tier-legendary-cross .badge-card__face {
+  background:
+    radial-gradient(240px 200px at 15% -10%, rgba(31, 138, 122, 0.55), transparent 55%),
+    radial-gradient(240px 200px at 100% 10%, rgba(11, 61, 140, 0.55), transparent 55%),
+    radial-gradient(260px 220px at 50% 120%, rgba(26, 125, 74, 0.55), transparent 60%),
+    linear-gradient(160deg, #241b4d 0%, #0b0f1e 100%);
+  background-size: 140% 140%;
+  animation: badgeAuroraShift 8s ease-in-out infinite;
+}
+
+/* ---- 미보유 상태: 채도/명도를 낮춰 "잠긴" 느낌을 준다 ---- */
+.badge-card.is-locked {
+  filter: grayscale(0.75) brightness(0.5);
+  opacity: 0.75;
+}
+.badge-card.is-locked,
+.badge-card.is-locked .badge-card__sheen,
+.badge-card.is-locked .badge-sparkle,
+.badge-card.is-locked .badge-mascot-svg,
+.badge-card.is-locked .badge-icon-glow,
+.badge-card.is-locked .badge-card__icon::after {
+  animation: none !important;
+}
+.badge-card-outer:has(.badge-card.is-locked)::before {
+  animation: none !important;
+  opacity: 0.4;
+}
+
+.badge-card.is-owned {
+  cursor: pointer;
+}
+
+/* ---------------- 내 컬렉션: 폭죽 파티클 (보유 카드 클릭 시) ---------------- */
+
+.firework-particle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: var(--size, 8px);
+  height: var(--size, 8px);
+  background: var(--color, #fff);
+  border-radius: var(--radius, 50%);
+  pointer-events: none;
+  z-index: 60;
+  opacity: 1;
+  transform: translate(-50%, -50%) rotate(var(--rot, 0deg)) translateX(0) scale(1);
+  animation: fireworkBurst var(--dur, 800ms) cubic-bezier(0.15, 0.7, 0.3, 1) forwards;
+}
+@keyframes fireworkBurst {
+  0%   { transform: translate(-50%, -50%) rotate(var(--rot, 0deg)) translateX(0) scale(1); opacity: 1; }
+  65%  { opacity: 1; }
+  100% { transform: translate(-50%, -50%) rotate(var(--rot, 0deg)) translateX(var(--dist, 80px)) scale(var(--endscale, 0.3)); opacity: 0; }
+}
+
+/* ---------------- 내 컬렉션: 전체화면 리빌(3D 카드 플립) ---------------- */
+
+.reveal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: radial-gradient(120% 100% at 50% 30%, #12182a 0%, #05070d 70%, #000000 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+}
+.reveal-overlay.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.reveal-close {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.reveal-close:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.reveal-stage {
+  perspective: 1600px;
+  width: min(320px, 84vw);
+  height: min(460px, 78vh);
+}
+
+.reveal-flip {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation:
+    revealEnter 1s cubic-bezier(0.2, 0.8, 0.25, 1) both,
+    revealTumble 9s 1s linear infinite;
+}
+@keyframes revealEnter {
+  0%   { transform: rotateY(-75deg) rotateX(12deg) scale(0.75); opacity: 0; }
+  60%  { opacity: 1; }
+  100% { transform: rotateY(0deg) rotateX(0deg) scale(1); opacity: 1; }
+}
+@keyframes revealTumble {
+  0%   { transform: rotateY(0deg); }
+  100% { transform: rotateY(360deg); }
+}
+
+.reveal-face {
+  position: absolute;
+  inset: 0;
+  border-radius: 30px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  box-shadow: 0 40px 70px rgba(0, 0, 0, 0.55);
+}
+.reveal-art {
+  position: absolute;
+  inset: 12px;
+  height: auto;
+  min-height: 0;
+  border-radius: 22px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 26px 20px 20px;
+}
+.reveal-face.reveal-back {
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 13px;
+  line-height: 1.6;
+  padding: 20px;
+  background: linear-gradient(160deg, #1c2440, #05070d);
+}
+
+.reveal-glow {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  width: 260px;
+  height: 260px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--c2, var(--badge-gold-1)) 0%, transparent 70%);
+  filter: blur(30px);
+  z-index: 0;
+  animation: revealGlowPulse 2.6s ease-in-out infinite;
+}
+@keyframes revealGlowPulse {
+  0%, 100% { opacity: 0.55; transform: translate(-50%, -50%) scale(0.92); }
+  50%      { opacity: 0.95; transform: translate(-50%, -50%) scale(1.08); }
+}
+
+/* 리빌 카드는 그리드 카드보다 훨씬 커서, 아이콘/도장/제목을 그에 맞게 키운다 */
+.reveal-art .badge-card__icon {
+  width: 170px;
+  height: 170px;
+}
+.reveal-art .badge-card__face .seal,
+.reveal-art .seal {
+  width: 42px;
+  height: 42px;
+}
+.reveal-art .badge-card__title {
+  font-size: 22px;
+}
+.reveal-art .badge-card__domain {
+  font-size: 13px;
+}
+.reveal-art .badge-card__desc {
+  font-size: 13.5px;
+}
+.reveal-art .badge-card__badge {
+  font-size: 12.5px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-flip { animation: none !important; }
+  .reveal-glow { animation: none !important; }
 }
 
 /* ---------------- Admin CMS (3단계: 문제 관리) ---------------- */

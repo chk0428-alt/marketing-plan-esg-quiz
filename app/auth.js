@@ -563,6 +563,11 @@
         setMessage("학습 이력을 불러오지 못했습니다: " + describeAuthError(err), true);
       });
     }
+    // 5-1단계: 로그인 시점에도 컬렉션을 한 번 판정해둔다(다른 사용자의 활동으로 TOP20
+    // 순위가 바뀌었거나, 과거 학습 이력만으로 이미 조건을 채운 경우를 놓치지 않기 위함).
+    if (user && window.QuizCollections && typeof window.QuizCollections.onLogin === "function") {
+      window.QuizCollections.onLogin();
+    }
     if (!user) {
       // 로그인해 있다가 로그아웃(또는 세션 만료)한 경우, 서버에서 받아와 화면/로컬에
       // 남아있던 학습 이력을 즉시 지워 "로그인 안 한 상태 = 항상 새로 시작" 정책을 지킨다.
