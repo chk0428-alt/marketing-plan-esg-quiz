@@ -473,8 +473,14 @@
     if (row && !row.seen) {
       row.seen = true;
       renderGrid(Object.keys(lastOwnedByCode).map(function (code) { return lastOwnedByCode[code]; }));
-      client.rpc("mark_badge_seen", { p_code: b.code }).catch(function (err) {
-        console.error("카드 확인 처리 실패:", describeError(err));
+      // rpc()는 서버(SQL) 에러가 나도 프라미스를 reject하지 않고 res.error로 돌려주므로
+      // .catch()만으로는 잡히지 않는다 — 명시적으로 확인해서 콘솔에 남긴다.
+      client.rpc("mark_badge_seen", { p_code: b.code }).then(function (res) {
+        if (res.error) {
+          console.error("카드 확인 처리 실패(서버):", describeError(res.error));
+        }
+      }).catch(function (err) {
+        console.error("카드 확인 처리 실패(네트워크):", describeError(err));
       });
     }
   });
@@ -554,8 +560,14 @@
       return;
     }
     lastRecorded[kind] = today;
-    client.rpc("record_activity", { p_kind: kind, p_today: today }).catch(function (err) {
-      console.error("활동 기록 실패:", describeError(err));
+    client.rpc("record_activity", { p_kind: kind, p_today: today }).then(function (res) {
+      if (res.error) {
+        console.error("활동 기록 실패(서버):", describeError(res.error));
+        lastRecorded[kind] = null; // 실패했으니 같은 날 다시 시도할 수 있게 되돌린다
+      }
+    }).catch(function (err) {
+      console.error("활동 기록 실패(네트워크):", describeError(err));
+      lastRecorded[kind] = null;
     });
   }
 
