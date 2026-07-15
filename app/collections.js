@@ -212,13 +212,14 @@
     return out;
   }
 
-  function buildCardHtml(b, owned, idx) {
+  function buildCardHtml(b, owned, idx, unseen) {
     var tier = tierOf(b);
     var domClass = domainClassOf(b);
     var starHtml = starText(b.stars);
     var mascotSvg = buildMascot(b);
     var sparkleCount = tier === "common" ? 2 : (tier === "rare" ? 3 : (tier === "epic" ? 3 : 5));
     var lockClass = owned ? "is-owned" : "is-locked";
+    var unseenClass = owned && unseen ? " is-unseen" : "";
     var tierClass = "tier-" + tier;
     var dataAttrs = ' data-index="' + idx + '" data-owned="' + (owned ? "1" : "0") + '"';
 
@@ -226,6 +227,7 @@
       '<div class="badge-card__face">' +
       (tier !== "common" ? '<div class="badge-card__sheen"></div>' : "") +
       SEAL_HTML +
+      (owned && unseen ? '<span class="badge-card__new-flag">새로운 카드 획득!</span>' : "") +
       '<span class="badge-card__badge">' + starHtml + " " + TIER_LABELS[tier] + "</span>" +
       '<div class="badge-card__domain">' + escapeHtmlLocal(b.domainLabel) + "</div>" +
       '<div class="badge-card__icon"><div class="badge-icon-glow"></div><svg class="badge-mascot-svg" viewBox="0 0 58 58" fill="none">' + mascotSvg + "</svg></div>" +
@@ -233,15 +235,15 @@
       '<div class="badge-card__title">' + escapeHtmlLocal(b.title) + "</div>" +
       buildSparkles(sparkleCount) +
       '<div class="badge-card__desc">' + escapeHtmlLocal(b.desc) + "</div>" +
-      '<div class="badge-card__status">' + (owned ? "✅ 보유 중" : "🔒 미보유") + "</div>" +
+      '<div class="badge-card__status">' + (owned ? (unseen ? "✨ 눌러서 확인하기" : "✅ 보유 중") : "🔒 미보유") + "</div>" +
       "</div>";
 
     if (tier === "legendary" || tier === "legendary-cross") {
-      return '<div class="badge-card-outer ' + tierClass + " " + domClass + " " + lockClass + '"' + dataAttrs + '>' +
-        '<div class="badge-card ' + tierClass + " " + domClass + " " + lockClass + '">' + faceHtml + "</div>" +
+      return '<div class="badge-card-outer ' + tierClass + " " + domClass + " " + lockClass + unseenClass + '"' + dataAttrs + '>' +
+        '<div class="badge-card ' + tierClass + " " + domClass + " " + lockClass + unseenClass + '">' + faceHtml + "</div>" +
         "</div>";
     }
-    return '<div class="badge-card ' + tierClass + " " + domClass + " " + lockClass + '"' + dataAttrs + '>' + faceHtml + "</div>";
+    return '<div class="badge-card ' + tierClass + " " + domClass + " " + lockClass + unseenClass + '"' + dataAttrs + '>' + faceHtml + "</div>";
   }
 
   var elOpenBtn = document.getElementById("btn-open-collections");
@@ -251,6 +253,19 @@
   var elSummary = document.getElementById("collections-summary");
   var elGrid = document.getElementById("collections-grid");
   var elResultBadgeNotice = document.getElementById("result-badge-notice");
+  var elNavDots = [
+    document.getElementById("collections-new-dot-start"),
+    document.getElementById("collections-new-dot-result")
+  ].filter(Boolean);
+
+  // 서버에서 받아온 마지막 보유 목록(코드 -> row) — 카드 클릭 시 로컬에서 seen을
+  // 낙관적으로 갱신해 재요청 없이 바로 "NEW" 표시를 지우기 위해 들고 있는다.
+  var lastOwnedByCode = {};
+
+  function updateNavDots(rows) {
+    var hasUnseen = (rows || []).some(function (r) { return !r.seen; });
+    elNavDots.forEach(function (dot) { dot.hidden = !hasUnseen; });
+  }
 
   function escapeHtmlLocal(str) {
     var div = document.createElement("div");
@@ -282,15 +297,18 @@
   }
 
   function renderGrid(rows) {
-    var ownedCodes = {};
-    (rows || []).forEach(function (r) { ownedCodes[r.code] = r; });
+    lastOwnedByCode = {};
+    (rows || []).forEach(function (r) { lastOwnedByCode[r.code] = r; });
 
     elSummary.hidden = false;
-    elSummary.textContent = "보유 " + Object.keys(ownedCodes).length + " / " + BADGES.length + "종";
+    elSummary.textContent = "보유 " + Object.keys(lastOwnedByCode).length + " / " + BADGES.length + "종";
 
     elGrid.innerHTML = BADGES.map(function (b, idx) {
-      return buildCardHtml(b, !!ownedCodes[b.code], idx);
+      var row = lastOwnedByCode[b.code];
+      return buildCardHtml(b, !!row, idx, !!(row && !row.seen));
     }).join("");
+
+    updateNavDots(rows);
   }
 
   // ===========================================================
@@ -449,6 +467,16 @@
       return;
     }
     openReveal(b);
+
+    // "새로운 카드 획득" 표시를 클릭한 순간 지운다(낙관적 갱신 + 서버에도 반영).
+    var row = lastOwnedByCode[b.code];
+    if (row && !row.seen) {
+      row.seen = true;
+      renderGrid(Object.keys(lastOwnedByCode).map(function (code) { return lastOwnedByCode[code]; }));
+      client.rpc("mark_badge_seen", { p_code: b.code }).catch(function (err) {
+        console.error("카드 확인 처리 실패:", describeError(err));
+      });
+    }
   });
 
   function renderSignedOut() {
@@ -536,12 +564,15 @@
       if (!isLoggedIn()) {
         return;
       }
-      fetchBadges().then(announceNewBadges).catch(function (err) {
+      fetchBadges().then(function (rows) {
+        updateNavDots(rows);
+        announceNewBadges(rows);
+      }).catch(function (err) {
         console.error("컬렉션 판정 실패:", describeError(err));
       });
     },
     onLogin: function () {
-      fetchBadges().catch(function (err) {
+      fetchBadges().then(updateNavDots).catch(function (err) {
         console.error("컬렉션 판정 실패:", describeError(err));
       });
     },
