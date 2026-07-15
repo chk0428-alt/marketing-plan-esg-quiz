@@ -44,7 +44,9 @@
     { code: "study_streak_10", domain: "sun", domainLabel: "10일 연속 학습", stars: 3, title: "10일 연속 학습 컬렉션", desc: "10일 연속으로 학습에 참여한 꾸준함의 증표예요." },
     { code: "daily_quiz_streak_3", domain: "mint", domainLabel: "오늘의 퀴즈 3일 연속 참여(정답 무관)", stars: 1, title: "3일 연속 오늘의 퀴즈 컬렉션", desc: "정답 여부와 무관하게, 오늘의 퀴즈에 3일 연속 참여했어요." },
     { code: "daily_quiz_streak_7", domain: "mint", domainLabel: "오늘의 퀴즈 7일 연속 참여(정답 무관)", stars: 2, title: "7일 연속 오늘의 퀴즈 컬렉션", desc: "정답 여부와 무관하게, 오늘의 퀴즈에 7일 연속 참여했어요." },
-    { code: "daily_quiz_streak_10", domain: "mint", domainLabel: "오늘의 퀴즈 10일 연속 참여(정답 무관)", stars: 3, title: "10일 연속 오늘의 퀴즈 컬렉션", desc: "정답 여부와 무관하게, 오늘의 퀴즈에 10일 연속 참여했어요." }
+    { code: "daily_quiz_streak_10", domain: "mint", domainLabel: "오늘의 퀴즈 10일 연속 참여(정답 무관)", stars: 3, title: "10일 연속 오늘의 퀴즈 컬렉션", desc: "정답 여부와 무관하게, 오늘의 퀴즈에 10일 연속 참여했어요." },
+    // 신규: 마케팅플랜+ESG를 합산한 통합 랭킹(랭킹 화면 "통합" 탭과 동일 기준) TOP 20
+    { code: "total_top20", domain: "rank", domainLabel: "마케팅플랜 × ESG 통합 랭킹 TOP 20", stars: 3, title: "통합 TOP 20 컬렉션", desc: "마케팅플랜과 ESG를 합산한 통합 랭킹 TOP 20에 든 학습자에게 주어지는 경쟁의 증표예요." }
   ];
   var BADGE_BY_CODE = {};
   BADGES.forEach(function (b) { BADGE_BY_CODE[b.code] = b; });
@@ -60,7 +62,7 @@
   }
 
   function domainClassOf(b) {
-    if (b.domain === "mp" || b.domain === "esg" || b.domain === "sun" || b.domain === "mint") {
+    if (b.domain === "mp" || b.domain === "esg" || b.domain === "sun" || b.domain === "mint" || b.domain === "rank") {
       return "dom-" + b.domain;
     }
     return "";

@@ -565,8 +565,17 @@
     }
     // 5-1단계: 로그인 시점에도 컬렉션을 한 번 판정해둔다(다른 사용자의 활동으로 TOP20
     // 순위가 바뀌었거나, 과거 학습 이력만으로 이미 조건을 채운 경우를 놓치지 않기 위함).
-    if (user && window.QuizCollections && typeof window.QuizCollections.onLogin === "function") {
-      window.QuizCollections.onLogin();
+    // setTimeout으로 한 틱 늦추는 이유: 세션이 로컬에 이미 있으면(새로고침 등)
+    // onAuthStateChange의 초기 콜백이 뒤에 오는 <script src="collections.js">가
+    // 로드되기도 전에(마이크로태스크 타이밍) 실행돼, window.QuizCollections가
+    // 아직 없어 이 훅이 조용히 무시되는 경우가 있었다 — 다음 태스크로 미뤄 모든
+    // 스크립트가 로드된 뒤 확실히 호출되게 한다.
+    if (user) {
+      setTimeout(function () {
+        if (window.QuizCollections && typeof window.QuizCollections.onLogin === "function") {
+          window.QuizCollections.onLogin();
+        }
+      }, 0);
     }
     if (!user) {
       // 로그인해 있다가 로그아웃(또는 세션 만료)한 경우, 서버에서 받아와 화면/로컬에

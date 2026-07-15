@@ -1853,6 +1853,8 @@ summary:focus-visible,
 /* 5-3단계: 학습 스트릭(sun=주황 불꽃 톤)/오늘의 퀴즈 스트릭(mint=민트 톤) — 도메인 무관 공통 트랙 */
 .badge-card.dom-sun { --c1: #ff6a3d; --c2: #ffb648; --c3: #fff2a8; }
 .badge-card.dom-mint { --c1: #0f8f66; --c2: #3ecf9a; --c3: #eafff5; }
+/* 신규: 통합 TOP20(랭킹/경쟁 — 도메인 무관) — 네이비/실버 톤 */
+.badge-card.dom-rank { --c1: #16264a; --c2: #375a9e; --c3: #9fb3e0; }
 
 .badge-card__face {
   position: relative;
