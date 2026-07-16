@@ -3219,36 +3219,6 @@ var ESG_QUESTIONS = [
     voiceExplanationUrl: "voice/e029.mp3"
   },
   {
-    id: "e030",
-    domain: "esg",
-    category: "지속가능경영 추진체계",
-    reportYear: 2025,
-    active: true,
-    type: "mc",
-    difficulty: "중급",
-    tags: ["중대성평가", "핵심이슈순위"],
-    question: "17개 핵심이슈 순위 중 17위(가장 낮은 순위)에 해당하는 이슈는?",
-    choices: ["자원순환 및 순환경제 구축", "기후변화 대응", "인권 및 노동환경 보호", "임직원 복지 및 역량 강화"],
-    answerIndex: 1,
-    explanation: "중대성평가 결과표에서 17위는 환경 분야의 '기후변화 대응'이다.",
-    voiceExplanationUrl: "voice/e030.mp3"
-  },
-  {
-    id: "e031",
-    domain: "esg",
-    category: "지속가능경영 추진체계",
-    reportYear: 2025,
-    active: true,
-    type: "mc",
-    difficulty: "고급",
-    tags: ["중대성평가", "핵심이슈순위"],
-    question: "17개 핵심이슈 순위 중 16위에 해당하는 이슈는?",
-    choices: ["기후변화 대응", "자원순환 및 순환경제 구축", "개인정보 보호 및 정보보안", "인권 및 노동환경 보호"],
-    answerIndex: 1,
-    explanation: "중대성평가 결과표에서 16위는 환경 분야의 '자원순환 및 순환경제 구축'이며, 17위는 '기후변화 대응'이다.",
-    voiceExplanationUrl: "voice/e031.mp3"
-  },
-  {
     id: "e032",
     domain: "esg",
     category: "지속가능경영 추진체계",
@@ -4310,20 +4280,6 @@ var ESG_QUESTIONS = [
     voiceExplanationUrl: "voice/e102.mp3"
   },
   {
-    id: "e103",
-    domain: "esg",
-    category: "합력사와 동반성장",
-    reportYear: 2025,
-    active: true,
-    type: "ox",
-    difficulty: "초급",
-    tags: ["합력사", "현황"],
-    question: "2024년 기준 애터미의 합력사 88개는 모두 제조업체이다.",
-    answer: true,
-    explanation: "애터미의 2024년 합력사는 88개로 모두 제조업체입니다.",
-    voiceExplanationUrl: "voice/e103.mp3"
-  },
-  {
     id: "e104",
     domain: "esg",
     category: "합력사와 동반성장",
@@ -5332,20 +5288,6 @@ var ESG_QUESTIONS = [
     answer: false,
     explanation: "애터미는 주민들의 제안을 지역사회의 합리적 제안으로 받아들여 약 3억 원의 추가 비용이 발생함에도 요구사항을 전면 수용했습니다.",
     voiceExplanationUrl: "voice/e170.mp3"
-  },
-  {
-    id: "e171",
-    domain: "esg",
-    category: "나눔문화와 사회공헌",
-    reportYear: 2025,
-    active: true,
-    type: "ox",
-    difficulty: "초급",
-    tags: ["컴패션"],
-    question: "애터미는 한국 컴패션에 누적 500억 원을 기부하며 전 세계 25개 지역 아동의 교육·보건·정서 발달을 지원하고 있다.",
-    answer: true,
-    explanation: "국제어린이양육기구 컴패션에 누적 500억 원을 기부하며 전 세계 25개 지역 아동의 교육·보건·정서 발달을 지원하고 있습니다.",
-    voiceExplanationUrl: "voice/e171.mp3"
   },
   {
     id: "e172",
