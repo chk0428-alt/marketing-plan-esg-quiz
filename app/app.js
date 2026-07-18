@@ -100,6 +100,7 @@
   var quizFeedbackAnswerEl = document.getElementById("quiz-feedback-answer");
   var quizFeedbackExplanationLabelEl = document.getElementById("quiz-feedback-explanation-label");
   var quizFeedbackExplanationEl = document.getElementById("quiz-feedback-explanation");
+  var quizFeedbackSourceEl = document.getElementById("quiz-feedback-source");
   var btnVoiceExplanation = document.getElementById("btn-voice-explanation");
   var voiceExplanationAudio = document.getElementById("voice-explanation-audio");
   var btnNext = document.getElementById("btn-next");
@@ -1103,6 +1104,13 @@
     quizFeedbackExplanationEl.textContent = q.explanation;
     quizFeedbackExplanationEl.classList.toggle("is-detailed", !isCorrect);
     quizFeedbackExplanationLabelEl.hidden = isCorrect;
+
+    if (q.domain === "esg" && q.reportPage) {
+      quizFeedbackSourceEl.textContent = "📄 2025 ATOMY ESG REPORT p." + q.reportPage;
+      quizFeedbackSourceEl.hidden = false;
+    } else {
+      quizFeedbackSourceEl.hidden = true;
+    }
 
     if (!isCorrect && q.voiceExplanationUrl) {
       btnVoiceExplanation.hidden = false;

@@ -1156,6 +1156,12 @@ summary:focus-visible,
   background: var(--color-incorrect-bg);
 }
 
+.quiz-feedback__source {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin: 6px 2px 0;
+}
+
 .quiz-feedback__voice-btn {
   margin-top: 10px;
   width: 100%;
